@@ -466,6 +466,38 @@ Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clust
 
 See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
 
+## Boto
+
+Boto is the official AWS SDK for Python.
+
+### Install and Usage
+
+Coming Soon
+
+## S3cmd
+
+S3cmd interacts with S3 through the command line.
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
+
+## S3DistCp
+
+S3DistCp combines smaller files and aggregates them together by taking in a pattern and target file. S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster.
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
+
+## S3-parallel-put
+
+S3-parallel-put uploads multiple files to S3 in parallel.
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
