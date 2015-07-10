@@ -245,6 +245,41 @@ To uninstall a package:
 
     $ pip uninstall <package>
 
+## Virtualenv
+
+[Virtualenv](http://www.virtualenv.org/) is a tool that creates an isolated Python environment for each of your projects. For a particular project, instead of installing required packages globally, it is best to install them in an isolated folder in the project (say a folder named `venv`), that will be managed by virtualenv.
+
+The advantage is that different projects might require different versions of packages, and it would be hard to manage that if you install packages globally. It also allows you to keep your global `/usr/local/lib/python2.7/site-packages` folder clean.
+
+### Install
+
+To install virtualenv, simply run:
+
+    $ pip install virtualenv
+
+### Usage
+
+Let's say you have a project in a directory called `myproject`. To set up virtualenv for that project:
+
+    $ cd myproject/
+    $ virtualenv venv --distribute
+
+If you want your virtualenv to also inherit globally installed packages (like IPython or Numpy mentioned above), use:
+
+    $ virtualenv venv --distribute --system-site-packages
+
+These commands create a `venv` subdirectory in your project where everything is installed. You need to **activate** it first though (in every terminal where you are working on your project):
+
+    $ source venv/bin/activate
+
+You should see a `(venv)` appear at the beginning of your terminal prompt indicating that you are working inside the virtualenv. Now when you install something:
+
+    $ pip install <package>
+
+It will get installed in the `venv` folder, and not conflict with other projects.
+
+**Important**: Remember to add `venv` to your project's `.gitignore` file so you don't include all of that in your source code!
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
