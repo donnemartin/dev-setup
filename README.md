@@ -390,6 +390,64 @@ If you run into an issue about pyzmq, refer to the following [Stack Overflow pos
 
 For an example of IPython Notebooks used in Data Science, see this [repo](https://github.com/donnemartin/data-science-ipython-notebooks)
 
+## NumPy
+
+NumPy adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
+
+### Install and Usage
+
+    $ pip install numpy
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#numpy).
+
+## Pandas
+
+Pandas is a software library written for data manipulation and analysis in Python. Offers data structures and operations for manipulating numerical tables and time series.
+
+### Install and Usage
+
+    $ pip install pandas
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#pandas).
+
+## Matplotlib
+
+Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+
+### Install and Usage
+
+    $ pip install matplotlib
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+
+## Scikit-learn
+
+Scikit-learn adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
+
+### Install and Usage
+
+    $ pip install scikit-learn
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+
+## SciPy
+
+SciPy is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
+
+### Install and Usage
+
+    $ pip install scipy
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
+
+## Bokeh
+
+Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, but also deliver this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
+
+### Install and Usage
+
+Coming Soon
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
