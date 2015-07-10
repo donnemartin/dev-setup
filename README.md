@@ -363,6 +363,32 @@ RubyGems keeps old versions of gems, so feel free to do come cleaning after upda
 I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
 
     $ gem install compass --no-document
+## Anaconda
+
+Anaconda is a free distribution of the Python programming language for large-scale data processing, predictive analytics, and scientific computing that aims to simplify package management and deployment.
+
+Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/install.html) or the more lightweight [miniconda](http://conda.pydata.org/miniconda.html).
+
+## IPython Notebook
+
+[IPython](http://ipython.org/) is an awesome project which provides a much better Python shell than the one you get from running `$ python` in the command-line. It has many cool functions (running Unix commands from the Python shell, easy copy & paste, creating Matplotlib charts in-line, etc.) and I'll let you refer to the [documentation](http://ipython.org/ipython-doc/stable/index.html) to discover them.
+
+IPython Notebook is a web-based interactive computational environment where you can combine code execution, text, mathematics, plots and rich media into a single document.
+
+### Install
+
+    $ pip install "ipython[notebook]"
+
+If you run into an issue about pyzmq, refer to the following [Stack Overflow post](http://stackoverflow.com/questions/24995438/pyzmq-missing-when-running-ipython-notebook) and run:
+
+    $ pip uninstall ipython
+    $ pip install "ipython[all]"
+
+### Usage
+
+    $ ipython notebook
+
+For an example of IPython Notebooks used in Data Science, see this [repo](https://github.com/donnemartin/data-science-ipython-notebooks)
 
 ## Using Git and the Bootstrap Script
 
