@@ -448,6 +448,24 @@ Bokeh is a Python interactive visualization library that targets modern web brow
 
 Coming Soon
 
+## Spark
+
+Spark is an in-memory cluster computing framework, up to 100 times faster for certain applications and is well suited for machine learning algorithms.
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
+
+## MapReduce
+
+Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters.
+
+### Install and Usage
+
+    $ pip install mrjob
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
