@@ -363,6 +363,7 @@ RubyGems keeps old versions of gems, so feel free to do come cleaning after upda
 I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
 
     $ gem install compass --no-document
+
 ## Anaconda
 
 Anaconda is a free distribution of the Python programming language for large-scale data processing, predictive analytics, and scientific computing that aims to simplify package management and deployment.
@@ -517,6 +518,63 @@ See the following [notebook](https://github.com/donnemartin/data-science-ipython
 ## Lambda
 
 Lambda runs code in response to events, automatically managing compute resources.
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+## AWS Machine Learning
+
+Amazon Machine Learning is a service that makes it easy for developers of all skill levels to use machine learning technology. Amazon Machine Learning provides visualization tools and wizards that guide you through the process of creating machine learning (ML) models without having to learn complex ML algorithms and technology. Once your models are ready, Amazon Machine Learning makes it easy to obtain predictions for your application using simple APIs, without having to implement custom prediction generation code, or manage any infrastructure.
+
+### Install and Usage
+
+Coming Soon
+
+## MySQL
+
+### Install
+
+We will install [MySQL](http://www.mysql.com/) using Homebrew, which will also install some header files needed for MySQL bindings in different programming languages (MySQL-Python for one).
+
+To install, run:
+
+    $ brew update # Always good to do
+    $ brew install mysql
+
+As you can see in the ouput from Homebrew, before we can use MySQL we first need to set it up with:
+
+    $ unset TMPDIR
+    $ mkdir /usr/local/var
+    $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+### Usage
+
+To start the MySQL server, use the `mysql.server` tool:
+
+    $ mysql.server start
+
+To stop it when you are done, run:
+
+    $ mysql.server stop
+
+You can see the different commands available for `mysql.server` with:
+
+    $ mysql.server --help
+
+To connect with the command-line client, run:
+
+    $ mysql -uroot
+
+(Use `exit` to quit the MySQL shell.)
+
+**Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
+
+### MySQL Workbench
+
+In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
+
+You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
 
 ## Using Git and the Bootstrap Script
 
