@@ -221,6 +221,30 @@ And finally, install the Vim "sensible defaults" by running:
 
 With that, Vim will look a lot better next time you open it!
 
+## Python
+
+OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python 2.7 and Python 3.
+
+We'll visit the [section to run the script brew.sh](#install-homebrew-formulae-with-python2-and-python3) later in the installation process to install the latest Python2 and Python3 along with a number of useful Homebrew formulae.
+
+## Pip
+
+Here are a couple Pip commands to get you started. To install a Python package:
+
+    $ pip install <package>
+
+To upgrade a package:
+
+    $ pip install --upgrade <package>
+
+To see what's installed:
+
+    $ pip freeze
+
+To uninstall a package:
+
+    $ pip uninstall <package>
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
