@@ -7,12 +7,55 @@ data-dev-setup
 
 Data developer setup, scripts, and tools.  Hacker defaults for OSX.
 
+## General Apps and Tools
+
+* [System Update](#system-update)
+* [Google Chrome](#google-chrome)
+* [Homebrew](#homebrew)
+* [Sublime Text](#sublime-text)
+* [Atom](#atom)
+* [Terminal Customization](#terminal-customization)
+* [Git](#git)
+* [Vim](#vim)
+* [Python](#python)
+* [Pip](#pip)
+* [Virtualenv](#virtualenv)
+* [Ruby and RVM](#ruby-and-rvm)
+
+## Data Analysis
+
+* [Anaconda](#anaconda)
+* [IPython Notebook](#ipython-notebook)
+* [NumPy](#numpy)
+* [Pandas](#pandas)
+* [Matplotlib](#matplotlib)
+* [Scikit-learn](#scikit-learn)
+* [SciPy](#scipy)
+* [Bokeh](#bokeh)
+* [Spark](#spark)
+* [MapReduce](#mapreduce)
+* [Boto](#boto)
+* [S3cmd](#s3cmd)
+* [S3DistCp](#s3distcp)
+* [S3-parallel-put](#s3-parallel-put)
+* [Redshift](#redshift)
+* [Kinesis](#kinesis)
+* [Lambda](#lambda)
+* [AWS Machine Learning](#aws-machine-learning)
+* [MySQL](#mysql)
+* [MySQL Workbench](#mysql-workbench)
+
+## Dot Files
+
 * [Using Git and the Bootstrap Script](#using-git-and-the-bootstrap-script)
 * [Git-Free Install](#git-free-install)
 * [Specify PATH](#specify-path)
 * [Add Custom Commands](#add-custom-commands)
 * [Sensible OSX Defaults](#sensible-osx-defaults)
 * [Install Homebrew Formulae with Python2 and Python3](#install-homebrew-formulae-with-python2-and-python3)
+
+## Misc
+
 * [Contributions](#contributions)
 * [Credits](#credits)
 
