@@ -59,6 +59,24 @@ Data developer setup, scripts, and tools.  Hacker defaults for OSX.
 * [Contributions](#contributions)
 * [Credits](#credits)
 
+## System update
+
+First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon.
+
+## Install Apps
+
+Some of the scripts below tweak settings on apps such as Chrome and SublimeText.  When setting up a new machine, it's helpful to install some commonly-used apps first.
+
+## Google Chrome
+
+Install your favorite browser, mine happens to be Chrome.
+
+Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
+
+### Configuration
+
+We'll visit the [section to run the script .osx](#sensible-osx-defaults) later in the installation process to configure Chrome.  Just install Chrome for now and continue reading :)
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
