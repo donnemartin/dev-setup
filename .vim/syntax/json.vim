@@ -10,12 +10,12 @@
 " For version 6.x: Quit when a syntax file was already loaded
 
 if !exists("main_syntax")
-	if version < 600
-		syntax clear
-	elseif exists("b:current_syntax")
-		finish
-	endif
-	let main_syntax = 'json'
+    if version < 600
+        syntax clear
+    elseif exists("b:current_syntax")
+        finish
+    endif
+    let main_syntax = 'json'
 endif
 
 " Syntax: Strings {{{2
@@ -70,5 +70,5 @@ endif
 
 let b:current_syntax = "json"
 if main_syntax == 'json'
-	unlet main_syntax
+    unlet main_syntax
 endif

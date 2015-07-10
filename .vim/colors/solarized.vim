@@ -79,43 +79,43 @@
 " Other options are detailed below.
 "
 " IMPORTANT NOTE FOR TERMINAL USERS:
-" 
-" If you are going to use Solarized in Terminal mode (i.e. not in a GUI version 
-" like gvim or macvim), **please please please** consider setting your terminal 
-" emulator's colorscheme to used the Solarized palette. I've included palettes 
-" for some popular terminal emulator as well as Xdefaults in the official 
-" Solarized download available from [Solarized homepage]. If you use 
+"
+" If you are going to use Solarized in Terminal mode (i.e. not in a GUI version
+" like gvim or macvim), **please please please** consider setting your terminal
+" emulator's colorscheme to used the Solarized palette. I've included palettes
+" for some popular terminal emulator as well as Xdefaults in the official
+" Solarized download available from [Solarized homepage]. If you use
 " Solarized *without* these colors, Solarized will need to be told to degrade
-" its colorscheme to a set compatible with the limited 256 terminal palette 
-" (whereas by using the terminal's 16 ansi color values, you can set the 
+" its colorscheme to a set compatible with the limited 256 terminal palette
+" (whereas by using the terminal's 16 ansi color values, you can set the
 " correct, specific values for the Solarized palette).
-" 
-" If you do use the custom terminal colors, solarized.vim should work out of 
-" the box for you. If you are using a terminal emulator that supports 256 
-" colors and don't want to use the custom Solarized terminal colors, you will 
-" need to use the degraded 256 colorscheme. To do so, simply add the following 
+"
+" If you do use the custom terminal colors, solarized.vim should work out of
+" the box for you. If you are using a terminal emulator that supports 256
+" colors and don't want to use the custom Solarized terminal colors, you will
+" need to use the degraded 256 colorscheme. To do so, simply add the following
 " line *before* the `colorschem solarized` line:
-" 
+"
 "     let g:solarized_termcolors=256
-" 
-" Again, I recommend just changing your terminal colors to Solarized values 
+"
+" Again, I recommend just changing your terminal colors to Solarized values
 " either manually or via one of the many terminal schemes available for import.
 "
 " ---------------------------------------------------------------------
 " TOGGLE BACKGROUND FUNCTION:
 " ---------------------------------------------------------------------
-" 
-" Solarized comes with a Toggle Background plugin that by default will map to 
-" <F5> if that mapping is available. If it is not available you will need to 
-" either map the function manually or change your current <F5> mapping to 
-" something else. If you wish to map the function manually, enter the following 
+"
+" Solarized comes with a Toggle Background plugin that by default will map to
+" <F5> if that mapping is available. If it is not available you will need to
+" either map the function manually or change your current <F5> mapping to
+" something else. If you wish to map the function manually, enter the following
 " lines in your .vimrc:
-" 
+"
 "     nmap <unique> <F5> <Plug>ToggleBackground
 "     imap <unique> <F5> <Plug>ToggleBackground
 "     vmap <unique> <F5> <Plug>ToggleBackground
-" 
-" Note that it is important to *not* use the noremap map variants. The plugin 
+"
+" Note that it is important to *not* use the noremap map variants. The plugin
 " uses noremap internally. You may run `:help togglebg` for more information.
 "
 " ---------------------------------------------------------------------
@@ -165,8 +165,8 @@
 " Solarized will use the default (transparent) background of the terminal
 " emulator. *urxvt* required this in my testing; iTerm2 did not.
 "
-" Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by 
-" default as this is almost always the best option. The only exception to this 
+" Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by
+" default as this is almost always the best option. The only exception to this
 " is if the working terminfo file supports 256 colors (xterm-256color).
 "
 " ------------------------------------------------
@@ -198,8 +198,8 @@
 " ------------------------------------------------
 " g:solarized_visibility =  "normal"|   "high" or "low"
 " ------------------------------------------------
-" Special characters such as trailing whitespace, tabs, newlines, when 
-" displayed using ":set list" can be set to one of three levels depending on 
+" Special characters such as trailing whitespace, tabs, newlines, when
+" displayed using ":set list" can be set to one of three levels depending on
 " your needs.
 "
 " ---------------------------------------------------------------------
@@ -925,19 +925,19 @@ hi! link pandocMetadataTitle             pandocMetadata
 "}}}
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
-" In cases where Solarized is initialized inside a terminal vim session and 
-" then transferred to a gui session via the command `:gui`, the gui vim process 
-" does not re-read the colorscheme (or .vimrc for that matter) so any `has_gui` 
+" In cases where Solarized is initialized inside a terminal vim session and
+" then transferred to a gui session via the command `:gui`, the gui vim process
+" does not re-read the colorscheme (or .vimrc for that matter) so any `has_gui`
 " related code that sets gui specific values isn't executed.
 "
-" Currently, Solarized sets only the cterm or gui values for the colorscheme 
-" depending on gui or terminal mode. It's possible that, if the following 
-" autocommand method is deemed excessively poor form, that approach will be 
+" Currently, Solarized sets only the cterm or gui values for the colorscheme
+" depending on gui or terminal mode. It's possible that, if the following
+" autocommand method is deemed excessively poor form, that approach will be
 " used again and the autocommand below will be dropped.
 "
-" However it seems relatively benign in this case to include the autocommand 
-" here. It fires only in cases where vim is transferring from terminal to gui 
-" mode (detected with the script scope s:vmode variable). It also allows for 
+" However it seems relatively benign in this case to include the autocommand
+" here. It fires only in cases where vim is transferring from terminal to gui
+" mode (detected with the script scope s:vmode variable). It also allows for
 " other potential terminal customizations that might make gui mode suboptimal.
 "
 autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | endif
