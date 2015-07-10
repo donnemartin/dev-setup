@@ -155,6 +155,72 @@ We'll visit the [section to run the script .osx](#sensible-osx-defaults) later i
 
 [Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.  Unfortunately I have found that it does not perform as well when working with very large files that you typically encounter while working with data.  As Atom matures, I'm hopeful its performance will improve.
 
+## Terminal Customization
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
+
+This step will be automated later in the process when we reach [the section to run the script bootstrap.sh](#using-git-and-the-bootstrap-script) and [the section to run the script .osx](#sensible-osx-defaults).
+
+## Git
+
+### Usage
+
+What's a developer without [Git](http://git-scm.com/)?
+
+We'll visit the [section to run the script brew.sh](#install-homebrew-formulae-with-python2-and-python3) later in the installation process to install git along with a number of useful Homebrew formulae.  Because our brew.sh will automate the install of the git, the following is provided mainly for reference.
+
+    $ git --version
+
+And `$ which git` should output `/usr/local/bin/git`.
+
+Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/donnemartin/data-dev-setup/master/.gitconfig) file to your home directory:
+
+    $ cd ~
+    $ curl -O https://raw.githubusercontent.com/donnemartin/data-dev-setup/master/.gitconfig
+
+It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
+
+Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
+
+    $ git config --global user.name "Your Name Here"
+    $ git config --global user.email "your_email@youremail.com"
+
+They will get added to your `.gitconfig` file.
+
+To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
+
+    $ git config --global credential.helper osxkeychain
+
+**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/data-dev-setup/blob/master/.gitignore) file for inspiration.
+
+## Vim
+
+Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
+
+For example, when you run a Git commit, it will open Vim to allow you to type the commit message.
+
+I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
+
+Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). But if you're like me and just use Vim occasionally, you'll be happy to know that [Tim Pope](https://github.com/tpope) has put together some sensible defaults to quickly get started.
+
+First, install [pathogen.vim](https://github.com/tpope/vim-pathogen) by running:
+
+    $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+Then create a file `~/.vimrc` (you can use `$ subl ~/.vimrc`), and paste in the following:
+
+    execute pathogen#infect()
+    syntax on
+    filetype plugin indent on
+
+And finally, install the Vim "sensible defaults" by running:
+
+    $ cd ~/.vim/bundle
+    $ git clone git://github.com/tpope/vim-sensible.git
+
+With that, Vim will look a lot better next time you open it!
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
