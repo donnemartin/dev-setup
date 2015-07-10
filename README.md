@@ -498,6 +498,26 @@ S3-parallel-put uploads multiple files to S3 in parallel.
 
 See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
+## Redshift
+
+Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+## Kinesis
+
+Kinesis streams data in real time with the ability to process thousands of data streams per second.
+
+### Install and Usage
+
+See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+## Lambda
+
+Lambda runs code in response to events, automatically managing compute resources.
+
 ## Using Git and the Bootstrap Script
 
 You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
