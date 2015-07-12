@@ -100,8 +100,12 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 
+# Install Python and data tools
 brew install python
 brew install python3
+brew install mysql
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
