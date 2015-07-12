@@ -5,9 +5,35 @@
 data-dev-setup
 ============
 
-Data developer setup, scripts, and tools.  Hacker defaults for OSX.
+Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfiles/scripts for python data analysis, AWS, and hacker defaults for OSX. https://bit.ly/git-dotfiles
 
-## General Apps and Tools
+Setting up a new developer machine can be an ad-hoc, manual, and time-consuming task.  This repo aims to simplify the process with easy-to-understand instructions plus dotfiles/scripts that automate the following:
+
+* Customize apps such as Sublime Text and Google Chrome
+* Customize the terminal and vim
+* Setup defaults for OSX users
+* Install common Homebrew formulae for OSX users
+* Install common modules used for Python data analysis
+* Setup the Amazon Web Services (AWS) environment
+* Setup common databases
+
+**Section 1: Installation** contains the dotfiles/scripts (TLDR version).  The following sections contain more information about what is installed in Section 1.
+
+## Section 1: Installation
+
+* [Step 1: Update the Operating System](https://github.com/donnemartin/dev-setup)
+    * [Optional: Install Apps](https://github.com/donnemartin/dev-setup)
+* [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup)
+    * [Running with Git](https://github.com/donnemartin/dev-setup)
+    * [Running without Git](https://github.com/donnemartin/dev-setup)
+    * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup)
+    * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup)
+* [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup)
+* [Step 4: Run brew.sh Script](https://github.com/donnemartin/dev-setup)
+* [Step 5: Run the .pydata Script](https://github.com/donnemartin/dev-setup)
+* [Step 6: Run the .aws Script](https://github.com/donnemartin/dev-setup)
+
+## Section 2: General Apps and Tools
 
 * [System Update](#system-update)
 * [Google Chrome](#google-chrome)
@@ -22,7 +48,7 @@ Data developer setup, scripts, and tools.  Hacker defaults for OSX.
 * [Virtualenv](#virtualenv)
 * [Ruby and RVM](#ruby-and-rvm)
 
-## Data Analysis
+## Section 3: Python Data Analysis
 
 * [Anaconda](#anaconda)
 * [IPython Notebook](#ipython-notebook)
@@ -32,6 +58,9 @@ Data developer setup, scripts, and tools.  Hacker defaults for OSX.
 * [Scikit-learn](#scikit-learn)
 * [SciPy](#scipy)
 * [Bokeh](#bokeh)
+
+## Section 4: AWS
+
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
 * [Boto](#boto)
@@ -42,30 +71,118 @@ Data developer setup, scripts, and tools.  Hacker defaults for OSX.
 * [Kinesis](#kinesis)
 * [Lambda](#lambda)
 * [AWS Machine Learning](#aws-machine-learning)
+
+## Section 5: Databases
+
 * [MySQL](#mysql)
 * [MySQL Workbench](#mysql-workbench)
-
-## Dot Files
-
-* [Using Git and the Bootstrap Script](#using-git-and-the-bootstrap-script)
-* [Git-Free Install](#git-free-install)
-* [Specify PATH](#specify-path)
-* [Add Custom Commands](#add-custom-commands)
-* [Sensible OSX Defaults](#sensible-osx-defaults)
-* [Install Homebrew Formulae with Python2 and Python3](#install-homebrew-formulae-with-python2-and-python3)
+* [MongoDB](#)
 
 ## Misc
 
 * [Contributions](#contributions)
 * [Credits](#credits)
 
-## System update
+## Step 1: Update the Operating System
 
 First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon.
 
-## Install Apps
+## Optional: Install Apps
 
-Some of the scripts below tweak settings on apps such as Chrome and SublimeText.  When setting up a new machine, it's helpful to install some commonly-used apps first.
+Some of the scripts tweak settings on apps such as [Google Chrome](#google-chrome) and [Sublime Text](#sublime-text).  If you use these apps, it might be useful to install them first.
+
+## Step 2: Run the bootstrap.sh Script
+
+### Running with Git
+
+You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+
+```bash
+git clone https://github.com/donnemartin/data-dev-setup.git && cd data-dev-setup && source bootstrap.sh
+```
+
+To update, `cd` into your local `data-dev-setup` repository and then:
+
+```bash
+source bootstrap.sh
+```
+
+Alternatively, to update while avoiding the confirmation prompt:
+
+```bash
+set -- -f; source bootstrap.sh
+```
+
+### Running without Git
+
+To install these dotfiles without Git:
+
+```bash
+cd; curl -#L https://github.com/donnemartin/data-dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
+```
+
+To update later on, just run that command again.
+
+## Optional: Specify PATH
+
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/donnemartin/data-dev-setup/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
+
+Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
+
+```bash
+export PATH="/usr/local/bin:$PATH"
+```
+
+## Optional: Add Custom Commands
+
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+
+My `~/.extra` looks something like this:
+
+```bash
+# Git credentials
+GIT_AUTHOR_NAME="Donne Martin"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="donne.martin@gmail.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# Pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+
+# Install or upgrade a global package
+# Usage: syspip install –upgrade pip setuptools virtualenv
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+```
+
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/data-dev-setup/fork) instead, though.
+
+## Step 3: Run the .osx Script
+
+When setting up a new Mac, you may want to set some sensible OS X defaults:
+
+```bash
+./.osx
+```
+
+## Step 4: Run brew.sh Script
+
+When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
+
+```bash
+./brew.sh
+```
+
+This will include the latest version of Python2 and Python3.
+
+## Step 5: Run the .pydata Script
+
+```bash
+./.pydata
+```
 
 ## Google Chrome
 
@@ -575,81 +692,6 @@ To connect with the command-line client, run:
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
-
-## Using Git and the Bootstrap Script
-
-You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
-
-```bash
-git clone https://github.com/donnemartin/data-dev-setup.git && cd data-dev-setup && source bootstrap.sh
-```
-
-To update, `cd` into your local `data-dev-setup` repository and then:
-
-```bash
-source bootstrap.sh
-```
-
-Alternatively, to update while avoiding the confirmation prompt:
-
-```bash
-set -- -f; source bootstrap.sh
-```
-
-## Git-Free Install
-
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/donnemartin/data-dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
-
-## Specify PATH
-
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/donnemartin/data-dev-setup/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
-
-Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
-
-```bash
-export PATH="/usr/local/bin:$PATH"
-```
-
-## Add Custom Commands
-
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
-
-My `~/.extra` looks something like this:
-
-```bash
-# Git credentials
-# Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="Donne Martin"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="donne.martin@gmail.com"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-```
-
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/data-dev-setup/fork) instead, though.
-
-## Sensible OSX Defaults
-
-When setting up a new Mac, you may want to set some sensible OS X defaults:
-
-```bash
-./.osx
-```
-
-## Install Homebrew Formulae Including Python2 and Python3
-
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
-
-```bash
-./brew.sh
-```
 
 ## Contributions
 
