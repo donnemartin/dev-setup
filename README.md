@@ -2,7 +2,7 @@
   <img src="http://i.imgur.com/GMnses0.png">
 </p>
 
-data-dev-setup
+dev-setup
 ============
 
 Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfiles/scripts for python data analysis, AWS, and hacker defaults for OSX. https://bit.ly/git-dotfiles
@@ -115,13 +115,13 @@ Some of the scripts tweak settings on apps such as [Google Chrome](#google-chrom
 
 ### Running with Git
 
-You can clone the repository wherever you want. (I like to keep it in `~/dev/data-dev-setup`, with `~/data-dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone https://github.com/donnemartin/data-dev-setup.git && cd data-dev-setup && source bootstrap.sh
+git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
 ```
 
-To update, `cd` into your local `data-dev-setup` repository and then:
+To update, `cd` into your local `dev-setup` repository and then:
 
 ```bash
 source bootstrap.sh
@@ -138,14 +138,14 @@ set -- -f; source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/donnemartin/data-dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
+cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
 ```
 
 To update later on, just run that command again.
 
 ## Optional: Specify PATH
 
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/donnemartin/data-dev-setup/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/donnemartin/dev-setup/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
 
 Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
@@ -178,7 +178,7 @@ gpip(){
 }
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/data-dev-setup/fork) instead, though.
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/dev-setup/fork) instead, though.
 
 ## Step 3: Run the .osx Script
 
@@ -314,10 +314,10 @@ Git should have been installed when you ran through the [Install Xcode Command L
 
 And `$ which git` should output `/usr/local/bin/git`.
 
-Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/donnemartin/data-dev-setup/master/.gitconfig) file to your home directory:
+Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig) file to your home directory:
 
     $ cd ~
-    $ curl -O https://raw.githubusercontent.com/donnemartin/data-dev-setup/master/.gitconfig
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig
 
 It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
 
@@ -332,7 +332,7 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
 
     $ git config --global credential.helper osxkeychain
 
-**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/data-dev-setup/blob/master/.gitignore) file for inspiration.
+**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/dev-setup/blob/master/.gitignore) file for inspiration.
 
 ## Vim
 
@@ -719,7 +719,7 @@ You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/
 
 ## Contributions
 
-Bug reports and suggestions are [welcome](https://github.com/donnemartin/data-dev-setup/issues)!
+Bug reports and suggestions are [welcome](https://github.com/donnemartin/dev-setup/issues)!
 
 ## Credits
 
