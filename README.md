@@ -21,17 +21,17 @@ Setting up a new developer machine can be an ad-hoc, manual, and time-consuming 
 
 ## Section 1: Installation
 
-* [Step 1: Update the Operating System](https://github.com/donnemartin/dev-setup)
-    * [Optional: Install Apps](https://github.com/donnemartin/dev-setup)
-* [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup)
-    * [Running with Git](https://github.com/donnemartin/dev-setup)
-    * [Running without Git](https://github.com/donnemartin/dev-setup)
-    * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup)
+* [Step 1: Update the Operating System](https://github.com/donnemartin/dev-setup#step-1-update-the-operating-system)
+    * [Optional: Install Apps](https://github.com/donnemartin/dev-setup#optional-install-apps)
+* [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
+    * [Running with Git](https://github.com/donnemartin/dev-setup#running-with-git)
+    * [Running without Git](https://github.com/donnemartin/dev-setup#running-without-git)
+    * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup#optional-add-custom-commands)
     * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup)
-* [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup)
-* [Step 4: Run brew.sh Script](https://github.com/donnemartin/dev-setup)
-* [Step 5: Run the .pydata Script](https://github.com/donnemartin/dev-setup)
-* [Step 6: Run the .aws Script](https://github.com/donnemartin/dev-setup)
+* [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
+* [Step 4: Run brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-brewsh-script)
+* [Step 5: Run the .pydata Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script)
+* [Step 6: Run the .aws Script](https://github.com/donnemartin/dev-setup#step-6-run-the-.aws-script)
 
 ## Section 2: General Apps and Tools
 
