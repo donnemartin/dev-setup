@@ -36,7 +36,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
     * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup#optional-add-custom-commands)
     * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup)
 * [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
-* [Step 4: Run brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-brewsh-script)
+* [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script)
 * [Step 5: Run the .pydata Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script)
 * [Step 6: Run the .aws Script](https://github.com/donnemartin/dev-setup#step-6-run-the-.aws-script)
 
@@ -97,7 +97,7 @@ First thing you need to do on any OS, is to update the system.  On a Mac run the
 
 An important dependency before many tools such as Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers like gcc that will allow you to build from source.  Git is also included.
 
-Now, Xcode weight something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
+Now, Xcode weighs something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
 
 If you are running **OS X 10.9 Mavericks or later**, then you can install the Xcode Command Line Tools directly from the command line with:
 
@@ -192,7 +192,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 **Note: For your terminal customization to take full effect, quit and re-start it.**
 
-## Step 4: Run brew.sh Script
+## Step 4: Run the brew.sh Script
 
 First, install [Homebrew](http://brew.sh/).
 
@@ -282,7 +282,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
-**Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text and iTerm. To do so, right-click on the running application and select **Options > Keep in Dock**.
+**Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text. To do so, right-click on the running application and select **Options > Keep in Dock**.
 
 Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool.
 
