@@ -9,7 +9,7 @@ Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfi
 
 Setting up a new developer machine can be an ad-hoc, manual, and time-consuming task.  This repo aims to simplify the process with easy-to-understand instructions plus dotfiles/scripts that automate the following:
 
-* Customize apps such as Sublime Text and Google Chrome
+* Customize commonly-used apps
 * Customize the terminal and vim
 * Setup defaults for OSX users
 * Install common Homebrew formulae for OSX users
@@ -19,7 +19,9 @@ Setting up a new developer machine can be an ad-hoc, manual, and time-consuming 
 
 Sections Summary:
 * Section 1 contains the dotfiles/scripts to setup your system (TLDR version).
-* Sections 2 through 6 detail more information about what is installed in Section 1.  It also describes some intallation details if you prefer to install specific components.
+* Sections 2 through 6 detail more information about what is installed in Section 1.  It also describes some intallation details if you prefer to install only specific components.
+
+This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
 
 ## Section 1: Installation
 
@@ -37,7 +39,6 @@ Sections Summary:
 
 ## Section 2: General Apps and Tools
 
-* [System Update](#system-update)
 * [Google Chrome](#google-chrome)
 * [Homebrew](#homebrew)
 * [Sublime Text](#sublime-text)
@@ -61,7 +62,7 @@ Sections Summary:
 * [SciPy](#scipy)
 * [Bokeh](#bokeh)
 
-## Section 4: AWS
+## Section 4: Amazon Web Services (AWS)
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
@@ -80,16 +81,16 @@ Sections Summary:
 * [MySQL Workbench](#mysql-workbench)
 * [MongoDB](#)
 
-## Misc
+## Section 6: Misc
 
 * [Contributions](#contributions)
 * [Credits](#credits)
 
 ## Step 1: Update the Operating System
 
-First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon.
+First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon and update both the OS and installed apps.
 
-## Optional: Install Apps
+### Optional: Install Apps
 
 Some of the scripts tweak settings on apps such as [Google Chrome](#google-chrome) and [Sublime Text](#sublime-text).  If you use these apps, it might be useful to install them first.
 
