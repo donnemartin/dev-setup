@@ -192,7 +192,15 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ## Step 4: Run brew.sh Script
 
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
+First, install [Homebrew](http://brew.sh/).
+
+In the terminal paste the following line hit **Enter**, and follow the steps on the screen:
+
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+When setting up a new Mac, you may want to install some common Homebrew formulae (after installing Homebrew, of course):
 
 ```bash
 ./brew.sh
@@ -231,20 +239,6 @@ We'll visit the [section to run the script .osx](#sensible-osx-defaults) later i
 ## Homebrew
 
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
-
-### Install
-
-In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
-
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-One thing we need to do is tell the system to use programs installed by Hombrew (in `/usr/local/bin`) rather than the OS default if it exists. We do this by adding `/usr/local/bin` to your `$PATH` environment variable:
-
-    $ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-
-Open a new terminal tab with **Cmd+T** (you should also close the old one), then run the following command to make sure everything works:
-
-    $ brew doctor
 
 ### Usage
 
