@@ -26,6 +26,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 ## Section 1: Installation
 
 * [Step 1: Update the Operating System](https://github.com/donnemartin/dev-setup#step-1-update-the-operating-system)
+    * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
     * [Optional: Install Apps](https://github.com/donnemartin/dev-setup#optional-install-apps)
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
     * [Running with Git](https://github.com/donnemartin/dev-setup#running-with-git)
@@ -89,6 +90,22 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 ## Step 1: Update the Operating System
 
 First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon and update both the OS and installed apps.
+
+### Install Xcode Command Line Tools
+
+An important dependency before many tools such as Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers like gcc that will allow you to build from source.
+
+Now, Xcode weight something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
+
+If you are running **OS X 10.9 Mavericks or later**, then you can install the Xcode Command Line Tools directly from the command line with:
+
+```bash
+xcode-select --install
+```
+
+If you're running 10.8 or older, you'll need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
+
+Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
 ### Optional: Install Apps
 
@@ -203,15 +220,7 @@ Package managers make it so much easier to install and update applications (for 
 
 ### Install
 
-An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source.
-
-Now, Xcode weights something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode. To do this you need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
-
-Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
-
-**Note**: If you are running **OS X 10.9 Mavericks**, then you can install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`, and you don't have to go through the download page and the questionnaire.
-
-Finally, we can install Hombrew! In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
+In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
