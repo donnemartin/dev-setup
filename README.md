@@ -206,6 +206,16 @@ If you'd like to set up a development environment to work with Python and data a
 ./pydata.sh
 ```
 
+## Step 6: Run the aws.sh Script
+
+[Coming soon]
+
+If you'd like to set up a development environment to work Amazon Web Services, run the following script:
+
+```bash
+./aws.sh
+```
+
 ## Google Chrome
 
 Install your favorite browser, mine happens to be Chrome.
