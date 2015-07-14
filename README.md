@@ -198,10 +198,12 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 
 This will include the latest version of Python2 and Python3.
 
-## Step 5: Run the .pydata Script
+## Step 5: Run the pydata.sh Script
+
+If you'd like to set up a development environment to work with Python and data analysis, run the following script:
 
 ```bash
-./.pydata
+./pydata.sh
 ```
 
 ## Google Chrome
