@@ -7,6 +7,8 @@ dev-setup
 
 Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfiles/scripts for python data analysis, AWS, and hacker defaults for OSX. https://bit.ly/git-dotfiles
 
+## Motivation
+
 Setting up a new developer machine can be an ad-hoc, manual, and time-consuming task.  This repo aims to simplify the process with easy-to-understand instructions plus dotfiles/scripts that automate the following:
 
 * Customize commonly-used apps
