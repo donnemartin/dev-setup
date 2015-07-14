@@ -17,7 +17,9 @@ Setting up a new developer machine can be an ad-hoc, manual, and time-consuming 
 * Setup the Amazon Web Services (AWS) environment
 * Setup common databases
 
-**Section 1: Installation** contains the dotfiles/scripts (TLDR version).  The following sections contain more information about what is installed in Section 1.
+Sections Summary:
+* Section 1 contains the dotfiles/scripts to setup your system (TLDR version).
+* Sections 2 through 6 detail more information about what is installed in Section 1.  It also describes some intallation details if you prefer to install specific components.
 
 ## Section 1: Installation
 
