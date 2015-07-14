@@ -93,7 +93,7 @@ First thing you need to do on any OS, is to update the system.  On a Mac run the
 
 ### Install Xcode Command Line Tools
 
-An important dependency before many tools such as Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers like gcc that will allow you to build from source.
+An important dependency before many tools such as Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers like gcc that will allow you to build from source.  Git is also included.
 
 Now, Xcode weight something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
 
@@ -308,7 +308,7 @@ This step will be automated later in the process when we reach [the section to r
 
 What's a developer without [Git](http://git-scm.com/)?
 
-We'll visit the [section to run the script brew.sh](#install-homebrew-formulae-with-python2-and-python3) later in the installation process to install git along with a number of useful Homebrew formulae.  Because our brew.sh will automate the install of the git, the following is provided mainly for reference.
+Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.  The following is provided for reference.
 
     $ git --version
 
