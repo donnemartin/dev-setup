@@ -190,7 +190,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-**Note: For your terminal customization to take full effect, quit and re-start it.**
+**For your terminal customization to take full effect, quit and re-start the terminal.**
 
 ## Step 4: Run the brew.sh Script
 
@@ -231,7 +231,7 @@ Change to the new shell:
 chsh -s /usr/local/bin/bash
 ```
 
-Restart the terminal.
+**For your terminal customization to take full effect, quit and re-start the terminal.**
 
 ## Step 5: Run the pydata.sh Script
 
