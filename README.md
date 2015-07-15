@@ -9,7 +9,7 @@ Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfi
 
 ## Motivation
 
-Setting up a new developer machine can be an ad-hoc, manual, and time-consuming task.  This repo aims to simplify the process with easy-to-understand instructions plus dotfiles/scripts that automate the following:
+Setting up a new developer machine can be an ad-hoc, manual, and time-consuming task.  This repo aims to simplify the process with easy-to-understand instructions and dotfiles/scripts that automate the following:
 
 * Customize commonly-used apps
 * Customize the terminal and vim
@@ -115,6 +115,10 @@ Some of the scripts tweak settings on apps such as [Google Chrome](#google-chrom
 
 ## Step 2: Run the bootstrap.sh Script
 
+The bootstrap.sh script will sync the dev-tools repo to your local machine.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this README describes some of the customizations.
+
+Below you'll find two ways to run the bootstrap script, one using Git and the other using curl.
+
 ### Running with Git
 
 Git should have been installed from the section [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).  You can clone the repository wherever you want. (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
@@ -184,7 +188,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 ## Step 3: Run the .osx Script
 
-When setting up a new Mac, you may want to set some sensible OS X defaults:
+When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
 
 ```bash
 ./.osx
@@ -194,15 +198,15 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ## Step 4: Run the brew.sh Script
 
-First, install [Homebrew](http://brew.sh/).
+First, install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
 
-In the terminal paste the following line hit **Enter**, and follow the steps on the screen:
+Run the following command and follow the steps on the screen:
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-When setting up a new Mac, you may want to install some common Homebrew formulae (after installing Homebrew, of course):
+When setting up a new Mac, you may want to install some common Homebrew formulae.  For a full listing of installed formulae, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly.
 
 ```bash
 ./brew.sh
@@ -241,6 +245,8 @@ If you'd like to set up a development environment to work with Python and data a
 ./pydata.sh
 ```
 
+Section 3 of this README describes the installed packages and usage.
+
 ## Step 6: Run the aws.sh Script
 
 [Coming soon]
@@ -250,6 +256,8 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 ```bash
 ./aws.sh
 ```
+
+Section 4 of this README describes the installed packages and usage.
 
 ## Google Chrome
 
