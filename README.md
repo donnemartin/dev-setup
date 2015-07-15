@@ -210,6 +210,29 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 
 This will include the latest version of Python 2 and Python 3.
 
+Restart your terminal.  If you run into the following error, it is because brew installed an updated bash version, but it doesn't switch it to be your default:
+
+```bash
+-bash: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+-bash: complete: -D: invalid option
+complete: usage: complete [-abcdefgjksuv] [-pr] [-o option] [-A action] [-G globpat] [-W wordlist] [-P prefix] [-S suffix] [-X filterpat] [-F function] [-C command] [name ...]
+```
+
+Add the newly installed shell to the list of allowed shells:
+
+```bash
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+```
+
+Change to the new shell:
+
+```bash
+chsh -s /usr/local/bin/bash
+```
+
+Restart the terminal.
+
 ## Step 5: Run the pydata.sh Script
 
 If you'd like to set up a development environment to work with Python and data analysis, run the following script:
