@@ -323,6 +323,48 @@ Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file,
 
 Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool.
 
+#### Soda Theme
+
+The [Soda Theme](https://github.com/buymeasoda/soda-theme) is a great UI theme for Sublime Text, especially if you use a dark theme and think the side bar sticks out like a sore thumb.
+
+##### Installation with Sublime Package Control
+
+If you are using Will Bond's excellent [Sublime Package Control](http://wbond.net/sublime_packages/package_control), you can easily install Soda Theme via the `Package Control: Install Package` menu item. The Soda Theme package is listed as `Theme - Soda` in the packages list.
+
+##### Installation with Git
+
+Alternatively, if you are a git user, you can install the theme and keep up to date by cloning the repo directly into your `Packages` directory in the Sublime Text application settings area.
+
+You can locate your Sublime Text `Packages` directory by using the menu item `Preferences -> Browse Packages...`.
+
+While inside the `Packages` directory, clone the theme repository using the command below:
+
+```bash
+git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+```
+
+##### Activating the Theme on Sublime Text 2
+
+* Open your User Settings Preferences file `Sublime Text 2 -> Preferences -> Settings - User`
+* Add (or update) your theme entry to be `"theme": "Soda Light.sublime-theme"` or `"theme": "Soda Dark.sublime-theme"`
+
+**Example Sublime Text 2 User Settings**
+
+    {
+        "theme": "Soda Light.sublime-theme"
+    }
+
+##### Activating the Theme on Sublime Text 3
+
+* Open your User Settings Preferences file `Sublime Text -> Preferences -> Settings - User`
+* Add (or update) your theme entry to be `"theme": "Soda Light 3.sublime-theme"` or `"theme": "Soda Dark 3.sublime-theme"`
+
+**Example Sublime Text 3 User Settings**
+
+    {
+        "theme": "Soda Light 3.sublime-theme"
+    }
+
 #### Configuration
 
 The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
