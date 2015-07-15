@@ -323,6 +323,10 @@ Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file,
 
 Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool.
 
+#### Configuration
+
+The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
+
 #### Soda Theme
 
 The [Soda Theme](https://github.com/buymeasoda/soda-theme) is a great UI theme for Sublime Text, especially if you use a dark theme and think the side bar sticks out like a sore thumb.
@@ -364,10 +368,6 @@ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
     {
         "theme": "Soda Light 3.sublime-theme"
     }
-
-#### Configuration
-
-The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
 
 ### Atom
 
