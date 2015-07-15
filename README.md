@@ -208,7 +208,7 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 ./brew.sh
 ```
 
-This will include the latest version of Python2 and Python3.
+This will include the latest version of Python 2 and Python 3.
 
 ## Step 5: Run the pydata.sh Script
 
@@ -236,15 +236,17 @@ Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/brow
 
 ### Configuration
 
-We'll visit the [section to run the script .osx](#sensible-osx-defaults) later in the installation process to configure Chrome.  Just install Chrome for now and continue reading :)
+The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Chrome configurations.
 
 ## Homebrew
 
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
 
-### Usage
+### Configuration
 
-We'll visit the [section to run the script brew.sh](#install-homebrew-formulae-with-python2-and-python3) later in the installation process to install a number of useful Homebrew formulae.  Because our brew.sh will automate the install of the Homebrew formulae we'll need, the following is provided mainly for reference.
+The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
+
+### Usage
 
 To install a package (or **Formula** in Homebrew vocabulary) simply type:
 
@@ -288,7 +290,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 ### Configuration
 
-We'll visit the [section to run the script .osx](#sensible-osx-defaults) later in the installation process to configure Sublime Text.  Just install Sublime Text for now and continue reading :)
+The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
 
 ## Atom
 
@@ -298,15 +300,19 @@ We'll visit the [section to run the script .osx](#sensible-osx-defaults) later i
 
 Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
 
-This step will be automated later in the process when we reach [the section to run the script bootstrap.sh](#using-git-and-the-bootstrap-script) and [the section to run the script .osx](#sensible-osx-defaults).
+### Configuration
+
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain terminal customizations.
 
 ## Git
+
+### Configuration
+
+Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.
 
 ### Usage
 
 What's a developer without [Git](http://git-scm.com/)?
-
-Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.  The following is provided for reference.
 
     $ git --version
 
@@ -340,31 +346,15 @@ For example, when you run a Git commit, it will open Vim to allow you to type th
 
 I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
 
-Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). But if you're like me and just use Vim occasionally, you'll be happy to know that [Tim Pope](https://github.com/tpope) has put together some sensible defaults to quickly get started.
+### Configuration
 
-First, install [pathogen.vim](https://github.com/tpope/vim-pathogen) by running:
-
-    $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-Then create a file `~/.vimrc` (you can use `$ subl ~/.vimrc`), and paste in the following:
-
-    execute pathogen#infect()
-    syntax on
-    filetype plugin indent on
-
-And finally, install the Vim "sensible defaults" by running:
-
-    $ cd ~/.vim/bundle
-    $ git clone git://github.com/tpope/vim-sensible.git
-
-With that, Vim will look a lot better next time you open it!
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain Vim customizations.
 
 ## Python
 
 OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python 2.7 and Python 3.
 
-We'll visit the [section to run the script brew.sh](#install-homebrew-formulae-with-python2-and-python3) later in the installation process to install the latest Python2 and Python3 along with a number of useful Homebrew formulae.
+The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ## Pip
 
