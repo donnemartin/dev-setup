@@ -64,6 +64,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Seaborn](#seaborn)
 * [Scikit-learn](#scikit-learn)
 * [SciPy](#scipy)
+* [Flask](#flask)
 * [Bokeh](#bokeh)
 
 ## Section 4: Amazon Web Services (AWS)
@@ -664,6 +665,20 @@ SciPy is a collection of mathematical algorithms and convenience functions built
     $ pip install scipy
 
 See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
+
+### Flask
+
+Flask is a micro web application framework written in Python.
+
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs SciPy.  If you prefer to install it separately, run:
+
+    $ pip install Flask
+
+#### Usage
+
+Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
 ### Bokeh
 
