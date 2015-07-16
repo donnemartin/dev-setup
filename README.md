@@ -52,6 +52,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Python](#python)
 * [Pip](#pip)
 * [Virtualenv](#virtualenv)
+* [Virtualenvwrapper](#virtualenvwrapper)
 * [Ruby and RVM](#ruby-and-rvm)
 
 ## Section 3: Python Data Analysis
@@ -489,6 +490,39 @@ You should see a `(venv)` appear at the beginning of your terminal prompt indica
 It will get installed in the `venv` folder, and not conflict with other projects.
 
 **Important**: Remember to add `venv` to your project's `.gitignore` file so you don't include all of that in your source code!
+
+### Virtualenvwrapper
+
+[Virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/) is a set of extensions that includes wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
+
+Main features include:
+
+* Organizes all of your virtual environments in one place.
+* Wrappers for managing your virtual environments (create, delete, copy).
+* Use a single command to switch between environments.
+* Tab completion for commands that take a virtual environment as argument.
+
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Virtualenvwrapper.
+
+#### Usage
+
+Create a new virtual environment. When you create a new environment it automatically becomes the active environment:
+
+    $ mkvirtualenv [env name]
+
+Remove an existing virtual environment. The environment must be deactivated (see below) before it can be removed:
+
+    $ rmvirtualenv [env name]
+
+Activate a virtual environment. Will also list all existing virtual environments if no argument is passed:
+
+    $ workon [env name]
+
+Deactivate the currently active virtual environment. Note that workonwill automatically deactivate the current environment before activating a new one:
+
+    $ deactivate
 
 ### Ruby and RVM
 
