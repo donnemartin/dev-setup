@@ -17,7 +17,7 @@ Setting up a new developer machine can be an ad-hoc, manual, and time-consuming 
 * Install common Homebrew formulae for OSX users
 * Install common modules used for Python data analysis
 * Setup the Amazon Web Services (AWS) environment
-* Setup common databases
+* Setup common data stores
 
 Sections Summary:
 * Section 1 contains the dotfiles/scripts to setup your system (TLDR version).
@@ -82,7 +82,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [AWS Machine Learning](#aws-machine-learning)
 * [Heroku](#heroku)
 
-## Section 5: Databases
+## Section 5: Data Stores
 
 * [MySQL](#mysql)
 * [MySQL Workbench](#mysql-workbench)
@@ -850,7 +850,7 @@ Once the key business is done, you're ready to deploy apps! Heroku has a great [
 
 The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
 
-## Section 5: Databases
+## Section 5: Data Stores
 
 ### MySQL
 
@@ -896,6 +896,29 @@ To connect with the command-line client, run:
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
+
+### MongoDB
+
+[MongoDB](http://www.mongodb.org/) is a popular [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database.
+
+#### Installation
+
+The section Step 4: Run the brew.sh Script installs MongoDB. If you prefer to install it separately, run:
+
+    $ brew update
+    $ brew install mongo
+
+#### Usage
+
+In a terminal, start the MongoDB server:
+
+    $ mongod
+
+In another terminal, connect to the database with the Mongo shell using:
+
+    $ mongo
+
+I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual/tutorial/getting-started/) guide for more!
 
 ## Section 6: Misc
 
