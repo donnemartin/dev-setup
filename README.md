@@ -5,7 +5,7 @@
 dev-setup
 ============
 
-Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfiles/scripts for python data analysis, AWS, and hacker defaults for OSX. https://bit.ly/git-dotfiles
+Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfiles/scripts for python data analysis, AWS, JavaScript web development, and hacker defaults for OSX. https://bit.ly/git-dotfiles
 
 ## Motivation
 
@@ -16,8 +16,9 @@ Setting up a new developer machine can be an ad-hoc, manual, and time-consuming 
 * Setup defaults for OSX users
 * Install common Homebrew formulae for OSX users
 * Install common modules used for Python data analysis
-* Setup the Amazon Web Services (AWS) environment
+* Setup the Amazon Web Services (AWS) and Heroku environments
 * Setup common data stores
+* Setup Javascript web development
 
 Sections Summary:
 * Section 1 contains the dotfiles/scripts to setup your system (TLDR version).
@@ -37,8 +38,8 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
     * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup)
 * [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
 * [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script)
-* [Step 5: Run the .pydata Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script)
-* [Step 6: Run the .aws Script](https://github.com/donnemartin/dev-setup#step-6-run-the-.aws-script)
+* [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
+* [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-aws.sh-script)
 
 ## Section 2: General Apps and Tools
 
@@ -260,7 +261,7 @@ If you'd like to set up a development environment to work with Python and data a
 ./pydata.sh
 ```
 
-Section 3 of this README describes the installed packages and usage.
+[Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
 
 ### Step 6: Run the aws.sh Script
 
@@ -272,13 +273,15 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 ./aws.sh
 ```
 
-Section 4 of this README describes the installed packages and usage.
+[Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
 
 ## Section 2: General Apps and Tools
 
 ### Google Chrome
 
 Install your favorite browser, mine happens to be Chrome.
+
+#### Installation
 
 Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
 
@@ -290,7 +293,7 @@ The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-set
 
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
 
-#### Configuration
+#### Installation
 
 The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
 
@@ -329,6 +332,8 @@ To see what you have installed (with their version numbers):
 ### Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
+
+#### Installation
 
 Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
@@ -396,11 +401,11 @@ The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemarti
 
 ### Git
 
-#### Configuration
+#### Installation
 
 Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.
 
-#### Usage
+#### Configuration
 
 What's a developer without [Git](http://git-scm.com/)?
 
@@ -438,15 +443,25 @@ I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of
 
 #### Configuration
 
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain Vim customizations.
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
 
 ### Python
 
 OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python 2.7 and Python 3.
 
+#### Installation
+
 The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ### Pip
+
+[Pip](https://pypi.python.org/pypi/pip) is the Python package manager.
+
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs pip.
+
+#### Usage
 
 Here are a couple Pip commands to get you started. To install a Python package:
 
@@ -470,11 +485,9 @@ To uninstall a package:
 
 The advantage is that different projects might require different versions of packages, and it would be hard to manage that if you install packages globally. It also allows you to keep your global `/usr/local/lib/python2.7/site-packages` folder clean.
 
-#### Install
+#### Installation
 
-To install virtualenv, simply run:
-
-    $ pip install virtualenv
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Virtualenv.
 
 #### Usage
 
@@ -538,6 +551,10 @@ Deactivate the currently active virtual environment. Note that workonwill automa
 
 Anaconda is a free distribution of the Python programming language for large-scale data processing, predictive analytics, and scientific computing that aims to simplify package management and deployment.
 
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs packages you need to run Python data applications.  Alternatively, you can install the more heavy-weight Anaconda instead.
+
 Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/install.html) or the more lightweight [miniconda](http://conda.pydata.org/miniconda.html).
 
 ### IPython Notebook
@@ -546,7 +563,9 @@ Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/inst
 
 IPython Notebook is a web-based interactive computational environment where you can combine code execution, text, mathematics, plots and rich media into a single document.
 
-#### Install
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs IPython Notebook.  If you prefer to install it separately, run:
 
     $ pip install "ipython[notebook]"
 
@@ -559,47 +578,49 @@ If you run into an issue about pyzmq, refer to the following [Stack Overflow pos
 
     $ ipython notebook
 
-For an example of IPython Notebooks used in Data Science, see this [repo](https://github.com/donnemartin/data-science-ipython-notebooks)
+For an examples of IPython Notebooks used in Data Science, see the repo [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks).
 
 ### NumPy
 
 NumPy adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
 
-#### Install and Usage
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs NumPy.  If you prefer to install it separately, run:
 
     $ pip install numpy
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#numpy).
+#### Usage
+
+Refer to the following [Numpy IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#numpy).
 
 ### Pandas
 
 Pandas is a software library written for data manipulation and analysis in Python. Offers data structures and operations for manipulating numerical tables and time series.
 
-#### Install and Usage
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Pandas.  If you prefer to install it separately, run:
 
     $ pip install pandas
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#pandas).
+#### Usage
+
+Refer to the following [pandas IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#pandas).
 
 ### Matplotlib
 
 Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
 
-#### Install and Usage
+#### Installation
+
+The section [Step 5: Run the pydata.sh Scripts](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs matplotlib.  If you prefer to install it separately, run:
 
     $ pip install matplotlib
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+#### Usage
 
-### Scikit-learn
-
-Scikit-learn adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
-
-#### Install and Usage
-
-    $ pip install scikit-learn
-
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+Refer to the following [matplotlib IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
 
 ### Seaborn
 
@@ -615,15 +636,33 @@ The section [Step 5: Run the pydata.sh Scripts](https://github.com/donnemartin/d
 
 Refer to the following [matplotlib with Seaborn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
 
+### Scikit-learn
+
+Scikit-learn adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
+
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Scikit-learn.  If you prefer to install it separately, run:
+
+    $ pip install scikit-learn
+
+#### Usage
+
+Refer to the following [scikit-learn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+
 ### SciPy
 
 SciPy is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
 
-#### Install and Usage
+#### Installation
+
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs SciPy.  If you prefer to install it separately, run:
 
     $ pip install scipy
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
+#### Usage
+
+Refer to the following [SciPy IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
 
 ### Flask
 
@@ -643,9 +682,15 @@ Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/
 
 Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, but also deliver this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
 
-#### Install and Usage
+#### Installation
 
-Coming Soon
+The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Bokeh.  If you prefer to install it separately, run:
+
+    $ pip install bokeh
+
+#### Usage
+
+Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
 ## Section 4: AWS and Heroku
 
@@ -653,83 +698,131 @@ Coming Soon
 
 Spark is an in-memory cluster computing framework, up to 100 times faster for certain applications and is well suited for machine learning algorithms.
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark.  If you prefer to install it separately, refer to the following [link](https://spark.apache.org/docs/latest/):
+
+#### Usage
+
+Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
 
 ### MapReduce
 
 Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters.
 
-#### Install and Usage
+#### Installation
+
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs mrjob.  If you prefer to install it separately, run:
 
     $ pip install mrjob
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+#### Usage
+
+Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
 
 ### Boto
 
 Boto is the official AWS SDK for Python.
 
-#### Install and Usage
+#### Installation
 
-Coming Soon
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs boto.  If you prefer to install it separately, run:
+
+    $ pip install boto
+
+#### Usage
+
+Refer to the following [boto IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
 
 ### S3cmd
 
 S3cmd interacts with S3 through the command line.
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs s3cmd.  If you prefer to install it separately, run:
+
+    $ pip install s3cmd
+
+#### Usage
+
+Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
 ### S3DistCp
 
 S3DistCp combines smaller files and aggregates them together by taking in a pattern and target file. S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster.
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs S3DistCp.  If you prefer to install it separately, run:
+
+    $ pip install s3distcp
+
+#### Usage
+
+Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
 ### S3-parallel-put
 
 S3-parallel-put uploads multiple files to S3 in parallel.
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs S3Dis3-parallel-putstCp.  If you prefer to install it separately, run:
+
+    $ pip install s3-parallel-put
+
+#### Usage
+
+Refer to the following [s3-parallel-put IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### Redshift
 
 Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Redshift.
+
+#### Usage
+
+Refer to the following [Redshift IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### Kinesis
 
 Kinesis streams data in real time with the ability to process thousands of data streams per second.
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Kinesis.
+
+#### Usage
+
+Refer to the following [Kinesis IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### Lambda
 
 Lambda runs code in response to events, automatically managing compute resources.
 
-#### Install and Usage
+#### Installation
 
-See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Lambda.
+
+#### Usage
+
+Refer to the following [Lambda IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### AWS Machine Learning
 
 Amazon Machine Learning is a service that makes it easy for developers of all skill levels to use machine learning technology. Amazon Machine Learning provides visualization tools and wizards that guide you through the process of creating machine learning (ML) models without having to learn complex ML algorithms and technology. Once your models are ready, Amazon Machine Learning makes it easy to obtain predictions for your application using simple APIs, without having to implement custom prediction generation code, or manage any infrastructure.
 
-#### Install and Usage
+#### Installation
 
-Coming Soon
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs AWS Machine Learning.
+
+#### Usage
+
+Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### Heroku
 
@@ -778,11 +871,9 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 ### MySQL
 
-#### Install
+#### Installation
 
-We will install [MySQL](http://www.mysql.com/) using Homebrew, which will also install some header files needed for MySQL bindings in different programming languages (MySQL-Python for one).
-
-To install, run:
+The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs MySQL.  If you prefer to install it separately, run:
 
     $ brew update # Always good to do
     $ brew install mysql
@@ -818,6 +909,8 @@ To connect with the command-line client, run:
 #### MySQL Workbench
 
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
+
+Installation
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
 
@@ -927,7 +1020,7 @@ If you installed the elasticsearch-head plugin, you can visit its interface at `
 
 Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of a reference. To get started, I suggest reading some of the blog posts linked on this [StackOverflow answer](http://stackoverflow.com/questions/11593035/beginners-guide-to-elasticsearch/11767610#11767610).
 
-## Section 6: JavaScript Web Development
+## Section 6: Web Development
 
 ### Node.js
 
@@ -1003,7 +1096,7 @@ Follow additional instructions on the [JSHint Package Manager page](https://subl
 
 Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
 
-#### Install
+#### Installation
 
 When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
 
