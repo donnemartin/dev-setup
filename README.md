@@ -88,6 +88,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [MySQL Workbench](#mysql-workbench)
 * [MongoDB](#mongodb)
 * [Redis](#redis)
+* [Elasticsearch](#Elasticsearch)
 
 ## Section 6: Misc
 
@@ -947,6 +948,62 @@ In another terminal, connect to the server with the Redis command-line interface
     $ redis-cli
 
 I'll let you refer to Redis' [documentation](http://redis.io/documentation) or other tutorials for more information.
+
+### Elasticsearch
+
+As it says on the box, [Elasticsearch](http://www.elasticsearch.org/) is a "powerful open source, distributed real-time search and analytics engine". It uses an HTTP REST API, making it really easy to work with from any programming language.
+
+You can use elasticsearch for such cool things as real-time search results, autocomplete, recommendations, machine learning, and more.
+
+#### Installation
+
+Elasticsearch runs on Java, so check if you have it installed by running:
+
+```bash
+java -version
+```
+
+If Java isn't installed yet, a window will appear prompting you to install it. Go ahead and click "Install".
+
+Next, install elasticsearch with:
+
+```bash
+$ brew install elasticsearch
+```
+
+**Note**: Elasticsearch also has a `plugin` program that gets moved to your `PATH`. I find that too generic of a name, so I rename it to `elasticsearch-plugin` by running (will need to do that again if you update elasticsearch):
+
+```bash
+$ mv /usr/local/bin/plugin /usr/local/bin/elasticsearch-plugin
+```
+
+Below I will use `elasticsearch-plugin`, just replace it with `plugin` if you haven't followed this step.
+
+As you guessed, you can add plugins to elasticsearch. A popular one is [elasticsearch-head](http://mobz.github.io/elasticsearch-head/), which gives you a web interface to the REST API. Install it with:
+
+```bash
+$ elasticsearch-plugin --install mobz/elasticsearch-head
+```
+
+### Usage
+
+Start a local elasticsearch server with:
+
+```bash
+$ elasticsearch -f
+```
+
+(The `-f` option tells it to run in the foreground, so you can stop it with `Ctrl+C`.)
+
+Test that the server is working correctly by running:
+
+```bash
+$ curl -XGET 'http://localhost:9200/'
+```
+
+If you installed the elasticsearch-head plugin, you can visit its interface at `http://localhost:9200/_plugin/head/`.
+
+Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of a reference. To get started, I suggest reading some of the blog posts linked on this [StackOverflow answer](http://stackoverflow.com/questions/11593035/beginners-guide-to-elasticsearch/11767610#11767610).
 
 ## Section 6: Misc
 
