@@ -57,7 +57,7 @@ pip install nose
 pip install seaborn
 pip install scikit-learn
 pip install "ipython[all]"
-pip install boto
+pip install bokeh
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -79,7 +79,7 @@ pip install nose
 pip install seaborn
 pip install scikit-learn
 pip install "ipython[all]"
-pip install boto
+pip install bokeh
 
 echo "------------------------------"
 echo "Script completed."
