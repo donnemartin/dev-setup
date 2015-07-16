@@ -61,6 +61,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [NumPy](#numpy)
 * [Pandas](#pandas)
 * [Matplotlib](#matplotlib)
+* [Seaborn](#seaborn)
 * [Scikit-learn](#scikit-learn)
 * [SciPy](#scipy)
 * [Bokeh](#bokeh)
@@ -639,6 +640,20 @@ Scikit-learn adds Python support for large, multi-dimensional arrays and matrice
     $ pip install scikit-learn
 
 See the following [notebook](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+
+### Seaborn
+
+Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
+
+#### Installation
+
+The section [Step 5: Run the pydata.sh Scripts](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs matplotlib.  If you prefer to install it separately, run:
+
+    $ pip install seaborn
+
+#### Usage
+
+Refer to the following [matplotlib with Seaborn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
 
 ### SciPy
 
