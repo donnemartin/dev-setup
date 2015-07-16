@@ -90,7 +90,11 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Redis](#redis)
 * [Elasticsearch](#Elasticsearch)
 
-## Section 6: Misc
+## Section 6: JavaScript Web Development
+
+* [Node.js](#nodejs)
+
+## Section 7: Misc
 
 * [Contributions](#contributions)
 * [Credits](#credits)
@@ -1005,7 +1009,67 @@ If you installed the elasticsearch-head plugin, you can visit its interface at `
 
 Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of a reference. To get started, I suggest reading some of the blog posts linked on this [StackOverflow answer](http://stackoverflow.com/questions/11593035/beginners-guide-to-elasticsearch/11767610#11767610).
 
-## Section 6: Misc
+## Section 6: JavaScript Web Development
+
+### Node.js
+
+Install [Node.js](http://nodejs.org/) with Homebrew:
+
+    $ brew update
+    $ brew install node
+
+The formula also installs the [npm](https://npmjs.org/) package manager. However, as suggested by the Homebrew output, we need to add `/usr/local/share/npm/bin` to our path so that npm-installed modules with executables will have them picked up.
+
+To do so, add this line to your `~/.path` file, before the `export PATH` line:
+
+```bash
+PATH=/usr/local/share/npm/bin:$PATH
+```
+
+Open a new terminal for the `$PATH` changes to take effect.
+
+We also need to tell npm where to find the Xcode Command Line Tools, by running:
+
+    $ sudo xcode-select -switch /usr/bin
+
+(If Xcode Command Line Tools were installed by Xcode, try instead:)
+
+    $ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+
+Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
+
+    $ npm install -g coffee-script
+    $ npm install -g grunt-cli
+
+#### Npm usage
+
+To install a package:
+
+    $ npm install <package> # Install locally
+    $ npm install -g <package> # Install globally
+
+To install a package and save it in your project's `package.json` file:
+
+    $ npm install <package> --save
+
+To see what's installed:
+
+    $ npm list # Local
+    $ npm list -g # Global
+
+To find outdated packages (locally or globally):
+
+    $ npm outdated [-g]
+
+To upgrade all or a particular package:
+
+    $ npm update [<package>]
+
+To uninstall a package:
+
+    $ npm uninstall <package>
+
+## Section 7: Misc
 
 ### Contributions
 
