@@ -93,6 +93,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 ## Section 6: JavaScript Web Development
 
 * [Node.js](#nodejs)
+* [JSHint](#jshint)
 
 ## Section 7: Misc
 
@@ -1068,6 +1069,18 @@ To upgrade all or a particular package:
 To uninstall a package:
 
     $ npm uninstall <package>
+
+### JSHint
+
+JSHint is a JavaScript developer's best friend.
+
+If the extra credit assignment to install Sublime Package Manager was completed, JSHint can be run as part of Sublime Text.
+
+Install JSHint via npm (global install preferred)
+
+    $ npm install -g jshint
+
+Follow additional instructions on the [JSHint Package Manager page](https://sublime.wbond.net/packages/JSHint) or [build it manually](https://github.com/jshint/jshint).
 
 ## Section 7: Misc
 
