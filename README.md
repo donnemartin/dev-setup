@@ -53,7 +53,6 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Pip](#pip)
 * [Virtualenv](#virtualenv)
 * [Virtualenvwrapper](#virtualenvwrapper)
-* [Ruby and RVM](#ruby-and-rvm)
 
 ## Section 3: Python Data Analysis
 
@@ -94,6 +93,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Node.js](#nodejs)
 * [JSHint](#jshint)
+* [Ruby and RVM](#ruby-and-rvm)
 
 ## Section 7: Misc
 
@@ -530,90 +530,6 @@ Activate a virtual environment. Will also list all existing virtual environments
 Deactivate the currently active virtual environment. Note that workonwill automatically deactivate the current environment before activating a new one:
 
     $ deactivate
-
-### Ruby and RVM
-
-Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
-
-#### Install
-
-When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
-
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
-
-When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
-
-```bash
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-```
-
-I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clean. I suggest you do the same.
-
-After that, start a new terminal and run:
-
-    $ type rvm | head -1
-
-You should get the output `rvm is a function`.
-
-#### Usage
-
-The following command will show you which versions of Ruby you have installed:
-
-    $ rvm list
-
-The one that was just installed, Ruby 2.0, should be set as default. When managing multiple versions, you switch between them with:
-
-    $ rvm use system # Switch back to system install (1.8)
-    $ rvm use 2.0.0 --default # Switch to 2.0.0 and sets it as default
-
-Run the following to make sure the version you want is being used (in our case, the just-installed Ruby 1.9.3):
-
-    $ which ruby
-    $ ruby --version
-
-You can install another version with:
-
-    $ rvm install 1.9.3
-
-To update RVM itself, use:
-
-    $ rvm get stable
-
-[RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
-
-    $ which gem
-
-Update to its latest version with:
-
-    $ gem update --system
-
-To install a "gem" (Ruby package), run:
-
-    $ gem install <gemname>
-
-To install without generating the documentation for each gem (faster):
-
-    $ gem install <gemname> --no-document
-
-To see what gems you have installed:
-
-    $ gem list
-
-To check if any installed gems are outdated:
-
-    $ gem outdated
-
-To update all gems or a particular gem:
-
-    $ gem update [<gemname>]
-
-RubyGems keeps old versions of gems, so feel free to do come cleaning after updating:
-
-    $ gem cleanup
-
-I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
-
-    $ gem install compass --no-document
 
 ## Section 3: Python Data Analysis
 
@@ -1081,6 +997,90 @@ Install JSHint via npm (global install preferred)
     $ npm install -g jshint
 
 Follow additional instructions on the [JSHint Package Manager page](https://sublime.wbond.net/packages/JSHint) or [build it manually](https://github.com/jshint/jshint).
+
+### Ruby and RVM
+
+Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
+
+#### Install
+
+When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
+
+    $ curl -L https://get.rvm.io | bash -s stable --ruby
+
+When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
+
+```bash
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+```
+
+I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clean. I suggest you do the same.
+
+After that, start a new terminal and run:
+
+    $ type rvm | head -1
+
+You should get the output `rvm is a function`.
+
+#### Usage
+
+The following command will show you which versions of Ruby you have installed:
+
+    $ rvm list
+
+The one that was just installed, Ruby 2.0, should be set as default. When managing multiple versions, you switch between them with:
+
+    $ rvm use system # Switch back to system install (1.8)
+    $ rvm use 2.0.0 --default # Switch to 2.0.0 and sets it as default
+
+Run the following to make sure the version you want is being used (in our case, the just-installed Ruby 1.9.3):
+
+    $ which ruby
+    $ ruby --version
+
+You can install another version with:
+
+    $ rvm install 1.9.3
+
+To update RVM itself, use:
+
+    $ rvm get stable
+
+[RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
+
+    $ which gem
+
+Update to its latest version with:
+
+    $ gem update --system
+
+To install a "gem" (Ruby package), run:
+
+    $ gem install <gemname>
+
+To install without generating the documentation for each gem (faster):
+
+    $ gem install <gemname> --no-document
+
+To see what gems you have installed:
+
+    $ gem list
+
+To check if any installed gems are outdated:
+
+    $ gem outdated
+
+To update all gems or a particular gem:
+
+    $ gem update [<gemname>]
+
+RubyGems keeps old versions of gems, so feel free to do come cleaning after updating:
+
+    $ gem cleanup
+
+I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
+
+    $ gem install compass --no-document
 
 ## Section 7: Misc
 
