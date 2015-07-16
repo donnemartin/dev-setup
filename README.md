@@ -94,6 +94,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Node.js](#nodejs)
 * [JSHint](#jshint)
 * [Ruby and RVM](#ruby-and-rvm)
+* [Less](#less)
 
 ## Section 7: Misc
 
@@ -1081,6 +1082,40 @@ RubyGems keeps old versions of gems, so feel free to do come cleaning after upda
 I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
 
     $ gem install compass --no-document
+
+### LESS
+
+CSS preprocessors are becoming quite popular, the most popular processors are [LESS](http://lesscss.org/) and [SASS](http://sass-lang.com). Preprocessing is a lot like compiling code for CSS. It allows you to reuse CSS in many different ways. Let's start out with using LESS as a basic preprocessor, it's used by a lot of popular CSS frameworks like [Bootstrap](http://getbootstrap.com/).
+
+#### Install
+
+To install LESS you have to use NPM / Node, which you installed earlier using Homebrew. In the terminal use:
+
+    $ npm install less --global
+
+Note: the `--global` flag is optional but it prevents having to mess around with file paths. You can install without the flag, just know what you're doing.
+
+You can check that it installed properly by using:
+
+    $ lessc --version
+
+This should output some information about the compiler:
+
+    lessc 1.5.1 (LESS Compiler) [JavaScript]
+
+Okay, LESS is installed and running. Great!
+
+#### Usage
+
+There's a lot of different ways to use LESS. Generally I use it to compile my stylesheet locally. You can do that by using this command in the terminal:
+
+    $ lessc template.less template.css
+
+The two options are the "input" and "output" files for the compiler. The command looks in the current directory for the LESS stylesheet, compiles it, and outputs it to the second file in the same directory. You can add in paths to keep your project files organized:
+
+    $ lessc less/template.less css/template.css
+
+Read more about LESS on their page here: http://lesscss.org/
 
 ## Section 7: Misc
 
