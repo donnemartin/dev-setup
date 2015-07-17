@@ -9,19 +9,19 @@ Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfi
 
 ## Motivation
 
-Setting up a new developer machine can be an ad-hoc, manual, and time-consuming task.  This repo aims to simplify the process with easy-to-understand instructions and dotfiles/scripts that automate the following:
+**Setting up a new developer machine** can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify the process** with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
 
-* Customize commonly-used apps
-* Customize the terminal and vim
-* Setup defaults for OSX users
-* Install common Homebrew formulae for OSX users
-* Install common modules used for Python data analysis
-* Setup the Amazon Web Services (AWS) and Heroku environments
-* Setup common data stores
-* Setup Javascript web development
+* Customize commonly-used **developer apps**
+* Customize the **terminal** and **vim**
+* Setup **OS defaults** for OSX users
+* Install common **Homebrew formulae** for OSX users
+* Install common modules used for **Python data analysis**
+* Setup the **Amazon Web Services** (AWS) and **Heroku** environments
+* Setup common **data stores**
+* Setup **Javascript web development**
 
 Sections Summary:
-* Section 1 contains the dotfiles/scripts to setup your system (TLDR version).
+* Section 1 contains the dotfiles/scripts to setup your system.  **TLDR version**.
 * Sections 2 through 6 detail more information about what is installed in Section 1.  It also describes some intallation details if you prefer to install only specific components.
 
 This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
@@ -194,7 +194,7 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 export PIP_REQUIRE_VIRTUALENV=true
 
 # Install or upgrade a global package
-# Usage: syspip install –upgrade pip setuptools virtualenv
+# Usage: gpip install –upgrade pip setuptools virtualenv
 gpip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
@@ -205,6 +205,8 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 ### Step 3: Run the .osx Script
 
 When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
+
+I suggest you at least skim through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.
 
 ```bash
 ./.osx
@@ -222,7 +224,7 @@ Run the following command and follow the steps on the screen:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-When setting up a new Mac, you may want to install some common Homebrew formulae.  For a full listing of installed formulae, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly.
+When setting up a new Mac, you may want to install some common Homebrew formulae.  For a full listing of installed formulae, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly.
 
 ```bash
 ./brew.sh
