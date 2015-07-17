@@ -110,5 +110,9 @@ brew install mysql
 brew install mongo
 brew install redis
 
+# Heroku
+brew install heroku-toolbelt
+heroku update
+
 # Remove outdated versions from the cellar.
 brew cleanup
