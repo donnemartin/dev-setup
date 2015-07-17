@@ -108,6 +108,7 @@ brew install mysql
 
 # Install data stores
 brew install mongo
+brew install redis
 
 # Remove outdated versions from the cellar.
 brew cleanup
