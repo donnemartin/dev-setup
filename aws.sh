@@ -33,4 +33,22 @@ pip install awscli
 pip install mrjob
 pip install s3cmd
 
+###############################################################################
+# Python 3 Virtual Enviroment                                                 #
+###############################################################################
+
+echo "------------------------------"
+echo "Updating py3-data virtual environment with AWS modules."
+
+# Create a Python3 data environment
+# If this environment already exists from running pydata.sh,
+# it will not be overwritten
+mkvirtualenv --python=/usr/local/bin/python3 py3-data2
+workon py3-data2
+
+pip install boto
+pip install awscli
+#pip install mrjob # Python 2 only
+#pip install s3cmd # Python 2 only
+
 echo "Script completed."
