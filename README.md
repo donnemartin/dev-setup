@@ -804,13 +804,35 @@ S3cmd interacts with S3 through the command line.
 
 #### Installation
 
+**S3cmd is Python 2 only.**
+
 The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs s3cmd.  If you prefer to install it separately, run:
 
     $ pip install s3cmd
 
+Running the following command will prompt you to enter your AWS access and AWS secret keys. To follow security best practices, make sure you are using an IAM account as opposed to using the root account.
+
+I also suggest enabling GPG encryption which will encrypt your data at rest, and enabling HTTPS to encrypt your data in transit. Note this might impact performance.
+
+    $ s3cmd --configure
+
+Alternatively, the aws.sh script also syncs the template ```.s3cfg``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.s3cfg``` file.  Update the config file with your credentials and location:
+
+```
+[Credentials]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+...
+bucket_location = US
+...
+gpg_passphrase = YOURPASSPHRASE
+```
+
+**Be careful you do not accidentally check in your credentials.**  The .gitignore file is set to ignore files with credentials.
+
 #### Usage
 
-Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
+Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### S3DistCp
 
