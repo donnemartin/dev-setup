@@ -862,9 +862,9 @@ Refer to the following [s3-parallel-put IPython Notebook](https://github.com/don
 
 Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
 
-#### Installation
+#### Setup
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Redshift.
+Follow these [instructions](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html).
 
 #### Usage
 
