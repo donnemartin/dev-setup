@@ -840,13 +840,11 @@ S3DistCp combines smaller files and aggregates them together by taking in a patt
 
 #### Installation
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs S3DistCp.  If you prefer to install it separately, run:
-
-    $ pip install s3distcp
+S3DistCp comes bundled with the AWS CLI.
 
 #### Usage
 
-Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#).
+Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### S3-parallel-put
 
