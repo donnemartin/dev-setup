@@ -886,9 +886,9 @@ Refer to the following [Kinesis IPython Notebook](https://github.com/donnemartin
 
 Lambda runs code in response to events, automatically managing compute resources.
 
-#### Installation
+#### Setup
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Lambda.
+Follow these [instructions](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
 
 #### Usage
 
