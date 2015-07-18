@@ -874,9 +874,9 @@ Refer to the following [Redshift IPython Notebook](https://github.com/donnemarti
 
 Kinesis streams data in real time with the ability to process thousands of data streams per second.
 
-#### Installation
+#### Setup
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Kinesis.
+Follow these [instructions](http://docs.aws.amazon.com/kinesis/latest/dev/before-you-begin.html).
 
 #### Usage
 
