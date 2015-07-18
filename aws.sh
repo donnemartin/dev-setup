@@ -51,4 +51,32 @@ pip install awscli
 #pip install mrjob # Python 2 only
 #pip install s3cmd # Python 2 only
 
+###############################################################################
+# Sync AWS template config files                                              #
+###############################################################################
+
+echo "------------------------------"
+echo "Syncing AWS config files."
+
+cd "$(dirname "${BASH_SOURCE}")";
+
+git pull origin master;
+
+function doIt() {
+    rsync -avh --no-perms ".boto" ~;
+    rsync -avh --no-perms ".mrjob.conf" ~;
+    rsync -avh --no-perms ".aws/" ~;
+}
+
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+    doIt;
+else
+    read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+    echo "";
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        doIt;
+    fi;
+fi;
+unset doIt;
+
 echo "Script completed."
