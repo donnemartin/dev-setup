@@ -72,6 +72,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
+* [AWS CLI](#aws-cli)
 * [Boto](#boto)
 * [S3cmd](#s3cmd)
 * [S3DistCp](#s3distcp)
@@ -739,6 +740,39 @@ runners:
 #### Usage
 
 Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+
+### AWS CLI
+
+The AWS Command Line Interface is a unified tool to manage AWS services, allowing you to control multiple AWS services from the command line and to automate them through scripts.
+
+#### Installation
+
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs the AWS CLI.  If you prefer to install it separately, run:
+
+    $ pip install awscli
+
+Run the following command to configure the AWS CLI:
+
+    $ aws --configure
+
+Alternatively, the aws.sh script also syncs the template ```.aws/``` folder to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.aws/``` folder.  Update the config file with your credentials and location:
+
+```
+[default]
+region = us-east-1
+```
+
+```
+[default]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+```
+
+**Be careful you do not accidentally check in your credentials.**  The .gitignore file is set to ignore files with credentials.
+
+#### Usage
+
+Refer to the following [AWS CLI IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### Boto
 
