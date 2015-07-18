@@ -703,6 +703,8 @@ Spark is an in-memory cluster computing framework, up to 100 times faster for ce
 
 The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark.  If you prefer to install it separately, refer to the following [link](https://spark.apache.org/docs/latest/):
 
+    $ brew install apache-spark
+
 #### Usage
 
 Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
