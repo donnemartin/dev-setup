@@ -784,9 +784,19 @@ The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-s
 
     $ pip install boto
 
+The aws.sh script also syncs the template ```.boto``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.boto``` file.  Update the config file with your credentials:
+
+```
+[Credentials]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+```
+
+**Be careful you do not accidentally check in your credentials.**  The .gitignore file is set to ignore files with credentials.
+
 #### Usage
 
-Refer to the following [boto IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+Refer to the following [Boto IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### S3cmd
 
