@@ -41,6 +41,7 @@ source $EXTRA_PATH
 # Python 2 Virtual Enviroment                                                 #
 ###############################################################################
 
+echo "------------------------------"
 echo "Setting up py2-data virtual environment."
 
 # Create a Python2 data environment
@@ -58,11 +59,13 @@ pip install seaborn
 pip install scikit-learn
 pip install "ipython[all]"
 pip install bokeh
+pip install Flask
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
 ###############################################################################
 
+echo "------------------------------"
 echo "Setting up py3-data virtual environment."
 
 # Create a Python3 data environment
@@ -80,6 +83,7 @@ pip install seaborn
 pip install scikit-learn
 pip install "ipython[all]"
 pip install bokeh
+pip install Flask
 
 echo "------------------------------"
 echo "Script completed."
