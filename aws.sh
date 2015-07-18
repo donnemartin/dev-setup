@@ -52,7 +52,19 @@ pip install awscli
 #pip install s3cmd # Python 2 only
 
 ###############################################################################
-# Sync AWS template config files                                              #
+# System-Wide Packages                                                        #
+###############################################################################
+
+# If you need Homebrew, run the following:
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+brew install apache-spark
+
+###############################################################################
+# Sync AWS Template Config Files                                              #
 ###############################################################################
 
 echo "------------------------------"
