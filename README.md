@@ -852,9 +852,7 @@ S3-parallel-put uploads multiple files to S3 in parallel.
 
 #### Installation
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs S3Dis3-parallel-putstCp.  If you prefer to install it separately, run:
-
-    $ pip install s3-parallel-put
+    $ git clone https://github.com/twpayne/s3-parallel-put.git
 
 #### Usage
 
