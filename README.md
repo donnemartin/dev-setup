@@ -710,13 +710,31 @@ Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/d
 
 ### MapReduce
 
-Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters.
+Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters such as AWS Elastic MapReduce (EMR).
 
 #### Installation
+
+**Mrjob is Python 2 only.**
 
 The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs mrjob.  If you prefer to install it separately, run:
 
     $ pip install mrjob
+
+The aws.sh script also syncs the template ```.mrjob.conf``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.mrjob.conf``` file.  Update the config file with your credentials, keypair, region, and S3 bucket paths:
+
+```
+runners:
+  emr:
+    aws_access_key_id: YOURACCESSKEY
+    aws_secret_access_key: YOURSECRETKEY
+    aws_region: us-east-1
+    ec2_key_pair: YOURKEYPAIR
+    ec2_key_pair_file: ~/.ssh/YOURKEYPAIR.pem
+    ...
+    s3_scratch_uri: s3://YOURBUCKETSCRATCH
+    s3_log_uri: s3://YOURBUCKETLOG
+    ...
+```
 
 #### Usage
 
