@@ -13,6 +13,9 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# Files that contain credentials
+# Files that contain credentials or personal info
+.extra
 .boto
 .mrjob.conf
+.s3cfg
+.aws/
