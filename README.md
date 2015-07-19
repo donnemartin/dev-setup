@@ -30,14 +30,13 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Step 1: Update the OS and Install Xcode Tools](https://github.com/donnemartin/dev-setup#step-1-update-the-os-and-install-xcode-tools)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
-    * [Optional: Install Apps](https://github.com/donnemartin/dev-setup#optional-install-apps)
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
     * [Running with Git](https://github.com/donnemartin/dev-setup#running-with-git)
     * [Running without Git](https://github.com/donnemartin/dev-setup#running-without-git)
     * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup#optional-add-custom-commands)
     * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup)
-* [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
-* [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script)
+* [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script)
+* [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
 * [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
 * [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-aws.sh-script)
 
@@ -130,10 +129,6 @@ If you're running 10.8 or older, you'll need to go to [http://developer.apple.co
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
-#### Optional: Install Apps
-
-Some of the scripts tweak settings on apps such as [Google Chrome](#google-chrome) and [Sublime Text](#sublime-text).  If you use these apps, it might be useful to install them first.
-
 ### Step 2: Run the bootstrap.sh Script
 
 <p align="center">
@@ -204,22 +199,7 @@ gpip(){
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/dev-setup/fork) instead, though.
 
-### Step 3: Run the .osx Script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
-  <br/>
-</p>
-
-When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
-
-**I strongly suggest you read through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  It is meant for you to customize.**
-
-    $ ./.osx
-
-**For your terminal customization to take full effect, quit and re-start the terminal.**
-
-### Step 4: Run the brew.sh Script
+### Step 3: Run the brew.sh Script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
@@ -248,6 +228,21 @@ Add the newly installed shell to the list of allowed shells:
 Change to the new shell:
 
     $ chsh -s /usr/local/bin/bash
+
+**For your terminal customization to take full effect, quit and re-start the terminal.**
+
+### Step 4: Run the .osx Script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
+  <br/>
+</p>
+
+When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
+
+**I strongly suggest you read through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  It is meant for you to customize.**
+
+    $ ./.osx
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
@@ -290,11 +285,13 @@ Install your favorite browser, mine happens to be Chrome.
 
 #### Installation
 
-Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Google Chrome.
+
+If you prefer to install it separately, download it from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
 
 #### Configuration
 
-The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Chrome configurations.
+The section [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Chrome configurations.
 
 ### Sublime Text
 
@@ -307,7 +304,9 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 #### Installation
 
-Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Sublime Text.
+
+If you prefer to install it separately, go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
 **Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text. To do so, right-click on the running application and select **Options > Keep in Dock**.
 
@@ -315,7 +314,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 #### Configuration
 
-The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
+The section [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
@@ -366,6 +365,16 @@ While inside the `Packages` directory, clone the theme repository using the comm
 
 [Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.  Unfortunately I have found that it does not perform as well when working with very large files that you typically encounter while working with data.  As Atom matures, I'm hopeful its performance will improve.
 
+#### Installation
+
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Google Chrome.
+
+If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
+
+#### Configuration
+
+Atom has a great package manager that allows you to easily install both core and community packages.
+
 ### Homebrew
 
 <p align="center">
@@ -377,7 +386,11 @@ Package managers make it so much easier to install and update applications (for 
 
 #### Installation
 
-The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
+
+If you prefer to install it separately, run the following command and follow the steps on the screen:
+
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #### Usage
 
@@ -511,7 +524,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain terminal customizations.
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain terminal customizations.
 
 ### iTerm2
 
@@ -520,7 +533,7 @@ The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemarti
   <br/>
 </p>
 
-Many prefer iTerm2 over the default Terminal. Download and install iTerm2 (the newest version, even if it says "beta release").
+I prefer iTerm2 over the stock Terminal, as it has some [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
 
 In Finder, drag and drop the iTerm Application file into the Applications folder.
 
@@ -629,7 +642,7 @@ OS X, like Linux, ships with [Python](http://python.org/) already installed. But
 
 #### Installation
 
-The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ### Pip
 
@@ -1249,7 +1262,7 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 #### Installation
 
-The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs MySQL.  If you prefer to install it separately, run:
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs MySQL.  If you prefer to install it separately, run:
 
     $ brew update # Always good to do
     $ brew install mysql
@@ -1306,7 +1319,7 @@ You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/
 
 #### Installation
 
-The section Step 4: Run the brew.sh Script installs MongoDB. If you prefer to install it separately, run:
+The section Step 3: Run the brew.sh Script installs MongoDB. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install mongo
@@ -1334,7 +1347,7 @@ I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual
 
 #### Installation
 
-The section Step 4: Run the brew.sh Script installs Redis. If you prefer to install it separately, run:
+The section Step 3: Run the brew.sh Script installs Redis. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install redis
