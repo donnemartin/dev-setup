@@ -213,7 +213,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
 
-I suggest you at least skim through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.
+**I strongly suggest you read through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  It is meant for you to customize.**
 
     $ ./.osx
 
@@ -226,17 +226,11 @@ I suggest you at least skim through the [.osx source file](https://github.com/do
   <br/>
 </p>
 
-First, install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
+When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/) along with some common apps and Homebrew formulae.  Homebrew is a package manager that simplifies installing and updating applications or libraries.
 
-Run the following command and follow the steps on the screen:
-
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-When setting up a new Mac, you may want to install some common Homebrew formulae.  For a full listing of installed formulae, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly.
+**For a full listing of installed formulae, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
     $ ./brew.sh
-
-This will include the latest version of Python 2 and Python 3.
 
 Restart your terminal.  If you run into the following error, it is because brew installed an updated bash version, but it doesn't switch it to be your default:
 
