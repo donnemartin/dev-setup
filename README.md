@@ -44,9 +44,10 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 ## Section 2: General Apps and Tools
 
 * [Google Chrome](#google-chrome)
-* [Homebrew](#homebrew)
 * [Sublime Text](#sublime-text)
 * [Atom](#atom)
+* [Homebrew](#homebrew)
+* [Ruby and RVM](#ruby-and-rvm)
 * [Terminal Customization](#terminal-customization)
 * [iTerm2](#iterm2)
 * [Git](#git)
@@ -96,7 +97,6 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Node.js](#nodejs)
 * [JSHint](#jshint)
-* [Ruby and RVM](#ruby-and-rvm)
 * [Less](#less)
 
 ## Section 7: Misc
@@ -302,51 +302,6 @@ Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/brow
 
 The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Chrome configurations.
 
-### Homebrew
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew.png">
-  <br/>
-</p>
-
-Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
-
-#### Installation
-
-The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
-
-#### Usage
-
-To install a package (or **Formula** in Homebrew vocabulary) simply type:
-
-    $ brew install <formula>
-
-To update Homebrew's directory of formulae, run:
-
-    $ brew update
-
-**Note**: I've seen that command fail sometimes because of a bug. If that ever happens, run the following (when you have Git installed):
-
-    $ cd /usr/local
-    $ git fetch origin
-    $ git reset --hard origin/master
-
-To see if any of your packages need to be updated:
-
-    $ brew outdated
-
-To update a package:
-
-    $ brew upgrade <formula>
-
-Homebrew keeps older versions of packages installed, in case you want to roll back. That rarely is necessary, so you can do some cleanup to get rid of those old versions:
-
-    $ brew cleanup
-
-To see what you have installed (with their version numbers):
-
-    $ brew list --versions
-
 ### Sublime Text
 
 <p align="center">
@@ -416,6 +371,140 @@ While inside the `Packages` directory, clone the theme repository using the comm
 </p>
 
 [Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.  Unfortunately I have found that it does not perform as well when working with very large files that you typically encounter while working with data.  As Atom matures, I'm hopeful its performance will improve.
+
+### Homebrew
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew.png">
+  <br/>
+</p>
+
+Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
+
+#### Installation
+
+The section [Step 4: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
+
+#### Usage
+
+To install a package (or **Formula** in Homebrew vocabulary) simply type:
+
+    $ brew install <formula>
+
+To update Homebrew's directory of formulae, run:
+
+    $ brew update
+
+**Note**: I've seen that command fail sometimes because of a bug. If that ever happens, run the following (when you have Git installed):
+
+    $ cd /usr/local
+    $ git fetch origin
+    $ git reset --hard origin/master
+
+To see if any of your packages need to be updated:
+
+    $ brew outdated
+
+To update a package:
+
+    $ brew upgrade <formula>
+
+Homebrew keeps older versions of packages installed, in case you want to roll back. That rarely is necessary, so you can do some cleanup to get rid of those old versions:
+
+    $ brew cleanup
+
+To see what you have installed (with their version numbers):
+
+    $ brew list --versions
+
+### Ruby and RVM
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/ruby.png">
+  <br/>
+</p>
+
+Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
+
+#### Installation
+
+When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
+
+    $ curl -L https://get.rvm.io | bash -s stable --ruby
+
+When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
+
+```bash
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+```
+
+I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clean. I suggest you do the same.
+
+After that, start a new terminal and run:
+
+    $ type rvm | head -1
+
+You should get the output `rvm is a function`.
+
+#### Usage
+
+The following command will show you which versions of Ruby you have installed:
+
+    $ rvm list
+
+The one that was just installed, Ruby 2.0, should be set as default. When managing multiple versions, you switch between them with:
+
+    $ rvm use system # Switch back to system install (1.8)
+    $ rvm use 2.0.0 --default # Switch to 2.0.0 and sets it as default
+
+Run the following to make sure the version you want is being used (in our case, the just-installed Ruby 1.9.3):
+
+    $ which ruby
+    $ ruby --version
+
+You can install another version with:
+
+    $ rvm install 1.9.3
+
+To update RVM itself, use:
+
+    $ rvm get stable
+
+[RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
+
+    $ which gem
+
+Update to its latest version with:
+
+    $ gem update --system
+
+To install a "gem" (Ruby package), run:
+
+    $ gem install <gemname>
+
+To install without generating the documentation for each gem (faster):
+
+    $ gem install <gemname> --no-document
+
+To see what gems you have installed:
+
+    $ gem list
+
+To check if any installed gems are outdated:
+
+    $ gem outdated
+
+To update all gems or a particular gem:
+
+    $ gem update [<gemname>]
+
+RubyGems keeps old versions of gems, so feel free to do come cleaning after updating:
+
+    $ gem cleanup
+
+I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
+
+    $ gem install compass --no-document
 
 ### Terminal Customization
 
@@ -1400,95 +1489,6 @@ Install JSHint via npm (global install preferred)
     $ npm install -g jshint
 
 Follow additional instructions on the [JSHint Package Manager page](https://sublime.wbond.net/packages/JSHint) or [build it manually](https://github.com/jshint/jshint).
-
-### Ruby and RVM
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/ruby.png">
-  <br/>
-</p>
-
-Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
-
-#### Installation
-
-When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
-
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
-
-When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
-
-```bash
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-```
-
-I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clean. I suggest you do the same.
-
-After that, start a new terminal and run:
-
-    $ type rvm | head -1
-
-You should get the output `rvm is a function`.
-
-#### Usage
-
-The following command will show you which versions of Ruby you have installed:
-
-    $ rvm list
-
-The one that was just installed, Ruby 2.0, should be set as default. When managing multiple versions, you switch between them with:
-
-    $ rvm use system # Switch back to system install (1.8)
-    $ rvm use 2.0.0 --default # Switch to 2.0.0 and sets it as default
-
-Run the following to make sure the version you want is being used (in our case, the just-installed Ruby 1.9.3):
-
-    $ which ruby
-    $ ruby --version
-
-You can install another version with:
-
-    $ rvm install 1.9.3
-
-To update RVM itself, use:
-
-    $ rvm get stable
-
-[RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
-
-    $ which gem
-
-Update to its latest version with:
-
-    $ gem update --system
-
-To install a "gem" (Ruby package), run:
-
-    $ gem install <gemname>
-
-To install without generating the documentation for each gem (faster):
-
-    $ gem install <gemname> --no-document
-
-To see what gems you have installed:
-
-    $ gem list
-
-To check if any installed gems are outdated:
-
-    $ gem outdated
-
-To update all gems or a particular gem:
-
-    $ gem update [<gemname>]
-
-RubyGems keeps old versions of gems, so feel free to do come cleaning after updating:
-
-    $ gem cleanup
-
-I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
-
-    $ gem install compass --no-document
 
 ### LESS
 
