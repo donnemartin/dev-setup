@@ -15,6 +15,7 @@ This repo builds on the awesome work from the following repos:
 * [PyData](http://pydata.org/static/base/includes/images/pydatalogo-generic.png)
 * [AWS](http://aws.amazon.com)
 * [Chrome](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Google_Chrome_icon_(2011).svg/1024px-Google_Chrome_icon_(2011).svg.png)
+* [iTerm2](https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png)
 * [Atom](https://raw.githubusercontent.com/zeke/atom-icon/master/old-icon/2.png)
 * [Git](https://git-scm.com/images/logos/logomark-orange@2x.png)
 * [Python](https://www.python.org/)
