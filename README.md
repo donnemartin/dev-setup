@@ -130,6 +130,11 @@ Once you reach the downloads page, search for "command line tools", and download
 
 Some of the scripts tweak settings on apps such as [Google Chrome](#google-chrome) and [Sublime Text](#sublime-text).  If you use these apps, it might be useful to install them first.
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+</p>
+
 ### Step 2: Run the bootstrap.sh Script
 
 The bootstrap.sh script will sync the dev-tools repo to your local machine.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this README describes some of the customizations.
@@ -203,6 +208,11 @@ gpip(){
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/dev-setup/fork) instead, though.
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
+</p>
+
 ### Step 3: Run the .osx Script
 
 When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
@@ -214,6 +224,11 @@ I suggest you at least skim through the [.osx source file](https://github.com/do
 ```
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew.png">
+</p>
 
 ### Step 4: Run the brew.sh Script
 
@@ -256,6 +271,11 @@ chsh -s /usr/local/bin/bash
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pydata.png">
+</p>
+
 ### Step 5: Run the pydata.sh Script
 
 If you'd like to set up a development environment to work with Python and data analysis, run the following script:
@@ -274,9 +294,19 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 ./aws.sh
 ```
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
+</p>
+
 [Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
 
 ## Section 2: General Apps and Tools
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/chrome.png">
+</p>
 
 ### Google Chrome
 
@@ -289,6 +319,11 @@ Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/brow
 #### Configuration
 
 The section [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Chrome configurations.
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew.png">
+</p>
 
 ### Homebrew
 
@@ -329,6 +364,11 @@ Homebrew keeps older versions of packages installed, in case you want to roll ba
 To see what you have installed (with their version numbers):
 
     $ brew list --versions
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/sublime.png">
+</p>
 
 ### Sublime Text
 
@@ -388,9 +428,19 @@ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
         "theme": "Soda Light 3.sublime-theme"
     }
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/atom.png">
+</p>
+
 ### Atom
 
 [Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.  Unfortunately I have found that it does not perform as well when working with very large files that you typically encounter while working with data.  As Atom matures, I'm hopeful its performance will improve.
+
+<p align="center">
+  <br/>
+  <img src="http://i.imgur.com/GMnses0.png">
+</p>
 
 ### Terminal Customization
 
@@ -399,6 +449,11 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 #### Configuration
 
 The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 3: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain terminal customizations.
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/git.png">
+</p>
 
 ### Git
 
@@ -434,6 +489,11 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
 
 **Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/dev-setup/blob/master/.gitignore) file for inspiration.
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vim.png">
+</p>
+
 ### Vim
 
 Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
@@ -445,6 +505,11 @@ I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of
 #### Configuration
 
 The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/python.png">
+</p>
 
 ### Python
 
@@ -548,6 +613,11 @@ Deactivate the currently active virtual environment. Note that workonwill automa
 
 ## Section 3: Python Data Analysis
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/anaconda.png">
+</p>
+
 ### Anaconda
 
 Anaconda is a free distribution of the Python programming language for large-scale data processing, predictive analytics, and scientific computing that aims to simplify package management and deployment.
@@ -557,6 +627,11 @@ Anaconda is a free distribution of the Python programming language for large-sca
 The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs packages you need to run Python data applications.  Alternatively, you can install the more heavy-weight Anaconda instead.
 
 Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/install.html) or the more lightweight [miniconda](http://conda.pydata.org/miniconda.html).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/notebook.png">
+</p>
 
 ### IPython Notebook
 
@@ -581,6 +656,11 @@ If you run into an issue about pyzmq, refer to the following [Stack Overflow pos
 
 For an examples of IPython Notebooks used in Data Science, see the repo [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/numpy.png">
+</p>
+
 ### NumPy
 
 NumPy adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
@@ -594,6 +674,11 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 #### Usage
 
 Refer to the following [Numpy IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#numpy).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pandas.png">
+</p>
 
 ### Pandas
 
@@ -609,6 +694,11 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 
 Refer to the following [pandas IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#pandas).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/matplotlib.png">
+</p>
+
 ### Matplotlib
 
 Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
@@ -622,6 +712,11 @@ The section [Step 5: Run the pydata.sh Scripts](https://github.com/donnemartin/d
 #### Usage
 
 Refer to the following [matplotlib IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/seaborn.png">
+</p>
 
 ### Seaborn
 
@@ -637,6 +732,11 @@ The section [Step 5: Run the pydata.sh Scripts](https://github.com/donnemartin/d
 
 Refer to the following [matplotlib with Seaborn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/scikitlearn.png">
+</p>
+
 ### Scikit-learn
 
 Scikit-learn adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
@@ -650,6 +750,11 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 #### Usage
 
 Refer to the following [scikit-learn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/scipy.png">
+</p>
 
 ### SciPy
 
@@ -665,6 +770,11 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 
 Refer to the following [SciPy IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/flask.png">
+</p>
+
 ### Flask
 
 Flask is a micro web application framework written in Python.
@@ -678,6 +788,11 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 #### Usage
 
 Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/bokeh.png">
+</p>
 
 ### Bokeh
 
@@ -695,6 +810,11 @@ Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/
 
 ## Section 4: AWS and Heroku
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/spark.png">
+</p>
+
 ### Spark
 
 Spark is an in-memory cluster computing framework, up to 100 times faster for certain applications and is well suited for machine learning algorithms.
@@ -708,6 +828,11 @@ The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-s
 #### Usage
 
 Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mrjob.png">
+</p>
 
 ### MapReduce
 
@@ -740,6 +865,11 @@ runners:
 #### Usage
 
 Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+</p>
 
 ### AWS CLI
 
@@ -774,6 +904,11 @@ aws_secret_access_key = YOURSECRETKEY
 
 Refer to the following [AWS CLI IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+</p>
+
 ### Boto
 
 Boto is the official AWS SDK for Python.
@@ -797,6 +932,11 @@ aws_secret_access_key = YOURSECRETKEY
 #### Usage
 
 Refer to the following [Boto IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+</p>
 
 ### S3cmd
 
@@ -834,6 +974,11 @@ gpg_passphrase = YOURPASSPHRASE
 
 Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+</p>
+
 ### S3DistCp
 
 S3DistCp combines smaller files and aggregates them together by taking in a pattern and target file. S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster.
@@ -845,6 +990,11 @@ S3DistCp comes bundled with the AWS CLI.
 #### Usage
 
 Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+</p>
 
 ### S3-parallel-put
 
@@ -858,6 +1008,11 @@ S3-parallel-put uploads multiple files to S3 in parallel.
 
 Refer to the following [s3-parallel-put IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_redshift.png">
+</p>
+
 ### Redshift
 
 Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
@@ -869,6 +1024,11 @@ Follow these [instructions](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gs
 #### Usage
 
 Refer to the following [Redshift IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_kinesis.png">
+</p>
 
 ### Kinesis
 
@@ -882,6 +1042,11 @@ Follow these [instructions](http://docs.aws.amazon.com/kinesis/latest/dev/before
 
 Refer to the following [Kinesis IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_lambda.png">
+</p>
+
 ### Lambda
 
 Lambda runs code in response to events, automatically managing compute resources.
@@ -894,6 +1059,11 @@ Follow these [instructions](http://docs.aws.amazon.com/lambda/latest/dg/setting-
 
 Refer to the following [Lambda IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_ml.png">
+</p>
+
 ### AWS Machine Learning
 
 Amazon Machine Learning is a service that makes it easy for developers of all skill levels to use machine learning technology. Amazon Machine Learning provides visualization tools and wizards that guide you through the process of creating machine learning (ML) models without having to learn complex ML algorithms and technology. Once your models are ready, Amazon Machine Learning makes it easy to obtain predictions for your application using simple APIs, without having to implement custom prediction generation code, or manage any infrastructure.
@@ -905,6 +1075,11 @@ Follow these [instructions](http://docs.aws.amazon.com/machine-learning/latest/d
 #### Usage
 
 Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/heroku.jpg">
+</p>
 
 ### Heroku
 
@@ -951,6 +1126,11 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 ## Section 5: Data Stores
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql.png">
+</p>
+
 ### MySQL
 
 #### Installation
@@ -988,6 +1168,11 @@ To connect with the command-line client, run:
 
 **Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql_workbench.png">
+</p>
+
 #### MySQL Workbench
 
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
@@ -995,6 +1180,11 @@ In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Wor
 Installation
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mongodb.jpeg">
+</p>
 
 ### MongoDB
 
@@ -1018,6 +1208,11 @@ In another terminal, connect to the database with the Mongo shell using:
     $ mongo
 
 I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual/tutorial/getting-started/) guide for more!
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/redis.png">
+</p>
 
 ### Redis
 
@@ -1045,6 +1240,11 @@ In another terminal, connect to the server with the Redis command-line interface
     $ redis-cli
 
 I'll let you refer to Redis' [documentation](http://redis.io/documentation) or other tutorials for more information.
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/elasticsearch.png">
+</p>
 
 ### Elasticsearch
 
@@ -1104,6 +1304,11 @@ Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of 
 
 ## Section 6: Web Development
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/nodejs.png">
+</p>
+
 ### Node.js
 
 Install [Node.js](http://nodejs.org/) with Homebrew:
@@ -1162,6 +1367,11 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/jshint.png">
+</p>
+
 ### JSHint
 
 JSHint is a JavaScript developer's best friend.
@@ -1173,6 +1383,11 @@ Install JSHint via npm (global install preferred)
     $ npm install -g jshint
 
 Follow additional instructions on the [JSHint Package Manager page](https://sublime.wbond.net/packages/JSHint) or [build it manually](https://github.com/jshint/jshint).
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/ruby.png">
+</p>
 
 ### Ruby and RVM
 
@@ -1257,6 +1472,11 @@ RubyGems keeps old versions of gems, so feel free to do come cleaning after upda
 I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
 
     $ gem install compass --no-document
+
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/less.jpeg">
+</p>
 
 ### LESS
 
