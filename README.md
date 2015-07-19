@@ -424,7 +424,7 @@ To see what you have installed (with their version numbers):
   <br/>
 </p>
 
-Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
+[Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
 
 #### Installation
 
@@ -1058,7 +1058,9 @@ Refer to the following [Boto IPython Notebook](https://github.com/donnemartin/da
   <br/>
 </p>
 
-S3cmd interacts with S3 through the command line.
+Before I discovered [S3cmd](http://s3tools.org/s3cmd), I had been using the [S3 console](http://aws.amazon.com/console/) to do basic operations and [boto](https://boto.readthedocs.org/en/latest/) to do more of the heavy lifting.  However, sometimes I just want to hack away at a command line to do my work.
+
+I've found S3cmd to be a great command line tool for interacting with S3 on AWS.  S3cmd is written in Python, is open source, and is free even for commercial use.  It offers more advanced features than those found in the [AWS CLI](http://aws.amazon.com/cli/).
 
 #### Installation
 
@@ -1099,7 +1101,7 @@ Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/d
   <br/>
 </p>
 
-S3DistCp combines smaller files and aggregates them together by taking in a pattern and target file. S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster.
+[S3DistCp](http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/UsingEMR_s3distcp.html) is an extension of DistCp that is optimized to work with Amazon S3.  S3DistCp is useful for combining smaller files and aggregate them together, taking in a pattern and target file to combine smaller input files to larger ones.  S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster.
 
 #### Installation
 
@@ -1116,7 +1118,7 @@ Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemarti
   <br/>
 </p>
 
-S3-parallel-put uploads multiple files to S3 in parallel.
+[s3-parallel-put](https://github.com/twpayne/s3-parallel-put.git) is a great tool for uploading multiple files to S3 in parallel.
 
 #### Installation
 
