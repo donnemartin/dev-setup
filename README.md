@@ -123,9 +123,7 @@ Now, Xcode weighs something like 2GB, and you don't need it unless you're develo
 
 If you are running **OS X 10.9 Mavericks or later**, then you can install the Xcode Command Line Tools directly from the command line with:
 
-```bash
-xcode-select --install
-```
+    $ xcode-select --install
 
 If you're running 10.8 or older, you'll need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
 
@@ -150,29 +148,21 @@ Below you'll find two ways to run the bootstrap script, one using Git and the ot
 
 Git should have been installed from the section [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).  You can clone the repository wherever you want. (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
-```bash
-git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
-```
+    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
 
 To update, `cd` into your local `dev-setup` repository and then:
 
-```bash
-source bootstrap.sh
-```
+    $ source bootstrap.sh
 
 Alternatively, to update while avoiding the confirmation prompt:
 
-```bash
-set -- -f; source bootstrap.sh
-```
+    $ set -- -f; source bootstrap.sh
 
 #### Running without Git
 
 To install these dotfiles without Git:
 
-```bash
-cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
-```
+$ cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
 
 To update later on, just run that command again.
 
@@ -224,9 +214,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults.  Thi
 
 I suggest you at least skim through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.
 
-```bash
-./.osx
-```
+    $ ./.osx
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
@@ -241,15 +229,11 @@ First, install [Homebrew](http://brew.sh/), a package manager that simplifies in
 
 Run the following command and follow the steps on the screen:
 
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 When setting up a new Mac, you may want to install some common Homebrew formulae.  For a full listing of installed formulae, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly.
 
-```bash
-./brew.sh
-```
+    $ ./brew.sh
 
 This will include the latest version of Python 2 and Python 3.
 
@@ -264,15 +248,11 @@ complete: usage: complete [-abcdefgjksuv] [-pr] [-o option] [-A action] [-G glob
 
 Add the newly installed shell to the list of allowed shells:
 
-```bash
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-```
+    $ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 
 Change to the new shell:
 
-```bash
-chsh -s /usr/local/bin/bash
-```
+    $ chsh -s /usr/local/bin/bash
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
@@ -285,9 +265,7 @@ chsh -s /usr/local/bin/bash
 
 If you'd like to set up a development environment to work with Python and data analysis, run the following script:
 
-```bash
-./pydata.sh
-```
+    $ ./pydata.sh
 
 [Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
 
@@ -300,9 +278,7 @@ If you'd like to set up a development environment to work with Python and data a
 
 If you'd like to set up a development environment to work Amazon Web Services, run the following script:
 
-```bash
-./aws.sh
-```
+    $ ./aws.sh
 
 [Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
 
@@ -407,9 +383,7 @@ You can locate your Sublime Text `Packages` directory by using the menu item `Pr
 
 While inside the `Packages` directory, clone the theme repository using the command below:
 
-```bash
-git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
-```
+    $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
 
 ##### Activating the Theme on Sublime Text 2
 
@@ -1261,47 +1235,35 @@ You can use elasticsearch for such cool things as real-time search results, auto
 
 Elasticsearch runs on Java, so check if you have it installed by running:
 
-```bash
-java -version
-```
+    $ java -version
 
 If Java isn't installed yet, a window will appear prompting you to install it. Go ahead and click "Install".
 
 Next, install elasticsearch with:
 
-```bash
-$ brew install elasticsearch
-```
+    $ brew install elasticsearch
 
 **Note**: Elasticsearch also has a `plugin` program that gets moved to your `PATH`. I find that too generic of a name, so I rename it to `elasticsearch-plugin` by running (will need to do that again if you update elasticsearch):
 
-```bash
-$ mv /usr/local/bin/plugin /usr/local/bin/elasticsearch-plugin
-```
+    $ mv /usr/local/bin/plugin /usr/local/bin/elasticsearch-plugin
 
 Below I will use `elasticsearch-plugin`, just replace it with `plugin` if you haven't followed this step.
 
 As you guessed, you can add plugins to elasticsearch. A popular one is [elasticsearch-head](http://mobz.github.io/elasticsearch-head/), which gives you a web interface to the REST API. Install it with:
 
-```bash
-$ elasticsearch-plugin --install mobz/elasticsearch-head
-```
+    $ elasticsearch-plugin --install mobz/elasticsearch-head
 
 ### Usage
 
 Start a local elasticsearch server with:
 
-```bash
-$ elasticsearch -f
-```
+    $ elasticsearch -f
 
 (The `-f` option tells it to run in the foreground, so you can stop it with `Ctrl+C`.)
 
 Test that the server is working correctly by running:
 
-```bash
-$ curl -XGET 'http://localhost:9200/'
-```
+    $ curl -XGET 'http://localhost:9200/'
 
 If you installed the elasticsearch-head plugin, you can visit its interface at `http://localhost:9200/_plugin/head/`.
 
