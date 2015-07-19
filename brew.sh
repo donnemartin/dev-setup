@@ -121,5 +121,31 @@ brew install redis
 brew install heroku-toolbelt
 heroku update
 
+# Install Cask
+install caskroom/cask/brew-cask
+
+# Core
+brew cask install --appdir="/Applications" alfred
+brew cask install --appdir="~/Applications" iterm2
+brew cask install --appdir="~/Applications" java
+
+# Development
+brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" atom
+brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" vagrant
+brew cask install --appdir="/Applications" heroku-toolbelt
+
+# Misc
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" skype
+brew cask install --appdir="/Applications" slack
+brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" evernote
+
+# Link Cask Apps to Alfred
+brew cask alfred link
+
 # Remove outdated versions from the cellar.
 brew cleanup
