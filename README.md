@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://i.imgur.com/GMnses0.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
 </p>
 
 dev-setup
@@ -12,7 +12,7 @@ Developer setup instructions and dotfiles/scripts. Also includes setup for Pytho
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that help **automate** the following:
 
 * Install and customize commonly-used **developer apps and tools**
-* Customize the **terminal** and **Vim**
+* Customize **Terminal, iTerm2, and Vim**
 * Setup **OSX defaults** for Mac users
 * Install common **Homebrew formulae** for Mac users
 * Install common modules used for **Python data analysis**
@@ -420,7 +420,7 @@ While inside the `Packages` directory, clone the theme repository using the comm
 ### Terminal Customization
 
 <p align="center">
-  <img src="http://i.imgur.com/GMnses0.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
   <br/>
 </p>
 
@@ -433,7 +433,7 @@ The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemarti
 ### iTerm2
 
 <p align="center">
-  <img src="http://i.imgur.com/GMnses0.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
   <br/>
 </p>
 
