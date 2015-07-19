@@ -1520,10 +1520,7 @@ Bug reports and suggestions are [welcome](https://github.com/donnemartin/dev-set
 
 ### Credits
 
-This repo builds on the awesome work from the following repos:
-
-* [dotfiles](https://github.com/mathiasbynens/dotfiles) by Mathias Bynens
-* [mac-dev-setup](https://github.com/nicolashery/mac-dev-setup) by Nicolas Hery
+See the [Credits Page](https://github.com/donnemartin/dev-setup/blob/master/CREDITS.md).
 
 ### License
 
