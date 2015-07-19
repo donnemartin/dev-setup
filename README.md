@@ -232,7 +232,7 @@ I suggest you at least skim through the [.osx source file](https://github.com/do
 
 <p align="center">
   <br/>
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
 </p>
 
 ### Step 4: Run the brew.sh Script
@@ -291,6 +291,11 @@ If you'd like to set up a development environment to work with Python and data a
 
 [Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
 
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
+</p>
+
 ### Step 6: Run the aws.sh Script
 
 If you'd like to set up a development environment to work Amazon Web Services, run the following script:
@@ -298,11 +303,6 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 ```bash
 ./aws.sh
 ```
-
-<p align="center">
-  <br/>
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
-</p>
 
 [Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
 
@@ -1480,7 +1480,7 @@ I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/)
 
 <p align="center">
   <br/>
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/less.jpeg">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/less.png">
 </p>
 
 ### LESS
