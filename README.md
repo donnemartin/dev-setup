@@ -5,30 +5,30 @@
 dev-setup
 ============
 
-Dev machine setup instructions, dotfiles/scripts, and tools. Also includes dotfiles/scripts for python data analysis, AWS, JavaScript web development, and hacker defaults for OSX. https://bit.ly/git-dotfiles
+Developer setup instructions and dotfiles/scripts. Also includes setup for Python data analysis, AWS/Heroku, JavaScript web development, and hacker defaults for OSX. https://bit.ly/git-dotfiles
 
 ## Motivation
 
-**Setting up a new developer machine** can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify the process** with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
+Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that help **automate** the following:
 
-* Customize commonly-used **developer apps**
-* Customize the **terminal** and **vim**
-* Setup **OS defaults** for OSX users
-* Install common **Homebrew formulae** for OSX users
+* Install and customize commonly-used **developer apps and tools**
+* Customize the **terminal** and **Vim**
+* Setup **OSX defaults** for Mac users
+* Install common **Homebrew formulae** for Mac users
 * Install common modules used for **Python data analysis**
-* Setup the **Amazon Web Services** (AWS) and **Heroku** environments
+* Setup **Amazon Web Services** (AWS) and **Heroku**
 * Setup common **data stores**
 * Setup **Javascript web development**
 
 Sections Summary:
-* Section 1 contains the dotfiles/scripts to setup your system.  **TLDR version**.
-* Sections 2 through 6 detail more information about what is installed in Section 1.  It also describes some intallation details if you prefer to install only specific components.
+* Section 1 contains the dotfiles/scripts to setup your system (TLDR).
+* Sections 2 through 6 detail more information about installation, configuration, and usage for items in Section 1.
 
 This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
 
 ## Section 1: Installation
 
-* [Step 1: Update the Operating System](https://github.com/donnemartin/dev-setup#step-1-update-the-operating-system)
+* [Step 1: Update the OS and Install Xcode Tools](https://github.com/donnemartin/dev-setup#step-1-update-the-os-and-install-xcode-tools)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
     * [Optional: Install Apps](https://github.com/donnemartin/dev-setup#optional-install-apps)
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
@@ -106,7 +106,12 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ## Section 1: Installation
 
-### Step 1: Update the Operating System
+<p align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
+</p>
+
+### Step 1: Update the OS and Install Xcode Tools
 
 First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon and update both the OS and installed apps.
 
