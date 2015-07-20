@@ -45,7 +45,7 @@ echo "------------------------------"
 echo "Setting up py2-data virtual environment."
 
 # Create a Python2 data environment
-mkvirtualenv py2-data2
+mkvirtualenv py2-data
 workon py2-data2
 
 # Install Python data modules
@@ -70,7 +70,7 @@ echo "Setting up py3-data virtual environment."
 
 # Create a Python3 data environment
 mkvirtualenv --python=/usr/local/bin/python3 py3-data2
-workon py3-data2
+workon py3-data
 
 # Install Python data modules
 pip install numpy
