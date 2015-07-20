@@ -367,7 +367,7 @@ While inside the `Packages` directory, clone the theme repository using the comm
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Google Chrome.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Atom.
 
 If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
