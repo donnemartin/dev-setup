@@ -122,7 +122,7 @@ brew install heroku-toolbelt
 heroku update
 
 # Install Cask
-install caskroom/cask/brew-cask
+brew install caskroom/cask/brew-cask
 
 # Core
 brew cask install --appdir="/Applications" alfred
