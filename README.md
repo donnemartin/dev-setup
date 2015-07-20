@@ -285,6 +285,8 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 
     $ ./aws.sh
 
+[Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
+
 ### Step 7: Run the webdev.sh Script
 
 <p align="center">
@@ -298,7 +300,7 @@ If you'd like to set up a JavaScript web development environment, run the follow
 
     $ ./webdev.sh
 
-[Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
+[Section 6: JavaScript Web Development](#section-6-javascript-web-development) describes the installed packages and usage.
 
 ## Section 2: General Apps and Tools
 
