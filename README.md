@@ -208,7 +208,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/) along with some common apps and Homebrew formulae.  Homebrew is a package manager that simplifies installing and updating applications or libraries.
 
-**For a full listing of installed formulae, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
+**For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
     $ ./brew.sh
 
