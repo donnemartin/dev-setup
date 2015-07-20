@@ -39,6 +39,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
 * [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
 * [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-aws.sh-script)
+* [Step 7: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-7-run-the-webdev.sh-script) (Coming soon)
 
 ## Section 2: General Apps and Tools
 
@@ -283,6 +284,19 @@ Then start working with the installed modules, for example:
 If you'd like to set up a development environment to work Amazon Web Services, run the following script:
 
     $ ./aws.sh
+
+### Step 7: Run the webdev.sh Script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
+  <br/>
+</p>
+
+Coming soon.
+
+If you'd like to set up a JavaScript web development environment, run the following script:
+
+    $ ./webdev.sh
 
 [Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
 
