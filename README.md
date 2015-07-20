@@ -253,9 +253,23 @@ When setting up a new Mac, you may want to set some sensible OS X defaults by ru
   <br/>
 </p>
 
-If you'd like to set up a development environment to work with Python and data analysis, run the following script:
+If you'd like to set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the following script:
 
     $ ./pydata.sh
+
+This will install [Virtualenv](#virtualenv) and [Virtualenvwrapper](#virtualenvwrapper).  It will then set up two virtual environments loaded with the modules you will need to work with data in Python 2 and Python 3.
+
+To switch to the Python 2 virtual environment, run the following Virtualenvwrapper command:
+
+    $ workon py2-data
+
+To switch to the Python 3 virtual environment, run the following Virtualenvwrapper command:
+
+    $ workon py3-data
+
+Then start working with the installed modules, for example:
+
+    $ ipython notebook
 
 [Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
 
