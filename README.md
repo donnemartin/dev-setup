@@ -33,13 +33,13 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
     * [Running with Git](https://github.com/donnemartin/dev-setup#running-with-git)
     * [Running without Git](https://github.com/donnemartin/dev-setup#running-without-git)
-    * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup#optional-add-custom-commands)
-    * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup)
-* [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script)
-* [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script)
+    * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup#optional-specify-path)
+    * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup#optional-add-custom-commands)
+* [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script)
+* [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script)
 * [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
-* [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-aws.sh-script)
-* [Step 7: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-7-run-the-webdev.sh-script) (Coming soon)
+* [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-awssh-script)
+* [Step 7: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-7-run-the-webdevsh-script) (Coming soon)
 
 ## Section 2: General Apps and Tools
 
@@ -91,7 +91,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [MySQL Workbench](#mysql-workbench)
 * [MongoDB](#mongodb)
 * [Redis](#redis)
-* [Elasticsearch](#Elasticsearch)
+* [Elasticsearch](#elasticsearch)
 
 ## Section 6: JavaScript Web Development
 
@@ -165,7 +165,7 @@ To update later on, just run that command again.
 
 #### Optional: Specify PATH
 
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/donnemartin/dev-setup/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as detecting which version of `ls` is being used takes place.
 
 Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
@@ -315,13 +315,13 @@ Install your favorite browser, mine happens to be Chrome.
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Google Chrome.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Google Chrome.
 
 If you prefer to install it separately, download it from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
 
 #### Configuration
 
-The section [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Chrome configurations.
+The section [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contains Chrome configurations.
 
 ### Sublime Text
 
@@ -334,7 +334,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Sublime Text.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Sublime Text.
 
 If you prefer to install it separately, go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
@@ -344,7 +344,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 #### Configuration
 
-The section [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contains Sublime Text configurations.
+The section [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
@@ -397,7 +397,7 @@ While inside the `Packages` directory, clone the theme repository using the comm
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Atom.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Atom.
 
 If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
@@ -416,7 +416,7 @@ Package managers make it so much easier to install and update applications (for 
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
 
 If you prefer to install it separately, run the following command and follow the steps on the screen:
 
@@ -554,7 +554,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-3-run-the-osx-script) contain terminal customizations.
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contain terminal customizations.
 
 ### iTerm2
 
@@ -674,7 +674,7 @@ OS X, like Linux, ships with [Python](http://python.org/) already installed. But
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ### Pip
 
@@ -1296,7 +1296,7 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs MySQL.  If you prefer to install it separately, run:
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs MySQL.  If you prefer to install it separately, run:
 
     $ brew update # Always good to do
     $ brew install mysql
@@ -1353,7 +1353,7 @@ You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/
 
 #### Installation
 
-The section Step 3: Run the brew.sh Script installs MongoDB. If you prefer to install it separately, run:
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs MongoDB. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install mongo
@@ -1381,7 +1381,7 @@ I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual
 
 #### Installation
 
-The section Step 3: Run the brew.sh Script installs Redis. If you prefer to install it separately, run:
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Redis. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install redis
