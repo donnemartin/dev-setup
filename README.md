@@ -390,7 +390,7 @@ The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-
 
 If you prefer to install it separately, run the following command and follow the steps on the screen:
 
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #### Usage
 
