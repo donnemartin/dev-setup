@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
 </p>
 
 dev-setup
 ============
 
-Developer setup instructions and dotfiles/scripts. Also includes setup for Python data analysis, AWS/Heroku, JavaScript web development, and hacker defaults for OSX. https://bit.ly/git-dotfiles
+Developer setup instructions and dotfiles/scripts. Also includes setup for Python data analysis, AWS/Heroku, JavaScript web development, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
 
 ## Motivation
 
