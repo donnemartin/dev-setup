@@ -14,7 +14,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * Install and customize commonly-used **developer apps and tools**
 * Customize **Terminal, iTerm2, and Vim**
 * Setup **OSX defaults** for Mac users
-* Install common **Homebrew formulae** for Mac users
+* Install common **Homebrew formulae and apps** for Mac users
 * Install common modules used for **Python data analysis**
 * Setup **Amazon Web Services** (AWS) and **Heroku**
 * Setup common **data stores**
@@ -206,7 +206,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
   <br/>
 </p>
 
-When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/) along with some common apps and Homebrew formulae.  Homebrew is a package manager that simplifies installing and updating applications or libraries.
+When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/) along with some common Homebrew formulae and apps.  Homebrew is a package manager that simplifies installing and updating applications or libraries.
 
 **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
@@ -386,7 +386,7 @@ Package managers make it so much easier to install and update applications (for 
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae.
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-4-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
 
 If you prefer to install it separately, run the following command and follow the steps on the screen:
 
