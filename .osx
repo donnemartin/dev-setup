@@ -131,6 +131,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
+# You might want to disable these if you are not running an SSD               #
 ###############################################################################
 
 # Disable local Time Machine snapshots

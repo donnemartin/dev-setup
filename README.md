@@ -238,9 +238,9 @@ Change to the new shell:
   <br/>
 </p>
 
-When setting up a new Mac, you may want to set some sensible OS X defaults.  This script also configures common third-party apps such as Chrome and Sublime Text.  For a full listing of configuration changes, refer to the commented [source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) directly.  Section 2 of this README describes some of the customizations.
+When setting up a new Mac, you may want to set some sensible OS X defaults by running the .osx script.  This script also configures common third-party apps such as Chrome and Sublime Text.
 
-**I strongly suggest you read through the [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  It is meant for you to customize.**
+**I strongly suggest you read through the commented [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.**  The script defaults are intended for you to customize.  For example, if you are not running an SSD you might want to disable some of the settings listed in the SSD section.
 
     $ ./.osx
 
