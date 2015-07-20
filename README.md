@@ -377,7 +377,7 @@ While inside the `Packages` directory, clone the theme repository using the comm
   <br/>
 </p>
 
-[Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.  Unfortunately I have found that it does not perform as well when working with very large files that you typically encounter while working with data.  As Atom matures, I'm hopeful its performance will improve.
+[Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.
 
 #### Installation
 
@@ -547,7 +547,7 @@ The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemarti
   <br/>
 </p>
 
-I prefer iTerm2 over the stock Terminal, as it has some [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
+I prefer iTerm2 over the stock Terminal, as it has some some additional [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
 
 In Finder, drag and drop the iTerm Application file into the Applications folder.
 
@@ -596,13 +596,15 @@ Now we have a terminal we can work with!
   <br/>
 </p>
 
+What's a developer without [Git](http://git-scm.com/)?
+
 #### Installation
 
 Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.
 
 #### Configuration
 
-What's a developer without [Git](http://git-scm.com/)?
+To check your version of Git, run the following command:
 
     $ git --version
 
@@ -793,7 +795,9 @@ If you run into an issue about pyzmq, refer to the following [Stack Overflow pos
 
     $ ipython notebook
 
-For an examples of IPython Notebooks used in Data Science, see the repo [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks).
+If you'd like to see some examples here are a couple of my repos that use IPython Notebooks heavily:
+* [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
+* [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
 
 ### NumPy
 
