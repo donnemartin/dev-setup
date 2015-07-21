@@ -5,7 +5,7 @@
 dev-setup
 ============
 
-Developer setup instructions and dotfiles/scripts. Also includes setup for Python data analysis, AWS/Heroku, JavaScript web development, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
+Dev setup within hours, not days. Automated scripts/dotfiles and easy-to-understand instructions for common developer tools and apps. Also includes scripts and instructions to setup Python for data analysis, cloud services such as AWS and Heroku, JavaScript web development, common data stores, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
 
 ## Motivation
 
@@ -39,7 +39,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script)
 * [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
 * [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-awssh-script)
-* [Step 7: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-7-run-the-webdevsh-script) (Coming soon)
+* [Step 7: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-7-run-the-webdevsh-script) (coming soon)
 
 ## Section 2: General Apps and Tools
 
