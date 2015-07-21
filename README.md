@@ -103,6 +103,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Contributions](#contributions)
 * [Credits](#credits)
+* [Contact Info](#contact-info)
 * [License](#license)
 
 ## Section 1: Installation
@@ -1581,6 +1582,16 @@ Bug reports and suggestions are [welcome](https://github.com/donnemartin/dev-set
 ### Credits
 
 See the [Credits Page](https://github.com/donnemartin/dev-setup/blob/master/CREDITS.md).
+
+## Contact Info
+
+Feel free to contact me to discuss any issues, questions, or comments.
+
+* Email: [donne.martin@gmail.com](mailto:donne.martin@gmail.com)
+* Twitter: [@donne_martin](https://twitter.com/donne_martin)
+* GitHub: [donnemartin](https://github.com/donnemartin)
+* LinkedIn: [donnemartin](https://www.linkedin.com/in/donnemartin)
+* Website: [donnemartin.com](http://donnemartin.com)
 
 ### License
 
