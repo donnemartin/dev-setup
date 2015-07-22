@@ -25,8 +25,8 @@ echo "Updating py2-data virtual environment with AWS modules."
 # Create a Python2 data environment
 # If this environment already exists from running pydata.sh,
 # it will not be overwritten
-mkvirtualenv py2-data2
-workon py2-data2
+mkvirtualenv py2-data
+workon py2-data
 
 pip install boto
 pip install awscli
@@ -43,8 +43,8 @@ echo "Updating py3-data virtual environment with AWS modules."
 # Create a Python3 data environment
 # If this environment already exists from running pydata.sh,
 # it will not be overwritten
-mkvirtualenv --python=/usr/local/bin/python3 py3-data2
-workon py3-data2
+mkvirtualenv --python=/usr/local/bin/python3 py3-data
+workon py3-data
 
 pip install boto
 pip install awscli
