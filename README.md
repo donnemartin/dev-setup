@@ -26,7 +26,7 @@ Sections Summary:
 
 This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
 
-## Section 1: Installation
+## Section 1: Installation (TLDR)
 
 * [Step 1: Update the OS and Install Xcode Tools](https://github.com/donnemartin/dev-setup#step-1-update-the-os-and-install-xcode-tools)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
@@ -70,7 +70,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 * [Flask](#flask)
 * [Bokeh](#bokeh)
 
-## Section 4: AWS and Heroku
+## Section 4: Big Data, AWS, and Heroku
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
@@ -286,7 +286,7 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 
     $ ./aws.sh
 
-[Section 4: AWS and Heroku](#section-4-aws-and-heroku) describes the installed packages and usage.
+[Section 4: Big Data, AWS, and Heroku](#section-4-big-data-aws-and-heroku) describes the installed packages and usage.
 
 ### Step 7: Run the webdev.sh Script
 
@@ -968,7 +968,7 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 
 Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
-## Section 4: AWS and Heroku
+## Section 4: Big Data, AWS, and Heroku
 
 ### Spark
 
