@@ -5,7 +5,7 @@
 dev-setup
 ============
 
-Dev setup within hours, not days. Automated scripts/dotfiles and easy-to-understand instructions for common developer tools and apps. Also includes scripts and instructions to setup Python for data analysis, cloud services such as AWS and Heroku, JavaScript web development, common data stores, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
+Dev setup within hours, not days. Automated scripts/dotfiles and easy-to-understand instructions for common developer tools and apps. Also includes setup for Python data analysis, big data platforms Spark and Hadoop MapReduce, cloud services AWS and Heroku, JavaScript web development, common data stores, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
 
 ## Motivation
 
