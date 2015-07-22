@@ -992,8 +992,7 @@ Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/d
 
 Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli):
 
-    $ aws emr create-cluster --name "Spark cluster" --ami-version 3.8 --applications Name=Spark\
-            --ec2-attributes KeyName=myKey --instance-type m3.xlarge --instance-count 3 --use-default-roles
+    $ aws emr create-cluster --name "Spark cluster" --ami-version 3.8 --applications Name=Spark --ec2-attributes KeyName=myKey --instance-type m3.xlarge --instance-count 3 --use-default-roles
 
 ### MapReduce
 
