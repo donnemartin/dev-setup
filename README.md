@@ -12,11 +12,11 @@ Dev setup within hours, not days. Automated scripts/dotfiles and easy-to-underst
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that help **automate** the following:
 
 * Install and customize commonly-used **developer apps and tools**
-* Customize **Terminal, iTerm2, and Vim**
-* Setup **OSX defaults** for Mac users
+* Customize tools such as **Terminal, iTerm2, and Vim**
 * Install common **Homebrew formulae and apps** for Mac users
+* Setup **OSX defaults** for Mac users
 * Install common modules used for **Python data analysis**
-* Setup **Amazon Web Services** (AWS) and **Heroku**
+* Setup **Spark**, **MapReduce**, **Amazon Web Services** (AWS), and **Heroku**
 * Setup common **data stores**
 * Setup **Javascript web development**
 
