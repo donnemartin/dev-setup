@@ -74,6 +74,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
+* [AWS Account](#aws-account)
 * [AWS CLI](#aws-cli)
 * [Boto](#boto)
 * [S3cmd](#s3cmd)
@@ -1007,7 +1008,7 @@ Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clust
 
 **Mrjob is Python 2 only.**
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs mrjob.  If you prefer to install it separately, run:
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs mrjob locally.  If you prefer to install it separately, run:
 
     $ pip install mrjob
 
@@ -1030,6 +1031,16 @@ runners:
 #### Usage
 
 Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+
+### AWS Account
+
+To start using AWS, you first need to sign up for an account.
+
+#### Sign up for AWS
+
+When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS. You are charged only for the services that you use.  New users are eligible for 12 months of usage through the [AWS Free Tier](http://aws.amazon.com/free/).
+
+To create an AWS account, open http://aws.amazon.com/, and then click Sign Up.  Follow the on-screen instructions.  Part of the sign-up procedure involves receiving a phone call and entering a PIN using the phone keypad.  Note your AWS account ID.
 
 ### AWS CLI
 
