@@ -77,6 +77,7 @@ git pull origin master;
 function doIt() {
     rsync -avh --no-perms ".aws/" ~;
     rsync -avh --no-perms ".mrjob.conf" ~;
+    rsync -avh --no-perms ".s3cfg" ~;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
