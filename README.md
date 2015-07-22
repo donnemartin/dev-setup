@@ -1095,15 +1095,7 @@ The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-s
 
     $ pip install boto
 
-The aws.sh script also syncs the template ```.boto``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.boto``` file.  Update the config file with your credentials:
-
-```
-[Credentials]
-aws_access_key_id = YOURACCESSKEY
-aws_secret_access_key = YOURSECRETKEY
-```
-
-**Be careful you do not accidentally check in your credentials.**  The .gitignore file is set to ignore files with credentials.
+Boto uses the same configuration as described in the [AWS CLI](#aws-cli) section.
 
 #### Usage
 
