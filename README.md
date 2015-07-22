@@ -981,13 +981,18 @@ Spark is an in-memory cluster computing framework, up to 100 times faster for ce
 
 #### Installation
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark.  If you prefer to install it separately, run:
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark locally.  If you prefer to install it separately, run:
 
     $ brew install apache-spark
 
 #### Usage
 
 Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
+
+Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli):
+
+    $ aws emr create-cluster --name "Spark cluster" --ami-version 3.8 --applications Name=Spark\
+            --ec2-attributes KeyName=myKey --instance-type m3.xlarge --instance-count 3 --use-default-roles
 
 ### MapReduce
 
