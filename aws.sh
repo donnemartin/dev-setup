@@ -66,4 +66,5 @@ brew install apache-spark
 echo "------------------------------"
 echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
 echo "TODO: Update .mrjob.conf with your credentials, keypair, keypair location, region, and bucket info."
+echo "TODO: Update .s3cfg with your credentials, location, and passphrase or run s3cmd --configure."
 echo "Script completed."
