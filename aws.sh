@@ -63,34 +63,6 @@ brew update
 
 brew install apache-spark
 
-###############################################################################
-# Sync AWS Template Config Files                                              #
-###############################################################################
-
-echo "------------------------------"
-echo "Syncing AWS config files."
-
-cd "$(dirname "${BASH_SOURCE}")";
-
-git pull origin master;
-
-function doIt() {
-    rsync -avh --no-perms ".aws/" ~;
-    rsync -avh --no-perms ".mrjob.conf" ~;
-    rsync -avh --no-perms ".s3cfg" ~;
-}
-
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-    doIt;
-else
-    read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-    echo "";
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        doIt;
-    fi;
-fi;
-unset doIt;
-
 echo "------------------------------"
 echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
 echo "TODO: Update .mrjob.conf with your credentials, keypair, keypair location, region, and bucket info."
