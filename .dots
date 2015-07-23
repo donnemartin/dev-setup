@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+function runDots() {
+    # Step 1: Run the osxprep.sh Script
+    echo "------------------------------"
+    echo "Updating OSX and installing Xcode command line tools"
+    curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && ./osxprep.sh
+
+    # Step 2: Run the bootstrap.sh Script
+    echo "------------------------------"
+    echo "Syncing dev-setup repo to your local machine."
+    git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
+
+    # Step 3: Run the brew.sh Script
+    # For a full listing of installed formulae and apps, refer to the
+    # commented brew.sh source file directly and tweak it to suit your needs.
+    echo "------------------------------"
+    echo "Installing Homebrew along with some common formulae and apps."
+    ./brew.sh
+
+    # Step 4: Run the .osx Script
+    # I strongly suggest you read through the commented .osx source file
+    # and tweak any settings based on your personal preferences. The script
+    # defaults are intended for you to customize. For example, if you are not
+    # running an SSD you might want to disable some of the settings listed in
+    # the SSD section.
+    echo "------------------------------"
+    echo "Setting sensible OSX defaults."
+    ./.osx
+
+    # Step 5: Run the pydata.sh Script
+    echo "------------------------------"
+    echo "Setting up Python data development environment."
+    ./pydata.sh
+
+    # Step 6: Run the aws.sh Script
+    echo "------------------------------"
+    echo "Setting up AWS development environment."
+    ./aws.sh
+
+    # Step 7: Run the webdev.sh Script
+    echo "------------------------------"
+    echo "Setting up JavaScript web development environment."
+    #./webdev.sh # coming soon
+}
+
+read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    runDots;
+fi;
+
+unset runDots;
