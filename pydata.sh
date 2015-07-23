@@ -21,9 +21,9 @@ easy_install pip
 echo "------------------------------"
 echo "Setting up virtual environments."
 
-# Install virtual environments
-pip install virtualenv
-pip install virtualenvwrapper
+# Install virtual environments globally
+sudo pip install virtualenv
+sudo pip install virtualenvwrapper
 
 echo "------------------------------"
 echo "Source virtualenvwrapper from ~/.extra"
