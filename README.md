@@ -139,7 +139,7 @@ First thing you need to do on any OS is to update the system.  Run the `osxprep.
 
 Or without cloning:
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && ./osxprep.sh
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && chmod u+x osxprep.sh && ./osxprep.sh
 
 This will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, the script will then [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).
 
