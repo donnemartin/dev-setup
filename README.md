@@ -979,7 +979,7 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 
 #### Usage
 
-Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+[Coming Soon] Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
 ### Bokeh
 
@@ -998,7 +998,7 @@ The section [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/de
 
 #### Usage
 
-Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+[Coming Soon] Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
 
 ## Section 4: Big Data, AWS, and Heroku
 
