@@ -289,7 +289,7 @@ After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.s
   <br/>
 </p>
 
-If you'd like to set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the following script:
+If you'd like to set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./pydata.sh
 
