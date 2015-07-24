@@ -133,7 +133,7 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
   <br/>
 </p>
 
-First thing you need to do on any OS is to update the system.  Run the `osxprep.sh` script after you've cloned the repo::
+First thing you need to do on any OS is to update the system.  Run the `osxprep.sh` script after you've cloned the repo:
 
     $ ./osxprep.sh
 
@@ -1012,7 +1012,7 @@ Spark is an in-memory cluster computing framework, up to 100 times faster for ce
 
 #### Installation
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark locally.  It also hooks up Spark to run within the IPython Notebook by configuring your .bash_profile and adding a new IPython Notebook pyspark profile.
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark locally.  It also hooks up Spark to run within the IPython Notebook by configuring your `.bash_profile` and adding the repo's `profile_pyspark/` to `.ipython`.
 
 If you prefer to install it separately, run:
 
