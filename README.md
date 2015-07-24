@@ -122,7 +122,7 @@ Before running any of the dotfiles/scripts, first clone the repo:
 
 ### TLDR: One Script Setup
 
-**Although this is the "Too Long Didn't Read" section, I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.**
+Although this is the "Too Long Didn't Read" section, **I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.**
 
 If you want to execute just one script and be done with it, you can run the following after you've [cloned the repo](#clone-the-repo):
 
@@ -140,6 +140,14 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
 * webdev.sh (coming soon)
+
+**Notes:**
+* The script will prompt you to enter your password initially.
+* The script might ask you to re-enter your password depending on the the length of the installation.
+* If installing the OSX updates requires a restart, simply run the script again to resume where you left off.
+* When installing the Xcode command line tools, a dialog will be displayed asking to confirm installation.
+    * Once the dialog is dismissed and Xcode is installed, follow the instructions on the terminal to continue.
+* The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
 
 ### Step 1: Run the osxprep.sh Script
 
