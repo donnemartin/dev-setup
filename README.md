@@ -316,7 +316,7 @@ Then start working with the installed modules, for example:
   <br/>
 </p>
 
-If you'd like to set up a development environment to work Amazon Web Services, run the following script:
+If you'd like to set up a development environment to work Amazon Web Services, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./aws.sh
 
