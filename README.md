@@ -120,7 +120,7 @@ If you really want to execute just one script and be done with it, you can run t
 
 Or without cloning:
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && chmod u+x .dots && ./.dots
+    $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE} && ./.dots
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1.
 
