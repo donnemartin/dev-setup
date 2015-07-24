@@ -21,7 +21,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * Set up **Javascript web development**
 
 Sections Summary:
-* Section 1 contains the dotfiles/scripts to set up your system (TLDR).
+* Section 1 contains the dotfiles/scripts and instructions to set up your system.
 * Sections 2 through 6 detail more information about installation, configuration, and usage for items in Section 1.
 
 This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
@@ -115,7 +115,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ### Clone the Repo
 
-You can clone the repository wherever you want (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink).
+Before running any of the dotfiles/scripts, first clone the repo:
 
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
@@ -129,9 +129,16 @@ Or without cloning:
 
     $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE} && ./.dots
 
-The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1.  You might need to re-enter your password or dismiss dialogs such as those from installing the Xcode command line tools during the execution of the script.
+The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1:
+* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
+* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
+* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
+* [.osx](https://github.com/donnemartin/dev-setup/blob/master/.osx)
+* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
+* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
+* webdev.sh (coming soon)
 
-**I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section does.**
+**I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section does.  Tweak each script based on your preferences.**
 
 ### Step 1: Run the osxprep.sh Script
 
