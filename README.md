@@ -821,7 +821,7 @@ Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/inst
 ### IPython Notebook
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/notebook.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/README_1200x800.gif">
   <br/>
 </p>
 
