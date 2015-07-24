@@ -242,6 +242,8 @@ When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/) a
 
 **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
+After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
+
     $ ./brew.sh
 
 Restart your terminal.  If you run into the following error, it is because brew installed an updated bash version, but it doesn't switch it to be your default:
@@ -270,9 +272,11 @@ Change to the new shell:
   <br/>
 </p>
 
-When setting up a new Mac, you may want to set some sensible OS X defaults by running the .osx script.  This script also configures common third-party apps such as Chrome and Sublime Text.
+When setting up a new Mac, you may want to set some sensible OS X defaults by running the `.osx` script.  This script also configures common third-party apps such as Chrome and Sublime Text.
 
-**I strongly suggest you read through the commented [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.**  The script defaults are intended for you to customize.  For example, if you are not running an SSD you might want to disable some of the settings listed in the SSD section.
+**I strongly suggest you read through the commented [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to disable some of the settings listed in the SSD section.
+
+After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
 
     $ ./.osx
 
