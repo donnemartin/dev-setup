@@ -257,6 +257,8 @@ After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.s
 
     $ ./brew.sh
 
+The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
+
 Restart your terminal.  If you run into the following error, it is because brew installed an updated bash version, but it doesn't switch it to be your default:
 
 ```bash
