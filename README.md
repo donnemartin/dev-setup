@@ -5,11 +5,13 @@
 dev-setup
 ============
 
-Dev setup within hours, not days. Automated scripts/dotfiles and easy-to-understand instructions for common developer tools and apps. Also includes set up for Python data analysis, big data platforms Spark and Hadoop MapReduce, cloud services AWS and Heroku, JavaScript web development, common data stores, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
+Automated dev setup from scratch in hours, not days. Scripts/dotfiles and easy-to-understand instructions for common developer tools and apps. Also includes automated set up for Python data analysis, big data platforms Spark and Hadoop MapReduce, cloud services AWS and Heroku, JavaScript web development, common data stores, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
 
 ## Motivation
 
-Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that help **automate** the following:
+**Run one [dotfile/script](https://github.com/donnemartin/dev-setup/blob/master/.dots) to install and configure all of your favorite apps and tools.**
+
+Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
 
 * Install and customize commonly-used **developer apps and tools**
 * Customize tools such as **Terminal, iTerm2, and Vim**
