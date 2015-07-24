@@ -1275,7 +1275,7 @@ Follow these [instructions](http://docs.aws.amazon.com/machine-learning/latest/d
 
 #### Usage
 
-Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+[Coming Soon] Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
 
 ### Heroku
 
