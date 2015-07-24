@@ -129,9 +129,9 @@ Or without cloning:
 
     $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE} && ./.dots
 
-The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1.
+The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1.  You might need to re-enter your password or dismiss dialogs such as those from installing the Xcode command line tools during the execution of the script.
 
-**However, I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section does.**
+**I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section does.**
 
 ### Step 1: Run the osxprep.sh Script
 
