@@ -28,9 +28,10 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 **Scripts tested on OSX 10.10 Yosemite.**
 
-## Section 1: Installation (TLDR)
+## Section 1: Installation
 
-* [Step 1: Update the OS and Install Xcode Tools](https://github.com/donnemartin/dev-setup#step-1-update-the-os-and-install-xcode-tools)
+* [TLDR: One Script Setup](https://github.com/donnemartin/dev-setup#one-script-setup)
+* [Step 1: Run the osxprep.sh Script](https://github.com/donnemartin/dev-setup#step-1-run-the-osxprepsh-script)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
     * [Running with Git](https://github.com/donnemartin/dev-setup#running-with-git)
