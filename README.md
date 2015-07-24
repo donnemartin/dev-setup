@@ -190,7 +190,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 
 To install these dotfiles without Git:
 
-    $ cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
+    $ cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE.txt}
 
 To update later on, just run that command again.
 
