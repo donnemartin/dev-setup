@@ -1013,7 +1013,9 @@ Spark is an in-memory cluster computing framework, up to 100 times faster for ce
 
 #### Installation
 
-The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark locally.  If you prefer to install it separately, run:
+The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydata-script) installs Spark locally.  It also hooks up Spark to run within the IPython Notebook by configuring your .bash_profile and adding a new IPython Notebook pyspark profile.
+
+If you prefer to install it separately, run:
 
     $ brew install apache-spark
 
@@ -1021,9 +1023,9 @@ The section [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-s
 
 Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
 
-Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli):
+Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli), replacing ```myKeyPair``` with the name of your keypair to SSH into your cluster:
 
-    $ aws emr create-cluster --name "Spark cluster" --ami-version 3.8 --applications Name=Spark --ec2-attributes KeyName=myKey --instance-type m3.xlarge --instance-count 3 --use-default-roles
+    $ aws emr create-cluster --name "Spark cluster" --ami-version 3.8 --applications Name=Spark --ec2-attributes KeyName=myKeyPair --instance-type m3.xlarge --instance-count 3 --use-default-roles
 
 ### MapReduce
 
