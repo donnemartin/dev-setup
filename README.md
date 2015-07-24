@@ -112,24 +112,50 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ## Section 1: Installation
 
-### Step 1: Update the OS and Install Xcode Tools
+### TLDR: One Script Setup
+
+If you really want to execute just one script and be done with it, you can run the following after you've cloned the repo:
+
+    $ ./.dots
+
+Or without cloning:
+
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
+
+The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1.
+
+**However, I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section does.**
+
+### Step 1: Run the osxprep.sh Script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
   <br/>
 </p>
 
-First thing you need to do on any OS, is to update the system.  On a Mac run the "App Store" and select the "Updates" icon and update both the OS and installed apps.
+First thing you need to do on any OS is to update the system.  Run the `osxprep.sh` script after you've cloned the repo::
+
+    $ ./osxprep.sh
+
+Or without cloning:
+
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && ./osxprep.sh
+
+This will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, the script will then [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).
+
+If you want to go the manual route, you can also install all updates by running "App Store", selecting the "Updates" icon, then updating both the OS and installed apps.
 
 #### Install Xcode Command Line Tools
 
-An important dependency before many tools such as Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers like gcc that will allow you to build from source.  Git is also included.
+An important dependency before many tools such as Homebrew can work is the **Command Line Tools for Xcode**. These include compilers like gcc that will allow you to build from source.  Git is also included.
 
 Now, Xcode weighs something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
 
 If you are running **OS X 10.9 Mavericks or later**, then you can install the Xcode Command Line Tools directly from the command line with:
 
     $ xcode-select --install
+
+**Note the `osxprep.sh` script executes this command.**
 
 If you're running 10.8 or older, you'll need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
 
