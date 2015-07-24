@@ -9,7 +9,7 @@ Automated dev setup from scratch in hours, not days. Scripts/dotfiles and easy-t
 
 ## Motivation
 
-**Run one [dotfile/script](https://github.com/donnemartin/dev-setup/blob/master/.dots) to install and configure all of your favorite apps and tools.**
+**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure all of your favorite apps and tools.**
 
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
 
@@ -33,7 +33,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 ## Section 1: Installation
 
 * [Clone the Repo](#clone-the-repo)
-* [TLDR: One Script Setup](https://github.com/donnemartin/dev-setup#one-script-setup)
+* [TLDR: Single Script Setup](https://github.com/donnemartin/dev-setup#single-script-setup)
 * [Step 1: Run the osxprep.sh Script](https://github.com/donnemartin/dev-setup#step-1-run-the-osxprepsh-script)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
@@ -120,7 +120,7 @@ Before running any of the dotfiles/scripts, first clone the repo:
 
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
-### TLDR: One Script Setup
+### TLDR: Single Script Setup
 
 Although this is the "Too Long Didn't Read" section, **I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.**
 
