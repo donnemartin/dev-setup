@@ -122,7 +122,9 @@ Before running any of the dotfiles/scripts, first clone the repo:
 
 ### TLDR: One Script Setup
 
-If you really want to execute just one script and be done with it, you can run the following after you've [cloned the repo](#clone-the-repo):
+**Although this is the "Too Long Didn't Read" section, I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.**
+
+If you want to execute just one script and be done with it, you can run the following after you've [cloned the repo](#clone-the-repo):
 
     $ ./.dots
 
@@ -138,8 +140,6 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
 * webdev.sh (coming soon)
-
-**I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section does.  Tweak each script based on your preferences.**
 
 ### Step 1: Run the osxprep.sh Script
 
