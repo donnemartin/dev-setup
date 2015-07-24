@@ -115,7 +115,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ### Clone the Repo
 
-You can clone the repository wherever you want. (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink.).  To clone the repo, run the following:
+You can clone the repository wherever you want (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink).
 
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
@@ -177,17 +177,13 @@ Once you reach the downloads page, search for "command line tools", and download
 
 The `bootstrap.sh` script will sync the dev-setup repo to your local machine.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this `README` describes some of the customizations.
 
-Below you'll find two ways to run the `bootstrap.sh` script, one using Git and the other using curl.
-
 #### Running with Git
 
-Git should have been installed from the section [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).  You can clone the repository wherever you want. (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink.) The `bootstrap.sh` script will pull in the latest version and copy the files to your home folder `~`.
-
-    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
-
-To update, `cd` into your local `dev-setup` repository and then:
+Git should have been installed from the section [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).  The `bootstrap.sh` script will pull in the latest version and copy the files to your home folder `~`.
 
     $ source bootstrap.sh
+
+To update later on, just run that command again.
 
 Alternatively, to update while avoiding the confirmation prompt:
 
@@ -195,7 +191,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 
 #### Running without Git
 
-To install these dotfiles without Git:
+To install these dotfiles without Git run the following:
 
     $ cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
 
