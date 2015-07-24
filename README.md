@@ -329,11 +329,9 @@ If you'd like to set up a development environment to work Amazon Web Services, r
   <br/>
 </p>
 
-Coming soon.
+[Coming Soon] If you'd like to set up a JavaScript web development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
-If you'd like to set up a JavaScript web development environment, run the following script:
-
-    $ ./webdev.sh
+    $ ./webdev.sh  # coming soon
 
 [Section 6: JavaScript Web Development](#section-6-javascript-web-development) describes the installed packages and usage.
 
