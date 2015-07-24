@@ -9,7 +9,7 @@ Automated dev setup from scratch in hours, not days. Scripts/dotfiles and easy-t
 
 ## Motivation
 
-**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure all of your favorite apps and tools.**
+**[Single script setup](https://github.com/donnemartin/dev-setup#tldr-single-script-setup) to install and configure all of your favorite apps and tools.**
 
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
 
