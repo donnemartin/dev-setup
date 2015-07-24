@@ -14,17 +14,19 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * Install and customize commonly-used **developer apps and tools**
 * Customize tools such as **Terminal, iTerm2, and Vim**
 * Install common **Homebrew formulae and apps** for Mac users
-* Setup **OSX defaults** for Mac users
+* Set up **OSX defaults** for Mac users
 * Install common modules used for **Python data analysis**
-* Setup **Spark**, **MapReduce**, **Amazon Web Services** (AWS), and **Heroku**
-* Setup common **data stores**
-* Setup **Javascript web development**
+* Set up **Spark**, **MapReduce**, **Amazon Web Services** (AWS), and **Heroku**
+* Set up common **data stores**
+* Set up **Javascript web development**
 
 Sections Summary:
-* Section 1 contains the dotfiles/scripts to setup your system (TLDR).
+* Section 1 contains the dotfiles/scripts to set up your system (TLDR).
 * Sections 2 through 6 detail more information about installation, configuration, and usage for items in Section 1.
 
 This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
+
+**Scripts tested on OSX 10.10 Yosemite.**
 
 ## Section 1: Installation (TLDR)
 
