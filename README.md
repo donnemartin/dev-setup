@@ -120,7 +120,7 @@ If you really want to execute just one script and be done with it, you can run t
 
 Or without cloning:
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && chmod u+x .dots && ./.dots
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1.
 
