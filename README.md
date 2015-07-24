@@ -30,6 +30,7 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ## Section 1: Installation
 
+* [Clone the Repo](#clone-the-repo)
 * [TLDR: One Script Setup](https://github.com/donnemartin/dev-setup#one-script-setup)
 * [Step 1: Run the osxprep.sh Script](https://github.com/donnemartin/dev-setup#step-1-run-the-osxprepsh-script)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
@@ -112,9 +113,15 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ## Section 1: Installation
 
+### Clone the Repo
+
+You can clone the repository wherever you want. (I like to keep it in `~/dev/dev-setup`, with `~/dev-setup` as a symlink.).  To clone the repo, run the following:
+
+    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
+
 ### TLDR: One Script Setup
 
-If you really want to execute just one script and be done with it, you can run the following after you've cloned the repo:
+If you really want to execute just one script and be done with it, you can run the following after you've [cloned the repo](#clone-the-repo):
 
     $ ./.dots
 
@@ -133,7 +140,7 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
   <br/>
 </p>
 
-First thing you need to do on any OS is to update the system.  Run the `osxprep.sh` script after you've cloned the repo:
+First thing you need to do on any OS is to update the system.  Run the `osxprep.sh` script after you've [cloned the repo](#clone-the-repo):
 
     $ ./osxprep.sh
 
