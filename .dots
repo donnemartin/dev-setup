@@ -21,7 +21,9 @@ function runDots() {
     echo "Syncing dev-setup repo to your local machine."
     echo "------------------------------"
     echo ""
-    git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
+    # Run the bootstrap.sh with prompt disabled, since we already
+    # prompted the user at the start of the .dots script
+    git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && set -- -f; source bootstrap.sh
 
     # Step 3: Run the brew.sh Script
     # For a full listing of installed formulae and apps, refer to the
