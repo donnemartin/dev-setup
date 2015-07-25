@@ -267,23 +267,6 @@ After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.s
 
 The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
 
-Restart your terminal.  If you run into the following error, it is because brew installed an updated bash version, but it doesn't switch it to be your default:
-
-```bash
--bash: declare: -A: invalid option
-declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
--bash: complete: -D: invalid option
-complete: usage: complete [-abcdefgjksuv] [-pr] [-o option] [-A action] [-G globpat] [-W wordlist] [-P prefix] [-S suffix] [-X filterpat] [-F function] [-C command] [name ...]
-```
-
-Add the newly installed shell to the list of allowed shells:
-
-    $ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-
-Change to the new shell:
-
-    $ chsh -s /usr/local/bin/bash
-
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
 ### Step 4: Run the .osx Script
