@@ -124,8 +124,6 @@ I **strongly encourage** you to at least read through Section 1 so you have a be
 
 #### Clone the Repo
 
-Before running any of the dotfiles/scripts, first clone the repo:
-
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
 #### Run the .dots Script
@@ -138,7 +136,7 @@ Or without cloning:
 
     $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 && ./.dots
 
-The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1:
+The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
 * [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
@@ -155,6 +153,8 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
     * Once the dialog is dismissed and Xcode is installed, follow the instructions on the terminal to continue.
 * The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
 
+The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+
 ### Step 1: Run the osxprep.sh Script
 
 <p align="center">
@@ -162,7 +162,7 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
   <br/>
 </p>
 
-First thing you need to do on any OS is to update the system.  Run the `osxprep.sh` script after you've [cloned the repo](#clone-the-repo):
+First thing you should do on any OS is to update the system.  Run the `osxprep.sh` script after you've [cloned the repo](#clone-the-repo):
 
     $ ./osxprep.sh
 
@@ -184,7 +184,14 @@ If you are running **OS X 10.9 Mavericks or later**, then you can install the Xc
 
     $ xcode-select --install
 
-**Note the `osxprep.sh` script executes this command.**
+**Note**: the `osxprep.sh` script executes this command.
+
+This will display a dialog where you can either:
+* Install Xcode and the command line tools
+* Install the command line tools only
+* Cancel the install
+
+##### OSX 10.8 and Older
 
 If you're running 10.8 or older, you'll need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
 
