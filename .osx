@@ -621,7 +621,24 @@ EOD
 #defaults write com.apple.terminal FocusFollowsMouse -bool true
 #defaults write org.x.X11 wm_ffm -bool true
 
+start_if_needed() {
+  local grep_name="[${1:0:1}]${1:1}"
+
+  if [[ -z $(ps aux | grep -e "${grep_name}") ]]; then
+    if [ -e ~/Applications/$1.app ]; then
+      open ~/Applications/$1.app
+    else
+      if [ -e /Applications/$1.app ]; then
+        open /Applications/$1.app
+      fi
+    fi
+  fi
+
+  true
+}
+
 # Install the Solarized Dark theme for iTerm
+start_if_needed iTerm
 open "${HOME}/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
