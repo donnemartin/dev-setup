@@ -51,12 +51,12 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 * [Sublime Text](#sublime-text)
 * [Atom](#atom)
-* [Homebrew](#homebrew)
-* [Ruby and RVM](#ruby-and-rvm)
 * [Terminal Customization](#terminal-customization)
 * [iTerm2](#iterm2)
-* [Git](#git)
 * [Vim](#vim)
+* [Git](#git)
+* [Homebrew](#homebrew)
+* [Ruby and RVM](#ruby-and-rvm)
 * [Python](#python)
 * [Pip](#pip)
 * [Virtualenv](#virtualenv)
@@ -423,6 +423,126 @@ If you prefer to install it separately, [download](https://atom.io/) it, open th
 
 Atom has a great package manager that allows you to easily install both core and community packages.
 
+### Terminal Customization
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
+  <br/>
+</p>
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
+
+#### Configuration
+
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contain terminal customizations.
+
+### iTerm2
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+  <br/>
+</p>
+
+I prefer iTerm2 over the stock Terminal, as it has some some additional [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
+
+In Finder, drag and drop the iTerm Application file into the Applications folder.
+
+You can now launch iTerm, through the Launchpad for instance.
+
+Let's just quickly change some preferences. In iTerm > Preferences..., under the tab General, uncheck Confirm closing multiple sessions and Confirm "Quit iTerm2 (Cmd+Q)" command under the section Closing.
+
+In the tab Profiles, create a new one with the "+" icon, and rename it to your first name for example. Then, select Other Actions... > Set as Default. Under the section Window, change the size to something better, like Columns: 125 and Rows: 35.  I also like to set General > Working Directory > Reuse previous session's directory.  Finally, I change the wy the option key works so that I can quickly jump between words as described [here](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x).
+
+When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
+
+#### Configuration
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. What follows might seem like a lot of work, but trust me, it'll make the development experience so much better.
+
+Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **Consolas 13pt**.
+
+Now let's add some color. I'm a big fan of the [Solarized](http://ethanschoonover.com/solarized) color scheme. It is supposed to be scientifically optimal for the eyes. I just find it pretty.
+
+Scroll down the page and download the latest version. Unzip the archive. In it you will find the `iterm2-colors-solarized` folder with a `README.md` file, but I will just walk you through it here:
+
+- In **iTerm2 Preferences**, under **Profiles** and **Colors**, go to **Load Presets... > Import...**, find and open the two **.itermcolors** files we downloaded.
+- Go back to **Load Presets...** and select **Solarized Dark** to activate it. Voila!
+
+**Note**: You don't have to do this, but there is one color in the **Solarized Dark** preset I don't agree with, which is *Bright Black*. You'll notice it's too close to *Black*. So I change it to be the same as *Bright Yellow*, i.e. **R 83 G 104 B 112**.
+
+Not a lot of colors yet. We need to tweak a little bit our Unix user's profile for that. This is done (on OS X and Linux), in the `~/.bash_profile` text file (`~` stands for the user's home directory).
+
+We'll come back to the details of that later, but for now, just download the files [.bash_profile](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_profile), [.bash_prompt](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_prompt), [.aliases](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.aliases) attached to this document into your home directory (`.bash_profile` is the one that gets loaded, I've set it up to call the others):
+
+    $ cd ~
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_profile
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_prompt
+    $ curl -O https://raw.githubusercontent.com/donnemartin/mac-dev-setup/master/.aliases
+
+With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: `ls`, `ls -lh` (aliased to `ll`), `ls -lha` (aliased to `la`).
+
+At this point you can also change your computer's name, which shows up in this terminal prompt. If you want to do so, go to **System Preferences** > **Sharing**. For example, I changed mine from "Donne's MacBook Pro" to just "MacBook Pro", so it shows up as `MacBook-Pro` in the terminal.
+
+Now we have a terminal we can work with!
+
+### Vim
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vim.png">
+  <br/>
+</p>
+
+Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
+
+For example, when you run a Git commit, it will open Vim to allow you to type the commit message.
+
+I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
+
+#### Configuration
+
+The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
+
+### Git
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/git.png">
+  <br/>
+</p>
+
+What's a developer without [Git](http://git-scm.com/)?
+
+#### Installation
+
+Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.
+
+#### Configuration
+
+To check your version of Git, run the following command:
+
+    $ git --version
+
+And `$ which git` should output `/usr/local/bin/git`.
+
+Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig) file to your home directory:
+
+    $ cd ~
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig
+
+It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
+
+Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
+
+    $ git config --global user.name "Your Name Here"
+    $ git config --global user.email "your_email@youremail.com"
+
+They will get added to your `.gitconfig` file.
+
+To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
+
+    $ git config --global credential.helper osxkeychain
+
+**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/dev-setup/blob/master/.gitignore) file for inspiration.
+
 ### Homebrew
 
 <p align="center">
@@ -560,126 +680,6 @@ RubyGems keeps old versions of gems, so feel free to do come cleaning after upda
 I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
 
     $ gem install compass --no-document
-
-### Terminal Customization
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
-  <br/>
-</p>
-
-Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
-
-#### Configuration
-
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contain terminal customizations.
-
-### iTerm2
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
-  <br/>
-</p>
-
-I prefer iTerm2 over the stock Terminal, as it has some some additional [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
-
-In Finder, drag and drop the iTerm Application file into the Applications folder.
-
-You can now launch iTerm, through the Launchpad for instance.
-
-Let's just quickly change some preferences. In iTerm > Preferences..., under the tab General, uncheck Confirm closing multiple sessions and Confirm "Quit iTerm2 (Cmd+Q)" command under the section Closing.
-
-In the tab Profiles, create a new one with the "+" icon, and rename it to your first name for example. Then, select Other Actions... > Set as Default. Under the section Window, change the size to something better, like Columns: 125 and Rows: 35.  I also like to set General > Working Directory > Reuse previous session's directory.  Finally, I change the wy the option key works so that I can quickly jump between words as described [here](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x).
-
-When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
-
-#### Configuration
-
-Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. What follows might seem like a lot of work, but trust me, it'll make the development experience so much better.
-
-Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **Consolas 13pt**.
-
-Now let's add some color. I'm a big fan of the [Solarized](http://ethanschoonover.com/solarized) color scheme. It is supposed to be scientifically optimal for the eyes. I just find it pretty.
-
-Scroll down the page and download the latest version. Unzip the archive. In it you will find the `iterm2-colors-solarized` folder with a `README.md` file, but I will just walk you through it here:
-
-- In **iTerm2 Preferences**, under **Profiles** and **Colors**, go to **Load Presets... > Import...**, find and open the two **.itermcolors** files we downloaded.
-- Go back to **Load Presets...** and select **Solarized Dark** to activate it. Voila!
-
-**Note**: You don't have to do this, but there is one color in the **Solarized Dark** preset I don't agree with, which is *Bright Black*. You'll notice it's too close to *Black*. So I change it to be the same as *Bright Yellow*, i.e. **R 83 G 104 B 112**.
-
-Not a lot of colors yet. We need to tweak a little bit our Unix user's profile for that. This is done (on OS X and Linux), in the `~/.bash_profile` text file (`~` stands for the user's home directory).
-
-We'll come back to the details of that later, but for now, just download the files [.bash_profile](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_profile), [.bash_prompt](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_prompt), [.aliases](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.aliases) attached to this document into your home directory (`.bash_profile` is the one that gets loaded, I've set it up to call the others):
-
-    $ cd ~
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_profile
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_prompt
-    $ curl -O https://raw.githubusercontent.com/donnemartin/mac-dev-setup/master/.aliases
-
-With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: `ls`, `ls -lh` (aliased to `ll`), `ls -lha` (aliased to `la`).
-
-At this point you can also change your computer's name, which shows up in this terminal prompt. If you want to do so, go to **System Preferences** > **Sharing**. For example, I changed mine from "Donne's MacBook Pro" to just "MacBook Pro", so it shows up as `MacBook-Pro` in the terminal.
-
-Now we have a terminal we can work with!
-
-### Git
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/git.png">
-  <br/>
-</p>
-
-What's a developer without [Git](http://git-scm.com/)?
-
-#### Installation
-
-Git should have been installed when you ran through the [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools) section.
-
-#### Configuration
-
-To check your version of Git, run the following command:
-
-    $ git --version
-
-And `$ which git` should output `/usr/local/bin/git`.
-
-Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig) file to your home directory:
-
-    $ cd ~
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig
-
-It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
-
-Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
-
-    $ git config --global user.name "Your Name Here"
-    $ git config --global user.email "your_email@youremail.com"
-
-They will get added to your `.gitconfig` file.
-
-To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
-
-    $ git config --global credential.helper osxkeychain
-
-**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/dev-setup/blob/master/.gitignore) file for inspiration.
-
-### Vim
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vim.png">
-  <br/>
-</p>
-
-Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
-
-For example, when you run a Git commit, it will open Vim to allow you to type the commit message.
-
-I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
-
-#### Configuration
-
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
 
 ### Python
 
