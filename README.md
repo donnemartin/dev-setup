@@ -1066,6 +1066,14 @@ If you prefer to install it separately, run:
 
 #### Usage
 
+Run Spark locally:
+
+    $ pyspark
+
+Run Spark within IPython Notebook:
+
+    $ ipython notebook --profile=pyspark
+
 Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
 
 Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli), replacing ```myKeyPair``` with the name of your keypair to SSH into your cluster:
