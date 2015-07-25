@@ -8,20 +8,29 @@ function runDots() {
     while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
     # Step 1: Run the osxprep.sh Script
+    echo ""
     echo "------------------------------"
     echo "Updating OSX and installing Xcode command line tools"
+    echo "------------------------------"
+    echo ""
     curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && ./osxprep.sh
 
     # Step 2: Run the bootstrap.sh Script
+    echo ""
     echo "------------------------------"
     echo "Syncing dev-setup repo to your local machine."
+    echo "------------------------------"
+    echo ""
     git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && source bootstrap.sh
 
     # Step 3: Run the brew.sh Script
     # For a full listing of installed formulae and apps, refer to the
     # commented brew.sh source file directly and tweak it to suit your needs.
+    echo ""
     echo "------------------------------"
     echo "Installing Homebrew along with some common formulae and apps."
+    echo "------------------------------"
+    echo ""
     ./brew.sh
 
     # Step 4: Run the .osx Script
@@ -30,23 +39,32 @@ function runDots() {
     # defaults are intended for you to customize. For example, if you are not
     # running an SSD you might want to disable some of the settings listed in
     # the SSD section.
+    echo ""
     echo "------------------------------"
     echo "Setting sensible OSX defaults."
+    echo "------------------------------"
+    echo ""
     ./.osx
 
     # Step 5: Run the pydata.sh Script
     echo "------------------------------"
     echo "Setting up Python data development environment."
+    echo "------------------------------"
+    echo ""
     ./pydata.sh
 
     # Step 6: Run the aws.sh Script
     echo "------------------------------"
     echo "Setting up AWS development environment."
+    echo "------------------------------"
+    echo ""
     ./aws.sh
 
     # Step 7: Run the webdev.sh Script
     echo "------------------------------"
     echo "Setting up JavaScript web development environment."
+    echo "------------------------------"
+    echo ""
     #./webdev.sh # coming soon
 }
 
