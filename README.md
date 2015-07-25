@@ -130,7 +130,7 @@ If you want to execute just one script and be done with it, you can run the foll
 
 Or without cloning:
 
-    $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE} && ./.dots
+    $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 && ./.dots
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all seven steps discussed in further detail throughout Section 1:
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
