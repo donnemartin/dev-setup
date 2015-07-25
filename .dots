@@ -7,35 +7,33 @@ function runDots() {
     # Keep-alive: update existing `sudo` time stamp until the script has finished
     while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-    # Step 1: Run the osxprep.sh Script
+    echo "
+    echo "------------------------------"
+    echo "Syncing the dev-setup repo to your local machine."
+    echo "------------------------------"
+    echo ""
+    cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE} && ./.dots
+
+    # Run the osxprep.sh Script
     echo ""
     echo "------------------------------"
     echo "Updating OSX and installing Xcode command line tools"
     echo "------------------------------"
     echo ""
-    curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && ./osxprep.sh
+    ./osxprep.sh
 
-    # Step 2: Run the bootstrap.sh Script
-    echo ""
-    echo "------------------------------"
-    echo "Syncing dev-setup repo to your local machine."
-    echo "------------------------------"
-    echo ""
-    # Run the bootstrap.sh with prompt disabled, since we already
-    # prompted the user at the start of the .dots script
-    git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup && set -- -f; source bootstrap.sh
-
-    # Step 3: Run the brew.sh Script
+    # Run the brew.sh Script
     # For a full listing of installed formulae and apps, refer to the
     # commented brew.sh source file directly and tweak it to suit your needs.
     echo ""
     echo "------------------------------"
     echo "Installing Homebrew along with some common formulae and apps."
+    echo "This might awhile to complete, as some formulae need to be installed from source."
     echo "------------------------------"
     echo ""
     ./brew.sh
 
-    # Step 4: Run the .osx Script
+    # Run the .osx Script
     # I strongly suggest you read through the commented .osx source file
     # and tweak any settings based on your personal preferences. The script
     # defaults are intended for you to customize. For example, if you are not
@@ -48,26 +46,30 @@ function runDots() {
     echo ""
     ./.osx
 
-    # Step 5: Run the pydata.sh Script
+    # Run the pydata.sh Script
     echo "------------------------------"
     echo "Setting up Python data development environment."
     echo "------------------------------"
     echo ""
     ./pydata.sh
 
-    # Step 6: Run the aws.sh Script
+    # Run the aws.sh Script
     echo "------------------------------"
     echo "Setting up AWS development environment."
     echo "------------------------------"
     echo ""
     ./aws.sh
 
-    # Step 7: Run the webdev.sh Script
+    # Run the webdev.sh Script
     echo "------------------------------"
     echo "Setting up JavaScript web development environment."
     echo "------------------------------"
     echo ""
     #./webdev.sh # coming soon
+
+    echo "------------------------------"
+    echo "Completed running .dots, restart your computer for all updates to take effect"
+    echo "------------------------------"
 }
 
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
