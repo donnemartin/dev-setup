@@ -36,9 +36,12 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
-# Add the newly installed shell to the list of allowed shells
+# We installed the new shell, now we have to activate it
+echo "Adding the newly installed shell to the list of allowed shells"
+# Prompts for password
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-# Change to the new shell:
+# Prompts for password
+echo "Changing to the new shell"
 chsh -s /usr/local/bin/bash
 
 # Install `wget` with IRI support.
@@ -119,26 +122,26 @@ brew install mysql
 brew install mongo
 brew install redis
 
-# Heroku
+# Install Heroku
 brew install heroku-toolbelt
 heroku update
 
 # Install Cask
 brew install caskroom/cask/brew-cask
 
-# Core
+# Core casks
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 
-# Development
+# Development tool casks
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" heroku-toolbelt
 
-# Misc
+# Misc casks
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
@@ -146,7 +149,7 @@ brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" evernote
 
-# Link Cask Apps to Alfred
+# Link cask apps to Alfred
 brew cask alfred link
 
 # Remove outdated versions from the cellar.
