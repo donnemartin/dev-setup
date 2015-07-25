@@ -59,6 +59,9 @@ Sections Summary:
 * [iTerm2](#iterm2)
 * [Vim](#vim)
 * [Git](#git)
+* [VirtualBox](#virtualbox)
+* [Vagrant](#vagrant)
+* [Docker](#docker)
 * [Homebrew](#homebrew)
 * [Ruby and RVM](#ruby-and-rvm)
 * [Python](#python)
@@ -272,7 +275,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
 
-Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
+Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
 After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
 
@@ -514,6 +517,51 @@ I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of
 #### Configuration
 
 The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
+
+### VirtualBox
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/virtualbox.png">
+  <br/>
+</p>
+
+VirtualBox creates and manages virtual machines.  It's a solid free solution to its commercial rival VMware.
+
+#### Installation
+
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs VirtualBox
+
+If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads).
+
+### Vagrant
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vagrant.jpeg">
+  <br/>
+</p>
+
+Vagrant creates and configures development environments.  You can think of it as a higher-level wrapper around VirtualBox and configuration management tools like Ansible, Chef, Puppet, and Salt.  Vagrant also supports Docker containers and server environments like Amazon EC2.
+
+#### Installation
+
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Vagrant.
+
+If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/).
+
+### Docker
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/docker.png">
+  <br/>
+</p>
+
+Docker automates the deployment of applications inside software containers.  I think the following [quote](http://www.linux.com/news/enterprise/cloud-computing/731454-docker-a-shipping-container-for-linux-code) explains docker nicely: "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc".
+
+#### Installation
+
+The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Docker.
+
+If you prefer to install it separately, you can download it [here](https://www.docker.com/).
 
 ### Git
 
