@@ -152,5 +152,9 @@ brew cask install --appdir="/Applications" evernote
 # Link cask apps to Alfred
 brew cask alfred link
 
+# Install Docker, which requires virtualbox
+brew install docker
+brew install boot2docker
+
 # Remove outdated versions from the cellar.
 brew cleanup
