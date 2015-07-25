@@ -2,38 +2,42 @@
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
 </p>
 
+<p align="center">
+  <a href="https://bit.ly/git-dotfiles">https://bit.ly/git-dotfiles</a>
+</p>
+
 dev-setup
 ============
 
-Automated dev setup from scratch in hours, not days. Scripts/dotfiles and easy-to-understand instructions for common developer tools and apps. Also includes automated set up for Python data analysis, big data platforms Spark and Hadoop MapReduce, cloud services AWS and Heroku, JavaScript web development, common data stores, and hacker defaults for Mac OSX. https://bit.ly/git-dotfiles
-
 ## Motivation
 
-**[Single script setup](https://github.com/donnemartin/dev-setup#tldr-single-script-setup) to install and configure all of your favorite apps and tools.**
+**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure all of your favorite developer apps and tools.**
 
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
 
-* Install and customize commonly-used **developer apps and tools**
-* Customize tools such as **Terminal, iTerm2, and Vim**
+* Install **OS updates and Xcode Command Line Tools** for Mac users
+* Install and customize developer apps and tools such as **Sublime Text, Terminal, iTerm2, and Vim**
 * Install common **Homebrew formulae and apps** for Mac users
 * Set up **OSX defaults** for Mac users
-* Install common modules used for **Python data analysis**
-* Set up **Spark**, **MapReduce**, **Amazon Web Services** (AWS), and **Heroku**
-* Set up common **data stores**
-* Set up **Javascript web development**
+* Install the Python data packages **IPython Notebook, NumPy, Pandas, Scikit-Learn, Matplotlib, etc**
+* Set up Big Data platforms **Spark and MapReduce**
+* Set up cloud services **Amazon Web Services and Heroku**
+* Set up common data stores **MySQL, MongoDB, Redis, and Elasticsearch**
+* Set up Javascript web development with **Node.js, JSHint, and Less**
 
 Sections Summary:
 * Section 1 contains the dotfiles/scripts and instructions to set up your system.
 * Sections 2 through 6 detail more information about installation, configuration, and usage for items in Section 1.
 
-This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery), listed in the [Credits](#credits).
-
-**Scripts tested on OSX 10.10 Yosemite.**
+[Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
 ## Section 1: Installation
 
-* [Clone the Repo](#clone-the-repo)
-* [TLDR: Single Script Setup](https://github.com/donnemartin/dev-setup#single-script-setup)
+**Scripts tested on OSX 10.10 Yosemite.**
+
+* [Single Script Setup](https://github.com/donnemartin/dev-setup#single-script-setup)
+    * [Clone the Repo](#clone-the-repo)
+    * [Run the .dots Script](https://github.com/donnemartin/dev-setup#step-2-run-the-dots-script)
 * [Step 1: Run the osxprep.sh Script](https://github.com/donnemartin/dev-setup#step-1-run-the-osxprepsh-script)
     * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
 * [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
@@ -114,17 +118,19 @@ This repo builds on the awesome work from [Mathias Bynens](https://github.com/ma
 
 ## Section 1: Installation
 
-### Clone the Repo
+### Single Script Setup
+
+I **strongly encourage** you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.
+
+#### Clone the Repo
 
 Before running any of the dotfiles/scripts, first clone the repo:
 
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
-### TLDR: Single Script Setup
+#### Run the .dots Script
 
-Although this is the "Too Long Didn't Read" section, **I strongly encourage you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.**
-
-If you want to execute just one script and be done with it, you can run the following after you've [cloned the repo](#clone-the-repo):
+Run the following after you've [cloned the repo](#clone-the-repo):
 
     $ ./.dots
 
@@ -267,7 +273,7 @@ After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.s
 
 The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
 
-**For your terminal customization to take full effect, quit and re-start the terminal.**
+**For your terminal customization to take full effect, quit and re-start the terminal (unless you are running this section with the .dots single script setup).**
 
 ### Step 4: Run the .osx Script
 
@@ -284,7 +290,7 @@ After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.s
 
     $ ./.osx
 
-**For your terminal customization to take full effect, quit and re-start the terminal.**
+**For your terminal customization to take full effect, quit and re-start the terminal (unless you are running this section with the .dots single script setup).**
 
 ### Step 5: Run the pydata.sh Script
 
@@ -297,7 +303,7 @@ If you'd like to set up a development environment to work with Python and data a
 
     $ ./pydata.sh
 
-This will install [Virtualenv](#virtualenv) and [Virtualenvwrapper](#virtualenvwrapper).  It will then set up two virtual environments loaded with the modules you will need to work with data in Python 2 and Python 3.
+This will install [Virtualenv](#virtualenv) and [Virtualenvwrapper](#virtualenvwrapper).  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
 
 To switch to the Python 2 virtual environment, run the following Virtualenvwrapper command:
 
@@ -307,7 +313,7 @@ To switch to the Python 3 virtual environment, run the following Virtualenvwrapp
 
     $ workon py3-data
 
-Then start working with the installed modules, for example:
+Then start working with the installed packages, for example:
 
     $ ipython notebook
 
