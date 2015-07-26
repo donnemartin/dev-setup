@@ -40,8 +40,7 @@ brew install bash-completion2
 echo "Adding the newly installed shell to the list of allowed shells"
 # Prompts for password
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-# Prompts for password
-echo "Changing to the new shell"
+# Change to the new shell, prompts for password
 chsh -s /usr/local/bin/bash
 
 # Install `wget` with IRI support.
