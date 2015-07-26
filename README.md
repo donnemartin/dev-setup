@@ -49,7 +49,8 @@ Sections Summary:
 * [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script)
 * [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
 * [Step 6: Run the aws.sh Script](https://github.com/donnemartin/dev-setup#step-6-run-the-awssh-script)
-* [Step 7: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-7-run-the-webdevsh-script) (coming soon)
+* [Step 7: Run the datastores.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-datastoressh-script)
+* [Step 8: Run the webdev.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-webdevsh-script) (coming soon)
 
 ## Section 2: General Apps and Tools
 
@@ -344,7 +345,20 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 
 [Section 4: Big Data, AWS, and Heroku](#section-4-big-data-aws-and-heroku) describes the installed packages and usage.
 
-### Step 7: Run the webdev.sh Script
+### Step 7: Run the datastores.sh Script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
+  <br/>
+</p>
+
+[Coming Soon] If you'd like to set up common data stores, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
+
+    $ ./datastores.sh
+
+[Section 5: Data Stores](#section-5-data stores) describes the installed packages and usage.
+
+### Step 8: Run the webdev.sh Script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
@@ -1406,7 +1420,7 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs MySQL.  If you prefer to install it separately, run:
+The section [Step 7: Run the datastores.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-datastoressh-script) installs MySQL.  If you prefer to install it separately, run:
 
     $ brew update # Always good to do
     $ brew install mysql
@@ -1439,7 +1453,7 @@ To connect with the command-line client, run:
 
 **Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
 
-#### MySQL Workbench
+### MySQL Workbench
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql_workbench.png">
@@ -1448,9 +1462,14 @@ To connect with the command-line client, run:
 
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
 
-Installation
+#### Installation
 
-You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
+The section [Step 7: Run the datastores.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
+
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="/Applications" mysqlworkbench
+
+You can also find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
 
 ### MongoDB
 
@@ -1463,7 +1482,7 @@ You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs MongoDB. If you prefer to install it separately, run:
+The section [Step 7: Run the datastores.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-datastoressh-script) installs MongoDB. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install mongo
@@ -1491,7 +1510,7 @@ I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual
 
 #### Installation
 
-The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script) installs Redis. If you prefer to install it separately, run:
+The section [Step 7: Run the datastores.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-datastoressh-script) installs Redis. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install redis
@@ -1524,6 +1543,8 @@ As it says on the box, [Elasticsearch](http://www.elasticsearch.org/) is a "powe
 You can use elasticsearch for such cool things as real-time search results, autocomplete, recommendations, machine learning, and more.
 
 #### Installation
+
+The section [Step 7: Run the datastores.sh Script](https://github.com/donnemartin/dev-setup#step-8-run-the-datastoressh-script) installs Elasticsearch.  If you prefer to install it separately, check out the following discussion.
 
 Elasticsearch runs on Java, so check if you have it installed by running:
 

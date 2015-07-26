@@ -60,6 +60,13 @@ function runDots() {
     echo ""
     ./aws.sh
 
+    # Run the datastores.sh Script
+    echo "------------------------------"
+    echo "Setting up data stores."
+    echo "------------------------------"
+    echo ""
+    ./datastores.sh
+
     # Run the webdev.sh Script
     echo "------------------------------"
     echo "Setting up JavaScript web development environment."

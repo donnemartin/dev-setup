@@ -112,14 +112,9 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 
-# Install Python and data tools
+# Install Python
 brew install python
 brew install python3
-brew install mysql
-
-# Install data stores
-brew install mongo
-brew install redis
 
 # Install Heroku
 brew install heroku-toolbelt
