@@ -14,6 +14,7 @@ This repo builds on the awesome work from the following repos:
 * [Homebrew](http://blogs.alfresco.com/wp/developer/files/2012/12/homebrew.png)
 * [PyData](http://pydata.org/static/base/includes/images/pydatalogo-generic.png)
 * [AWS](http://aws.amazon.com)
+* [Data Stores](http://inwallspeakers1.com/wp-content/uploads/2014/10/database-symbol-png.png)
 * [Web Dev](http://html5beginners.com/wp-content/uploads/2014/09/js.png)
 * [Chrome](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Google_Chrome_icon_(2011).svg/1024px-Google_Chrome_icon_(2011).svg.png)
 * [iTerm2](https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png)

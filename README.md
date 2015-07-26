@@ -348,11 +348,11 @@ If you'd like to set up a development environment to work Amazon Web Services, r
 ### Step 7: Run the datastores.sh Script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/datastores.png">
   <br/>
 </p>
 
-[Coming Soon] If you'd like to set up common data stores, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
+If you'd like to set up common data stores, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./datastores.sh
 
