@@ -565,6 +565,20 @@ The section [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-
 
 If you prefer to install it separately, you can download it [here](https://www.docker.com/).
 
+#### Configuration
+
+Initialize and start `boot2docker` (only need to do this once):
+
+    $ boot2docker init
+
+Start the VM:
+
+    $ boot2docker up
+
+Set the `DOCKER_HOST` environment variable and fill in IP and PORT based on the output from the `boot2coker up` command:
+
+    $ export DOCKER_HOST=tcp://IP:PORT
+
 ### Git
 
 <p align="center">
