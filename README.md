@@ -9,9 +9,9 @@
 dev-setup
 ============
 
-## Motivation
+**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure developer apps and tools.**
 
-**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure all of your favorite developer apps and tools.**
+## Motivation
 
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
 
@@ -137,7 +137,7 @@ Run the following after you've [cloned the repo](#clone-the-repo):
 
 Or without cloning:
 
-    $ mkdir dev-setup && cd dev-setup && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 && ./.dots
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
@@ -155,6 +155,8 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * When installing the Xcode command line tools, a dialog will be displayed asking to confirm installation.
     * Once the dialog is dismissed and Xcode is installed, follow the instructions on the terminal to continue.
 * The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
+* The full runtime for `.dots` on a clean install of OSX 10.10 Yosemite took about 45 minutes on a 2013 Macbook Air.
+* When the script completes, restart your computer for all updates to take effect.
 
 The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
 
@@ -171,7 +173,7 @@ First thing you should do on any OS is to update the system.  Run the `osxprep.s
 
 Or without cloning:
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && chmod u+x osxprep.sh && ./osxprep.sh
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/osxprep.sh && ./osxprep.sh
 
 This will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, the script will then [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).
 
