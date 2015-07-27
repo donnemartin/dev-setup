@@ -36,15 +36,8 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 **Scripts tested on OSX 10.10 Yosemite.**
 
 * [Single Script Setup](https://github.com/donnemartin/dev-setup#single-script-setup)
-    * [Clone the Repo](#clone-the-repo)
-    * [Run the .dots Script](https://github.com/donnemartin/dev-setup#step-2-run-the-dots-script)
-* [Step 1: Run the osxprep.sh Script](https://github.com/donnemartin/dev-setup#step-1-run-the-osxprepsh-script)
-    * [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools)
-* [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script)
-    * [Running with Git](https://github.com/donnemartin/dev-setup#running-with-git)
-    * [Running without Git](https://github.com/donnemartin/dev-setup#running-without-git)
-    * [Optional: Specify PATH](https://github.com/donnemartin/dev-setup#optional-specify-path)
-    * [Optional: Add Custom Commands](https://github.com/donnemartin/dev-setup#optional-add-custom-commands)
+* [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-1-run-the-bootstrapsh-script)
+* [Step 2: Run the osxprep.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-osxprepsh-script)
 * [Step 3: Run the brew.sh Script](https://github.com/donnemartin/dev-setup#step-3-run-the-brewsh-script)
 * [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script)
 * [Step 5: Run the pydata.sh Script](https://github.com/donnemartin/dev-setup#step-5-run-the-pydatash-script)
@@ -124,30 +117,33 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 
 ### Single Script Setup
 
-I **strongly encourage** you to at least read through Section 1 so you have a better idea what each installation section/script does.  Tweak each script based on your preferences.
-
-#### Clone the Repo
-
-    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
-
-#### Run the .dots Script
-
-Run the following after you've [cloned the repo](#clone-the-repo):
-
-    $ ./.dots
-
-Or without cloning:
-
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
+**Note**: I strongly encourage** you to at least read through Section 1 so you have a better idea what each installation step does.  Tweak each script based on your preferences.
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
-* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
+* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
 * [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
 * [.osx](https://github.com/donnemartin/dev-setup/blob/master/.osx)
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
+* [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
 * webdev.sh (coming soon)
+
+#### Running without Git
+
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
+
+#### Running with Git
+
+##### Clone the Repo
+
+    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
+
+##### Run the .dots Script
+
+Run the following after you've [cloned the repo](#clone-the-repo):
+
+    $ ./.dots
 
 **Notes:**
 * The script will prompt you to enter your password initially.
@@ -159,9 +155,75 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * The full runtime for `.dots` on a clean install of OSX 10.10 Yosemite took about 45 minutes on a 2013 Macbook Air.
 * When the script completes, restart your computer for all updates to take effect.
 
-The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+The following steps in Section 1 describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
 
-### Step 1: Run the osxprep.sh Script
+### Step 1: Run the bootstrap.sh Script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <br/>
+</p>
+
+The `bootstrap.sh` script will sync the dev-setup repo to your local machine.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this `README` describes some of the customizations.
+
+#### Running without Git
+
+To install these dotfiles without Git run the following:
+
+    $ cd ~; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
+
+To update later on, just run that command again.
+
+#### Running with Git
+
+Git should have been installed from the section [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).  The `bootstrap.sh` script will pull in the latest version and copy the files to your home folder `~`.
+
+    $ source bootstrap.sh
+
+To update later on, just run that command again.
+
+Alternatively, to update while avoiding the confirmation prompt:
+
+    $ set -- -f; source bootstrap.sh
+
+#### Optional: Specify PATH
+
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as detecting which version of `ls` is being used takes place.
+
+Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
+
+```bash
+export PATH="/usr/local/bin:$PATH"
+```
+
+#### Optional: Add Custom Commands
+
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+
+My `~/.extra` looks something like this:
+
+```bash
+# Git credentials
+GIT_AUTHOR_NAME="Donne Martin"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="donne.martin@gmail.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# Pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+
+# Install or upgrade a global package
+# Usage: gpip install –upgrade pip setuptools virtualenv
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+```
+
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/dev-setup/fork) instead, though.
+
+### Step 2: Run the osxprep.sh Script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
@@ -203,72 +265,6 @@ If you're running 10.8 or older, you'll need to go to [http://developer.apple.co
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
-### Step 2: Run the bootstrap.sh Script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
-  <br/>
-</p>
-
-The `bootstrap.sh` script will sync the dev-setup repo to your local machine.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this `README` describes some of the customizations.
-
-#### Running with Git
-
-Git should have been installed from the section [Install Xcode Command Line Tools](https://github.com/donnemartin/dev-setup#install-xcode-command-line-tools).  The `bootstrap.sh` script will pull in the latest version and copy the files to your home folder `~`.
-
-    $ source bootstrap.sh
-
-To update later on, just run that command again.
-
-Alternatively, to update while avoiding the confirmation prompt:
-
-    $ set -- -f; source bootstrap.sh
-
-#### Running without Git
-
-To install these dotfiles without Git run the following:
-
-    $ cd; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
-
-To update later on, just run that command again.
-
-#### Optional: Specify PATH
-
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as detecting which version of `ls` is being used takes place.
-
-Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
-
-```bash
-export PATH="/usr/local/bin:$PATH"
-```
-
-#### Optional: Add Custom Commands
-
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
-
-My `~/.extra` looks something like this:
-
-```bash
-# Git credentials
-GIT_AUTHOR_NAME="Donne Martin"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="donne.martin@gmail.com"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-
-# Pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
-
-# Install or upgrade a global package
-# Usage: gpip install –upgrade pip setuptools virtualenv
-gpip(){
-   PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-```
-
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/donnemartin/dev-setup/fork) instead, though.
-
 ### Step 3: Run the brew.sh Script
 
 <p align="center">
@@ -280,7 +276,7 @@ When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), 
 
 Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
-After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
+After synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
 
     $ ./brew.sh
 
@@ -297,9 +293,9 @@ The `brew.sh` script takes awhile to complete, as some formulae need to be insta
 
 When setting up a new Mac, you may want to set some sensible OS X defaults by running the `.osx` script.  This script also configures common third-party apps such Sublime Text and Chrome.
 
-**I strongly suggest you read through the commented [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to disable some of the settings listed in the SSD section.
+**Note**: **I strongly encourage you read through the commented [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to disable some of the settings listed in the SSD section.
 
-After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
+After synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
 
     $ ./.osx
 
@@ -312,7 +308,7 @@ After synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.s
   <br/>
 </p>
 
-If you'd like to set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
+If you'd like to set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./pydata.sh
 
@@ -339,7 +335,7 @@ Then start working with the installed packages, for example:
   <br/>
 </p>
 
-If you'd like to set up a development environment to work Amazon Web Services, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
+If you'd like to set up a development environment to work Amazon Web Services, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./aws.sh
 
@@ -352,7 +348,7 @@ If you'd like to set up a development environment to work Amazon Web Services, r
   <br/>
 </p>
 
-If you'd like to set up common data stores, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
+If you'd like to set up common data stores, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./datastores.sh
 
@@ -365,7 +361,7 @@ If you'd like to set up common data stores, run the following script from your l
   <br/>
 </p>
 
-[Coming Soon] If you'd like to set up a JavaScript web development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
+[Coming Soon] If you'd like to set up a JavaScript web development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script):
 
     $ ./webdev.sh  # coming soon
 
@@ -466,7 +462,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contain terminal customizations.
+The sections [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx Script](https://github.com/donnemartin/dev-setup#step-4-run-the-osx-script) contain terminal customizations.
 
 ### iTerm2
 
@@ -532,7 +528,7 @@ I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of
 
 #### Configuration
 
-The sections [Step 2: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
+The sections [Step 1: Run the bootstrap.sh Script](https://github.com/donnemartin/dev-setup#step-2-run-the-bootstrapsh-script) contains Vim customizations.
 
 ### VirtualBox
 
