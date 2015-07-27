@@ -1160,7 +1160,7 @@ To create an AWS account, open http://aws.amazon.com/, and then click Sign Up.  
 ### AWS CLI
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_cli.png">
   <br/>
 </p>
 
@@ -1198,7 +1198,7 @@ Refer to the following [AWS CLI IPython Notebook](https://github.com/donnemartin
 ### Boto
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/boto.png">
   <br/>
 </p>
 
@@ -1219,7 +1219,7 @@ Refer to the following [Boto IPython Notebook](https://github.com/donnemartin/da
 ### S3cmd
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3cmd.png">
   <br/>
 </p>
 
@@ -1262,7 +1262,7 @@ Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/d
 ### S3DistCp
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3distcp.png">
   <br/>
 </p>
 
@@ -1279,7 +1279,7 @@ Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemarti
 ### S3-parallel-put
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3-parallel-put.png">
   <br/>
 </p>
 
