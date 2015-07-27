@@ -7,7 +7,7 @@ dev-setup
 
 ## Motivation
 
-**[Simple single script setup](#simple-single-script-setup) to install and configure developer apps and tools.**
+**[Single script setup](#single-script-setup) to install and configure developer apps and tools.**
 
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
 
@@ -36,9 +36,9 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 
 **Scripts tested on OS X 10.10 Yosemite.**
 
-* [Simple single Script Setup](#simple-single-script-setup)
+* [Single Script Setup](#single-script-setup)
 
-Individual steps executed by [Simple Single Script Setup](#simple-single-script-setup):
+Individual steps executed by [Single Script Setup](#single-script-setup):
 * [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
     * Syncs dev-setup to your local home directory
 * [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
@@ -135,7 +135,7 @@ Individual steps executed by [Simple Single Script Setup](#simple-single-script-
 
 ## Section 1: Installation
 
-### Simple Single Script Setup
+### Single Script Setup
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
