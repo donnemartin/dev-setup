@@ -1,33 +1,33 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
-</p>
-
-<p align="center">
-  <a href="https://bit.ly/git-dotfiles">https://bit.ly/git-dotfiles</a>
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/repo-header.gif">
 </p>
 
 dev-setup
 ============
 
-**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure developer apps and tools.**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+</p>
 
 ## Motivation
 
-Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with easy-to-understand **instructions** and **dotfiles/scripts** that **automate** the following:
+**[Single script setup](https://github.com/donnemartin/dev-setup#single-script-setup) to install and configure developer apps and tools.**
 
-* Install **OS updates and Xcode Command Line Tools** for Mac users
-* Install and customize developer apps and tools such as **Sublime Text, Terminal, iTerm2, and Vim**
-* Install common **Homebrew formulae and apps** for Mac users
-* Set up **OSX defaults** for Mac users
-* Install the Python data packages **IPython Notebook, NumPy, Pandas, Scikit-Learn, Matplotlib, etc**
-* Set up Big Data platforms **Spark and MapReduce**
-* Set up cloud services **Amazon Web Services and Heroku**
-* Set up common data stores **MySQL, MongoDB, Redis, and Elasticsearch**
-* Set up Javascript web development with **Node.js, JSHint, and Less**
+Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
 
-Sections Summary:
+* **OSX updates and Xcode Command Line Tools**
+* **OSX defaults** geared towards developers
+* **Developer tools**: Vim, bash, tab completion, curl, git, GNU core utils, Python, Ruby, etc
+* **Developer apps**: iTerm2, Sublime Text, Atom, VirtualBox, Vagrant, Docker, Chrome, etc
+* **Python data analysis**: IPython Notebook, NumPy, Pandas, Scikit-Learn, Matplotlib, etc
+* **Big Data platforms**: Spark (with IPython Notebook integration) and MapReduce
+* **Cloud services**: Amazon Web Services (Boto, AWS CLI, S3cmd, etc) and Heroku
+* **Common data stores**: MySQL, MongoDB, Redis, and Elasticsearch
+* **Javascript web development**: Node.js, JSHint, and Less
+
+### Sections Summary
 * Section 1 contains the dotfiles/scripts and instructions to set up your system.
-* Sections 2 through 6 detail more information about installation, configuration, and usage for items in Section 1.
+* Sections 2 through 6 detail more information about installation, configuration, and usage for topics in Section 1.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
