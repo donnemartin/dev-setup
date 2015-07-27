@@ -37,14 +37,14 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 
 * [Single Script Setup](#single-script-setup)
 
-Steps executed by [Single Script Setup](#single-script-setup):
+Individual steps executed by [Single Script Setup](#single-script-setup):
 * [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
     * Syncs dev-setup to your local home directory
 * [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
     * Updates OS X and install Xcode command line tools
 * [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script)
     * Installs common Homebrew formulae and apps
-* [Step 4: Run the .osx script](#step-4-run-the-osx-script)
+* [Step 4: Run the osx.sh script](#step-4-run-the-osxsh-script)
     * Sets up OS X defaults geared towards developers
 * [Step 5: Run the pydata.sh script](#step-5-run-the-pydatash-script)
     * Sets up python for data analysis
@@ -133,7 +133,7 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
 * [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
-* [.osx](https://github.com/donnemartin/dev-setup/blob/master/.osx)
+* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
 * [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
@@ -288,20 +288,20 @@ The `brew.sh` script takes awhile to complete, as some formulae need to be insta
 
 **For your terminal customization to take full effect, quit and re-start the terminal**
 
-### Step 4: Run the .osx script
+### Step 4: Run the osx.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
   <br/>
 </p>
 
-When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `.osx` script also configures common third-party apps such Sublime Text and Chrome.
+When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `osx.sh` script also configures common third-party apps such Sublime Text and Chrome.
 
-**Note**: **I strongly encourage you read through the commented [.osx source file](https://github.com/donnemartin/dev-setup/blob/master/.osx) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
+**Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/donnemartin/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
 
 After synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
 
-    $ ./.osx
+    $ ./osx.sh
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
@@ -394,7 +394,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 #### Configuration
 
-The section [Step 4: Run the .osx script](#step-4-run-the-osx-script) contains Sublime Text configurations.
+The section [Step 4: Run the osx.sh script](#step-4-run-the-osxsh-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
@@ -466,7 +466,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The sections [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script) and [Step 4: Run the .osx script](#step-4-run-the-osx-script) contain terminal customizations.
+The sections [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script) and [Step 4: Run the osx.sh script](#step-4-run-the-osxsh-script) contain terminal customizations.
 
 ### iTerm2
 
