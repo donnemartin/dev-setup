@@ -7,7 +7,7 @@ dev-setup
 
 ## Motivation
 
-**[Single script setup](#single-script-setup) to install and configure developer apps and tools.**
+**[Simple single script setup](#simple-single-script-setup) to install and configure developer apps and tools.**
 
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
 
@@ -36,9 +36,9 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 
 **Scripts tested on OS X 10.10 Yosemite.**
 
-* [Single Script Setup](#single-script-setup)
+* [Simple single Script Setup](#simple-single-script-setup)
 
-Individual steps executed by [Single Script Setup](#single-script-setup):
+Individual steps executed by [Simple Single Script Setup](#simple-single-script-setup):
 * [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
     * Syncs dev-setup to your local home directory
 * [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
@@ -135,9 +135,7 @@ Individual steps executed by [Single Script Setup](#single-script-setup):
 
 ## Section 1: Installation
 
-### Single Script Setup
-
-**Note**: I **strongly encourage** you to at least read through Section 1, starting with [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script) so you have a better idea what each installation step does.  Tweak each script based on your preferences.
+### Simple Single Script Setup
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
@@ -167,6 +165,7 @@ Run the following after you've [cloned the repo](#clone-the-repo):
     $ ./.dots
 
 **Notes:**
+
 * `.dots` will initially prompt you to enter your password.
 * `.dots` might ask you to re-enter your password at certain stages of the installation.
 * If installing OS X updates requires a restart, simply run `.dots` again to resume where you left off.
@@ -176,7 +175,7 @@ Run the following after you've [cloned the repo](#clone-the-repo):
 * The full runtime for `.dots` on a clean install of OS X 10.10 Yosemite took about 45 minutes on a 2013 Macbook Air based on my tests.
 * **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
 
-The following steps in Section 1 describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.  Fork the repo and tweak the scripts to suit your needs.
+I encourage you to read through Section 1 so you have a better idea of what each installation step does.  The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.  Fork the repo and tweak the scripts to suit your needs.
 
 ### Step 1: Run the bootstrap.sh script
 
