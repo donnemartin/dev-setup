@@ -569,7 +569,11 @@ VirtualBox creates and manages virtual machines.  It's a solid free solution to 
 
 The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs VirtualBox
 
-If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads).
+If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="/Applications" virtualbox
 
 ### Vagrant
 
@@ -584,7 +588,11 @@ Vagrant creates and configures development environments.  You can think of it as
 
 The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Vagrant.
 
-If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/).
+If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="/Applications" vagrant
 
 ### Docker
 
@@ -599,7 +607,11 @@ Docker automates the deployment of applications inside software containers.  I t
 
 The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Docker.
 
-If you prefer to install it separately, you can download it [here](https://www.docker.com/).
+If you prefer to install it separately, you can download it [here](https://www.docker.com/) or run:
+
+    $ brew update
+    $ brew install docker
+    $ brew install boot2docker
 
 #### Configuration
 
@@ -1740,7 +1752,11 @@ Read more about LESS on their page here: http://lesscss.org/
 
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
 
-If you prefer to install it separately, you can download the JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+If you prefer to install it separately, you can download the JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="~/Applications" java
 
 ### Android SDK
 
@@ -1762,7 +1778,11 @@ If you prefer to install it separately, you can download it [here](https://devel
 
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Android Studio.
 
-If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html).
+If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="~/Applications" android-studio
 
 ### IntelliJ IDEA
 
@@ -1773,7 +1793,11 @@ If you prefer to install it separately, you can download it [here](https://devel
 
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
 
-If you prefer to install it separately, you can download it [here](https://www.jetbrains.com/idea/download/).
+If you prefer to install it separately, you can download it [here](https://www.jetbrains.com/idea/download/) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="~/Applications" intellij-idea-ce
 
 ## Section 8: Misc
 
