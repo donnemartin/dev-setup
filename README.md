@@ -20,6 +20,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Cloud services**: Amazon Web Services (Boto, AWS CLI, S3cmd, etc) and Heroku
 * **Common data stores**: MySQL, MongoDB, Redis, and Elasticsearch
 * **Javascript web development**: Node.js, JSHint, and Less
+* **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
 
 ### Sections Summary
 * Section 1 contains the dotfiles/scripts and instructions to set up your system.
@@ -54,6 +55,8 @@ Individual steps executed by [Single Script Setup](#single-script-setup):
     * Sets up common data stores
 * [Step 8: Run the webdev.sh script](#step-8-run-the-webdevsh-script)
     * [Coming Soon] Sets up JavaScript web development
+* [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script)
+    * Sets up Android development
 
 ## Section 2: General Apps and Tools
 
@@ -116,7 +119,14 @@ Individual steps executed by [Single Script Setup](#single-script-setup):
 * [JSHint](#jshint)
 * [Less](#less)
 
-## Section 7: Misc
+## Section 7: Android Development
+
+* [Java](#java)
+* [Android SDK](#android-sdk)
+* [Android Studio](#android-studio)
+* [IntelliJ IDEA](#intellij-idea)
+
+## Section 8: Misc
 
 * [Contributions](#contributions)
 * [Credits](#credits)
@@ -369,7 +379,18 @@ To set up common data stores, run the following script from your local dev-setup
 
     $ ./webdev.sh  # coming soon
 
-[Section 6: JavaScript Web Development](#section-6-javascript-web-development) describes the installed packages and usage.
+### Step 9: Run the android.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/android.png">
+  <br/>
+</p>
+
+To set up an Android development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+
+    $ ./android.sh
+
+[Section 7: Android Development](#section-7-android-development) describes the installed packages and usage.
 
 ## Section 2: General Apps and Tools
 
@@ -1673,7 +1694,7 @@ Follow additional instructions on the [JSHint Package Manager page](https://subl
 
 CSS preprocessors are becoming quite popular, the most popular processors are [LESS](http://lesscss.org/) and [SASS](http://sass-lang.com). Preprocessing is a lot like compiling code for CSS. It allows you to reuse CSS in many different ways. Let's start out with using LESS as a basic preprocessor, it's used by a lot of popular CSS frameworks like [Bootstrap](http://getbootstrap.com/).
 
-#### Install
+#### Installation
 
 To install LESS you have to use NPM / Node, which you installed earlier using Homebrew. In the terminal use:
 
@@ -1703,7 +1724,37 @@ The two options are the "input" and "output" files for the compiler. The command
 
 Read more about LESS on their page here: http://lesscss.org/
 
-## Section 7: Misc
+## Section 7: Android Development
+
+***This section is under development.***
+
+### Java
+
+#### Installation
+
+The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
+
+If you prefer to install it separately, you can download the JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+### Android SDK
+
+The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs the Android SDK.
+
+If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html).
+
+### Android Studio
+
+The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Android Studio.
+
+If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html).
+
+### IntelliJ IDEA
+
+The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
+
+If you prefer to install it separately, you can download it [here](https://www.jetbrains.com/idea/download/).
+
+## Section 8: Misc
 
 ### Contributions
 

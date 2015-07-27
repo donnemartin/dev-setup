@@ -9,7 +9,7 @@ function runDots() {
 
     echo ""
     echo "------------------------------"
-    echo "Step 1/8: Syncing the dev-setup repo to your local machine."
+    echo "Step 1/9: Syncing the dev-setup repo to your local machine."
     echo "------------------------------"
     echo ""
     cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
@@ -17,7 +17,7 @@ function runDots() {
     # Run the osxprep.sh Script
     echo ""
     echo "------------------------------"
-    echo "Step 2/8: Updating OSX and installing Xcode command line tools"
+    echo "Step 2/9: Updating OSX and installing Xcode command line tools"
     echo "------------------------------"
     echo ""
     ./osxprep.sh
@@ -27,7 +27,7 @@ function runDots() {
     # commented brew.sh source file directly and tweak it to suit your needs.
     echo ""
     echo "------------------------------"
-    echo "Step 3/8: Installing Homebrew along with some common formulae and apps."
+    echo "Step 3/9: Installing Homebrew along with some common formulae and apps."
     echo "This might awhile to complete, as some formulae need to be installed from source."
     echo "------------------------------"
     echo ""
@@ -41,38 +41,45 @@ function runDots() {
     # the SSD section.
     echo ""
     echo "------------------------------"
-    echo "Step 4/8: Setting sensible OSX defaults."
+    echo "Step 4/9: Setting sensible OSX defaults."
     echo "------------------------------"
     echo ""
     ./osx.sh
 
     # Run the pydata.sh Script
     echo "------------------------------"
-    echo "Step 5/8: Setting up Python data development environment."
+    echo "Step 5/9: Setting up Python data development environment."
     echo "------------------------------"
     echo ""
     ./pydata.sh
 
     # Run the aws.sh Script
     echo "------------------------------"
-    echo "Step 6/8: Setting up AWS development environment."
+    echo "Step 6/9: Setting up AWS development environment."
     echo "------------------------------"
     echo ""
     ./aws.sh
 
     # Run the datastores.sh Script
     echo "------------------------------"
-    echo "Step 7/8: Setting up data stores."
+    echo "Step 7/9: Setting up data stores."
     echo "------------------------------"
     echo ""
     ./datastores.sh
 
     # Run the webdev.sh Script
     echo "------------------------------"
-    echo "Step 8/8: Setting up JavaScript web development environment."
+    echo "Step 8/9: Setting up JavaScript web development environment."
     echo "------------------------------"
     echo ""
     #./webdev.sh # coming soon
+
+    # Run the android.sh Script
+    echo "------------------------------"
+    echo "Step 9/9: Setting up Android development environment."
+    echo "------------------------------"
+    echo ""
+    ./android.sh
 
     echo "------------------------------"
     echo "Completed running .dots, restart your computer for all updates to take effect"
