@@ -1802,7 +1802,7 @@ If you prefer to install it separately, you can download it [here](https://www.j
 
 ### Contributions
 
-Bug reports and suggestions are [welcome](https://github.com/donnemartin/dev-setup/issues)!
+Bug reports, suggestions, and pull requests are [welcome](https://github.com/donnemartin/dev-setup/issues)!
 
 ### Credits
 
