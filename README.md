@@ -148,6 +148,7 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
 * [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
 * webdev.sh (coming soon)
+* [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
 
 #### Running without Git
 
@@ -1730,6 +1731,11 @@ Read more about LESS on their page here: http://lesscss.org/
 
 ### Java
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/java.png">
+  <br/>
+</p>
+
 #### Installation
 
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
@@ -1738,17 +1744,32 @@ If you prefer to install it separately, you can download the JDK [here](http://w
 
 ### Android SDK
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/androidsdk.png">
+  <br/>
+</p>
+
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs the Android SDK.
 
 If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html).
 
 ### Android Studio
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/androidstudio.png">
+  <br/>
+</p>
+
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Android Studio.
 
 If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html).
 
 ### IntelliJ IDEA
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/intellij.png">
+  <br/>
+</p>
 
 The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
 
