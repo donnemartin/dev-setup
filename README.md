@@ -1,12 +1,8 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/repo-header.gif">
-</p>
-
 dev-setup
 ============
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/repo-header.gif">
 </p>
 
 ## Motivation
@@ -30,6 +26,10 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * Sections 2 through 6 detail more information about installation, configuration, and usage for topics in Section 1.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+</p>
 
 ## Section 1: Installation
 
