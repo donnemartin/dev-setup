@@ -20,7 +20,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Javascript web development**: Node.js, JSHint, and Less
 * **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
 
-You can also automate the process by [running a single script](#single-script-setup) to install and configure these developer apps and tools.
+You can also automate the process by [running a single setup script](#single-setup-script) to install and configure these developer apps and tools.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
@@ -44,9 +44,9 @@ In addition to the **easy-to understand instructions** for installation, configu
 
 **Scripts tested on OS X 10.10 Yosemite.**
 
-* [Single Script Setup](#single-script-setup)
+* [Single Setup Script](#single-setup-script)
 
-Individual steps executed by [Single Script Setup](#single-script-setup):
+Individual steps executed by [Single Setup Script](#single-setup-script):
 * [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
     * Syncs dev-setup to your local home directory
 * [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
@@ -143,7 +143,7 @@ Individual steps executed by [Single Script Setup](#single-script-setup):
 
 ## Section 1: Installation
 
-### Single Script Setup
+### Single Setup Script
 
 The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
