@@ -7,8 +7,6 @@ dev-setup
 
 ## Motivation
 
-**[Single script setup](#single-script-setup) to install and configure developer apps and tools.**
-
 Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
 
 * **OS X updates and Xcode Command Line Tools**
@@ -18,9 +16,21 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Python data analysis**: IPython Notebook, NumPy, Pandas, Scikit-Learn, Matplotlib, etc
 * **Big Data platforms**: Spark (with IPython Notebook integration) and MapReduce
 * **Cloud services**: Amazon Web Services (Boto, AWS CLI, S3cmd, etc) and Heroku
-* **Common data stores**: MySQL, MongoDB, Redis, and Elasticsearch
+* **Common data stores**: MySQL, PostgreSQL, MongoDB, Redis, and Elasticsearch
 * **Javascript web development**: Node.js, JSHint, and Less
 * **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
+
+You can also automate the process by [running a single script](#single-script-setup) to install and configure these developer apps and tools.
+
+[Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
+
+### For Automation, What About Vagrant, Docker, or Boxen?
+
+[Docker](#docker) and [Vagrant](#vagrant) are great tools and are set up by this repo. We use Vagrant at work to ensure dev matches up with test and production tiers. I've only started playing around with Docker for side projects and it looks very promising. However, for Mac users, Docker and Vagrant both rely on **virtual machines**, which have their own considerations/pros/cons.
+
+[Boxen](https://boxen.github.com/) is a cool solution, although some might find it better geared towards "more mature companies or devops teams". I've seen some discussions of [headaches as it is using Puppet under the hood](https://github.com/boxen/our-boxen/issues/742).
+
+In addition to the **easy-to understand instructions** for installation, configuration, and usage, this repo is a more **light-weight** approach using a combination of **Homebrew, Homebrew Cask, and shell scripts** to do basic system setup.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
@@ -29,8 +39,6 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 ### Sections Summary
 * Section 1 contains the dotfiles/scripts and instructions to set up your system.
 * Sections 2 through 6 detail more information about installation, configuration, and usage for topics in Section 1.
-
-[Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
 ## Section 1: Installation
 
