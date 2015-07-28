@@ -385,9 +385,11 @@ To set up common data stores, run the following script from your local dev-setup
   <br/>
 </p>
 
-[Coming Soon] To set up a JavaScript web development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+To set up a JavaScript web development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
 
-    $ ./webdev.sh  # coming soon
+    $ ./webdev.sh  # automated install coming soon
+
+To install manually, refer to [Section 6: Web Development](#section-6-web-development) which describes the installed packages and usage.
 
 ### Step 9: Run the android.sh script
 
