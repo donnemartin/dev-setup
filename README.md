@@ -376,7 +376,7 @@ To set up common data stores, run the following script from your local dev-setup
 
     $ ./datastores.sh
 
-[Section 5: Data Stores](#section-5-data stores) describes the installed packages and usage.
+[Section 5: Data Stores](#section-5-data-stores) describes the installed packages and usage.
 
 ### Step 8: Run the webdev.sh script
 
