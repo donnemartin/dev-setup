@@ -30,7 +30,7 @@ You can also automate the process by [running a single setup script](#single-set
 
 [Boxen](https://boxen.github.com/) is a cool solution, although some might find it better geared towards "more mature companies or devops teams". I've seen some discussions of [headaches as it is using Puppet under the hood](https://github.com/boxen/our-boxen/issues/742).
 
-In addition to the **easy-to understand instructions** for installation, configuration, and usage, this repo is a more **light-weight** approach using a combination of **Homebrew, Homebrew Cask, and shell scripts** to do basic system setup.
+This repo takes a more **light-weight** approach to automation using a combination of **Homebrew, Homebrew Cask, and shell scripts** to do basic system setup.  It also provides **easy-to understand instructions** for installation, configuration, and usage for each developer app or tool.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
@@ -46,7 +46,7 @@ In addition to the **easy-to understand instructions** for installation, configu
 
 * [Single Setup Script](#single-setup-script)
 
-Individual steps executed by [Single Setup Script](#single-setup-script):
+The [Single Setup Script](#single-setup-script) executes each individual step, which you can also run separately:
 * [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
     * Syncs dev-setup to your local home directory
 * [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
@@ -155,6 +155,8 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
 * webdev.sh (coming soon)
 * [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
+
+If you prefer, you can run through the step(s) you'd like to install individually.
 
 #### Running without Git
 
