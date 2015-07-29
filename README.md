@@ -20,7 +20,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Javascript web development**: Node.js, JSHint, and Less
 * **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
 
-You can also automate the process by [running a single setup script](#single-setup-script) to install and configure these developer apps and tools.
+You can also automate the process by [running a single setup script](#single-setup-script) to install and configure some or all of these areas.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
@@ -45,8 +45,6 @@ This repo takes a more **light-weight** approach to automation using a combinati
 **Scripts tested on OS X 10.10 Yosemite.**
 
 * [Single Setup Script](#single-setup-script)
-
-The [Single Setup Script](#single-setup-script) executes each individual step, which you can also run separately:
 * [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
     * Syncs dev-setup to your local home directory
 * [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
@@ -145,7 +143,13 @@ The [Single Setup Script](#single-setup-script) executes each individual step, w
 
 ### Single Setup Script
 
-The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through all steps discussed in further detail throughout Section 1:
+By default, the template [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through the steps discussed in further detail throughout Section 1.
+
+You probably don't want to install every section unless you develop in all of these areas.  I'm currently working on command line arguments to [install only specified sections](https://github.com/donnemartin/dev-setup/issues/2).  **You can also [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script or its associated components to suit your needs.**
+
+#### Scripts
+
+* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
 * [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
@@ -157,10 +161,6 @@ The [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script w
 * [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
 
 If you prefer, you can run through the step(s) you'd like to install individually.
-
-#### Running without Git
-
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
 
 #### Running with Git
 
@@ -174,18 +174,22 @@ Run the following after you've [cloned the repo](#clone-the-repo):
 
     $ ./.dots
 
+#### Running without Git
+
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
+
 **Notes:**
 
 * `.dots` will initially prompt you to enter your password.
 * `.dots` might ask you to re-enter your password at certain stages of the installation.
-* If installing OS X updates requires a restart, simply run `.dots` again to resume where you left off.
-* When installing the Xcode command line tools, a dialog will be displayed asking to confirm installation.
+* If OS X updates require a restart, simply run `.dots` again to resume where you left off.
+* When installing the Xcode command line tools, a dialog box will confirm installation.
     * Once Xcode is installed, follow the instructions on the terminal to continue.
 * `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
 * The full runtime for `.dots` on a clean install of OS X 10.10 Yosemite took about 45 minutes on a 2013 Macbook Air based on my tests.
 * **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
 
-I encourage you to read through Section 1 so you have a better idea of what each installation step does.  The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.  Fork the repo and tweak the scripts to suit your needs.
+I encourage you to read through Section 1 so you have a better idea of what each installation step does.  The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
 
 ### Step 1: Run the bootstrap.sh script
 
@@ -195,14 +199,6 @@ I encourage you to read through Section 1 so you have a better idea of what each
 </p>
 
 The `bootstrap.sh` script will sync the dev-setup repo to your local home directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this `README` describes some of the customizations.
-
-#### Running without Git
-
-To sync dev-setup to your local home directory without Git, run the following:
-
-    $ cd ~; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
-
-To update later on, just run that command again.
 
 #### Running with Git
 
@@ -215,6 +211,14 @@ To update later on, just run that command again.
 Alternatively, to update while avoiding the confirmation prompt:
 
     $ set -- -f; source bootstrap.sh
+
+#### Running without Git
+
+To sync dev-setup to your local home directory without Git, run the following:
+
+    $ cd ~; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
+
+To update later on, just run that command again.
 
 #### Optional: Specify PATH
 
