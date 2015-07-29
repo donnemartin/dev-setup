@@ -1238,7 +1238,7 @@ The [aws.sh script](#aws-script) installs the AWS CLI.  If you prefer to install
 
 Run the following command to configure the AWS CLI:
 
-    $ aws --configure
+    $ aws configure
 
 Alternatively, the aws.sh script also syncs the template ```.aws/``` folder to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.aws/``` folder.  Update the config file with your credentials and location:
 
