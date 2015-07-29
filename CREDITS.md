@@ -53,6 +53,7 @@ This repo builds on the awesome work from the following repos:
 * [Ruby](http://www.unixstickers.com/image/cache/data/stickers/ruby/ruby.sh-600x600.png)
 * [less](http://www.endertech.com/wp-content/uploads/2014/10/LESSLogo.jpeg)
 * [Java](http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/java.svg)
-* [Android SDK](http://www.quality-web-solutions.com/blog/wp-content/uploads/2013/08/Android-SDK.png)
+* [Android](http://www.android.com/media/android_vector.jpg)
+* [Android SDK](http://geckobrosradio.com/wp-content/uploads/2014/06/android-logo-png.png)
 * [Android Studio](http://www.eightbitdreams.com/wp-content/uploads/2015/05/android-studio-logo.png)
 * [IntelliJ IDEA](http://www.jetbrains.com/img/logos/intellijIdea.png)
