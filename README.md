@@ -151,8 +151,6 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ##### Run the .dots Script
 
-By default, [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) will run through the sections discussed in further detail throughout this repo.
-
 **Since you probably don't want to install every section, the `.dots` script supports command line arguments to install only specified sections**.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
 
 Run all:
