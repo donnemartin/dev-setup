@@ -7,89 +7,105 @@ function runDots() {
     # Keep-alive: update existing `sudo` time stamp until the script has finished
     while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-    echo ""
-    echo "------------------------------"
-    echo "Step 1/9: Syncing the dev-setup repo to your local machine."
-    echo "------------------------------"
-    echo ""
-    cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+    # Run sections based on command line arguments
+    for ARG in "$@"
+    do
+        if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
+            echo ""
+            echo "------------------------------"
+            echo "Syncing the dev-setup repo to your local machine."
+            echo "------------------------------"
+            echo ""
+            cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+        fi
+        if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
+            # Run the osxprep.sh Script
+            echo ""
+            echo "------------------------------"
+            echo "Updating OSX and installing Xcode command line tools"
+            echo "------------------------------"
+            echo ""
+            ./osxprep.sh
+        fi
+        if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
+            # Run the brew.sh Script
+            # For a full listing of installed formulae and apps, refer to
+            # the commented brew.sh source file directly and tweak it to
+            # suit your needs.
+            echo ""
+            echo "------------------------------"
+            echo "Installing Homebrew along with some common formulae and apps."
+            echo "This might awhile to complete, as some formulae need to be installed from source."
+            echo "------------------------------"
+            echo ""
+            ./brew.sh
+        fi
+        if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
+            # Run the osx.sh Script
+            # I strongly suggest you read through the commented osx.sh
+            # source file and tweak any settings based on your personal
+            # preferences. The script defaults are intended for you to
+            # customize. For example, if you are not running an SSD you
+            # might want to change some of the settings listed in the
+            # SSD section.
+            echo ""
+            echo "------------------------------"
+            echo "Setting sensible OSX defaults."
+            echo "------------------------------"
+            echo ""
+            ./osx.sh
+        fi
+        if [ $ARG == "pydata" ] || [ $ARG == "all" ]; then
+            # Run the pydata.sh Script
+            echo "------------------------------"
+            echo "Setting up Python data development environment."
+            echo "------------------------------"
+            echo ""
+            ./pydata.sh
+        fi
+        if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
+            # Run the aws.sh Script
+            echo "------------------------------"
+            echo "Setting up AWS development environment."
+            echo "------------------------------"
+            echo ""
+            ./aws.sh
+        fi
+        if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
+            # Run the datastores.sh Script
+            echo "------------------------------"
+            echo "Setting up data stores."
+            echo "------------------------------"
+            echo ""
+            ./datastores.sh
+        fi
+        if [ $ARG == "webdev" ] || [ $ARG == "all" ]; then
+            # Run the webdev.sh Script
+            echo "------------------------------"
+            echo "Setting up JavaScript web development environment."
+            echo "------------------------------"
+            echo ""
+            #./webdev.sh # coming soon
+        fi
+        if [ $ARG == "android" ] || [ $ARG == "all" ]; then
+            # Run the android.sh Script
+            echo "------------------------------"
+            echo "Setting up Android development environment."
+            echo "------------------------------"
+            echo ""
+            ./android.sh
+        fi
+    done
 
-    # Run the osxprep.sh Script
-    echo ""
     echo "------------------------------"
-    echo "Step 2/9: Updating OSX and installing Xcode command line tools"
-    echo "------------------------------"
-    echo ""
-    ./osxprep.sh
-
-    # Run the brew.sh Script
-    # For a full listing of installed formulae and apps, refer to the
-    # commented brew.sh source file directly and tweak it to suit your needs.
-    echo ""
-    echo "------------------------------"
-    echo "Step 3/9: Installing Homebrew along with some common formulae and apps."
-    echo "This might awhile to complete, as some formulae need to be installed from source."
-    echo "------------------------------"
-    echo ""
-    ./brew.sh
-
-    # Run the osx.sh Script
-    # I strongly suggest you read through the commented osx.sh source file
-    # and tweak any settings based on your personal preferences. The script
-    # defaults are intended for you to customize. For example, if you are not
-    # running an SSD you might want to change some of the settings listed in
-    # the SSD section.
-    echo ""
-    echo "------------------------------"
-    echo "Step 4/9: Setting sensible OSX defaults."
-    echo "------------------------------"
-    echo ""
-    ./osx.sh
-
-    # Run the pydata.sh Script
-    echo "------------------------------"
-    echo "Step 5/9: Setting up Python data development environment."
-    echo "------------------------------"
-    echo ""
-    ./pydata.sh
-
-    # Run the aws.sh Script
-    echo "------------------------------"
-    echo "Step 6/9: Setting up AWS development environment."
-    echo "------------------------------"
-    echo ""
-    ./aws.sh
-
-    # Run the datastores.sh Script
-    echo "------------------------------"
-    echo "Step 7/9: Setting up data stores."
-    echo "------------------------------"
-    echo ""
-    ./datastores.sh
-
-    # Run the webdev.sh Script
-    echo "------------------------------"
-    echo "Step 8/9: Setting up JavaScript web development environment."
-    echo "------------------------------"
-    echo ""
-    #./webdev.sh # coming soon
-
-    # Run the android.sh Script
-    echo "------------------------------"
-    echo "Step 9/9: Setting up Android development environment."
-    echo "------------------------------"
-    echo ""
-    ./android.sh
-
-    echo "------------------------------"
-    echo "Completed running .dots, restart your computer for all updates to take effect"
+    echo "Completed running .dots, restart your computer to ensure all updates take effect"
     echo "------------------------------"
 }
 
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    runDots;
+    runDots $@
 fi;
 
 unset runDots;
