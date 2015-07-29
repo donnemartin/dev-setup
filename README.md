@@ -20,7 +20,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Javascript web development**: Node.js, JSHint, and Less
 * **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
 
-You can also automate the process by [running a single setup script](#single-setup-script) to install and configure some or all of these areas.
+You can also automate the process by [running a single setup script](#single-setup-script) to install and configure specified sections.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
@@ -38,30 +38,30 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ### Sections Summary
 * Section 1 contains the dotfiles/scripts and instructions to set up your system.
-* Sections 2 through 6 detail more information about installation, configuration, and usage for topics in Section 1.
+* Sections 2 through 7 detail more information about installation, configuration, and usage for topics in Section 1.
 
 ## Section 1: Installation
 
 **Scripts tested on OS X 10.10 Yosemite.**
 
 * [Single Setup Script](#single-setup-script)
-* [Step 1: Run the bootstrap.sh script](#step-1-run-the-bootstrapsh-script)
-    * Syncs dev-setup to your local home directory
-* [Step 2: Run the osxprep.sh script](#step-2-run-the-osxprepsh-script)
-    * Updates OS X and install Xcode command line tools
-* [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script)
+* [bootstrap.sh script](#bootstrapsh-script)
+    * Syncs dev-setup to your local home directory `~`
+* [osxprep.sh script](#osxprepsh-script)
+    * Updates OS X and installs Xcode command line tools
+* [brew.sh script](#brewsh-script)
     * Installs common Homebrew formulae and apps
-* [Step 4: Run the osx.sh script](#step-4-run-the-osxsh-script)
+* [osx.sh script](#osxsh-script)
     * Sets up OS X defaults geared towards developers
-* [Step 5: Run the pydata.sh script](#step-5-run-the-pydatash-script)
+* [pydata.sh script](#pydatash-script)
     * Sets up python for data analysis
-* [Step 6: Run the aws.sh script](#step-6-run-the-awssh-script)
+* [aws.sh script](#awssh-script)
     * Sets up Amazon Web Services
-* [Step 7: Run the datastores.sh script](#step-8-run-the-datastoressh-script)
+* [datastores.sh script](#datastoressh-script)
     * Sets up common data stores
-* [Step 8: Run the webdev.sh script](#step-8-run-the-webdevsh-script)
+* [webdev.sh script](#webdevsh-script)
     * [Coming Soon] Sets up JavaScript web development
-* [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script)
+* [android.sh script](#androidsh-script)
     * Sets up Android development
 
 ## Section 2: General Apps and Tools
@@ -143,25 +143,6 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ### Single Setup Script
 
-By default, the template [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script will run through the steps discussed in further detail throughout Section 1.
-
-You probably don't want to install every section unless you develop in all of these areas.  I'm currently working on command line arguments to [install only specified sections](https://github.com/donnemartin/dev-setup/issues/2).  **You can also [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script or its associated components to suit your needs.**
-
-#### Scripts
-
-* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
-* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
-* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
-* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
-* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
-* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
-* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
-* [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
-* webdev.sh (coming soon)
-* [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
-
-If you prefer, you can run through the step(s) you'd like to install individually.
-
 #### Running with Git
 
 ##### Clone the Repo
@@ -170,13 +151,50 @@ If you prefer, you can run through the step(s) you'd like to install individuall
 
 ##### Run the .dots Script
 
-Run the following after you've [cloned the repo](#clone-the-repo):
+By default, [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) will run through the sections discussed in further detail throughout this repo.
 
-    $ ./.dots
+**Since you probably don't want to install every section, the `.dots` script supports command line arguments to install only specified sections**.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+
+Run all:
+
+    $ ./.dots all
+
+Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
+
+    $ ./.dots bootstrap osxprep brew osx
+
+Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+
+    $ ./.dots bootstrap osxprep brew osx pydata aws datastores
 
 #### Running without Git
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
+
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
+
+#### Scripts
+
+* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
+    * Runs specified scripts
+* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
+    * Syncs dev-setup to your local home directory `~`
+* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
+    * Updates OS X and installs Xcode command line tools
+* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
+    * Installs common Homebrew formulae and apps
+* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
+    * Sets up OS X defaults geared towards developers
+* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
+    * Sets up python for data analysis
+* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
+    * Sets up Amazon Web Services
+* [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
+    * Sets up common data stores
+* webdev.sh
+    * [Coming Soon] Sets up JavaScript web development
+* [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
+    * Sets up Android development
 
 **Notes:**
 
@@ -186,19 +204,18 @@ Run the following after you've [cloned the repo](#clone-the-repo):
 * When installing the Xcode command line tools, a dialog box will confirm installation.
     * Once Xcode is installed, follow the instructions on the terminal to continue.
 * `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
-* The full runtime for `.dots` on a clean install of OS X 10.10 Yosemite took about 45 minutes on a 2013 Macbook Air based on my tests.
 * **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
 
-I encourage you to read through Section 1 so you have a better idea of what each installation step does.  The following steps describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
 
-### Step 1: Run the bootstrap.sh script
+### bootstrap.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
   <br/>
 </p>
 
-The `bootstrap.sh` script will sync the dev-setup repo to your local home directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this `README` describes some of the customizations.
+The `bootstrap.sh` script will sync the dev-setup repo to your local home directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
 
 #### Running with Git
 
@@ -257,14 +274,14 @@ gpip(){
 
 You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
 
-### Step 2: Run the osxprep.sh script
+### osxprep.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
   <br/>
 </p>
 
-Run the `osxprep.sh` script after you've [cloned the repo](#clone-the-repo):
+Run the `osxprep.sh` script:
 
     $ ./osxprep.sh
 
@@ -293,7 +310,7 @@ If you're running 10.8 or older, you'll need to go to [http://developer.apple.co
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
-### Step 3: Run the brew.sh script
+### brew.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
@@ -304,7 +321,7 @@ When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), 
 
 Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
-After synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
+Run the `brew.sh` script:
 
     $ ./brew.sh
 
@@ -312,7 +329,7 @@ The `brew.sh` script takes awhile to complete, as some formulae need to be insta
 
 **For your terminal customization to take full effect, quit and re-start the terminal**
 
-### Step 4: Run the osx.sh script
+### osx.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
@@ -323,20 +340,20 @@ When setting up a new Mac, you may want to set OS X defaults geared towards deve
 
 **Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/donnemartin/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
 
-After synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script), run the following script from your local dev-setup directory:
+Run the `osx.sh` script:
 
     $ ./osx.sh
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
-### Step 5: Run the pydata.sh script
+### pydata.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pydata.png">
   <br/>
 </p>
 
-To set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+To set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the `pydata.sh` script:
 
     $ ./pydata.sh
 
@@ -356,53 +373,53 @@ Then start working with the installed packages, for example:
 
 [Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
 
-### Step 6: Run the aws.sh script
+### aws.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
   <br/>
 </p>
 
-To set up a development environment to work Amazon Web Services, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+To set up a development environment to work Amazon Web Services, run the `aws.sh` script:
 
     $ ./aws.sh
 
 [Section 4: Big Data, AWS, and Heroku](#section-4-big-data-aws-and-heroku) describes the installed packages and usage.
 
-### Step 7: Run the datastores.sh script
+### datastores.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/datastores.png">
   <br/>
 </p>
 
-To set up common data stores, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+To set up common data stores, run the `datastores.sh` script:
 
     $ ./datastores.sh
 
 [Section 5: Data Stores](#section-5-data-stores) describes the installed packages and usage.
 
-### Step 8: Run the webdev.sh script
+### webdev.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
   <br/>
 </p>
 
-To set up a JavaScript web development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+To set up a JavaScript web development environment, Run the `webdev.sh` script:
 
     $ ./webdev.sh  # automated install coming soon
 
 To install manually, refer to [Section 6: Web Development](#section-6-web-development) which describes the installed packages and usage.
 
-### Step 9: Run the android.sh script
+### android.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/android.png">
   <br/>
 </p>
 
-To set up an Android development environment, run the following script from your local dev-setup directory after synchronizing with the dev-setup repo through [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script):
+To set up an Android development environment, run the `android.sh` script:
 
     $ ./android.sh
 
@@ -421,7 +438,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Sublime Text.
+The [brew.sh script](#brewsh-script) installs Sublime Text.
 
 If you prefer to install it separately, go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
@@ -431,7 +448,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 #### Configuration
 
-The section [Step 4: Run the osx.sh script](#step-4-run-the-osxsh-script) contains Sublime Text configurations.
+The [osx.sh script](#osxsh-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
@@ -484,7 +501,7 @@ While inside the `Packages` directory, clone the theme repository using the comm
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Atom.
+The [brew.sh script](#brewsh-script) installs Atom.
 
 If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
@@ -503,7 +520,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The sections [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script) and [Step 4: Run the osx.sh script](#step-4-run-the-osxsh-script) contain terminal customizations.
+The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script) contain terminal customizations.
 
 ### iTerm2
 
@@ -569,7 +586,7 @@ I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of
 
 #### Configuration
 
-The sections [Step 1: Run the bootstrap.sh script](#step-2-run-the-bootstrapsh-script) contains Vim customizations.
+The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
 
 ### VirtualBox
 
@@ -582,7 +599,7 @@ VirtualBox creates and manages virtual machines.  It's a solid free solution to 
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs VirtualBox
+The [brew.sh script](#brewsh-script) installs VirtualBox
 
 If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads) or run:
 
@@ -601,7 +618,7 @@ Vagrant creates and configures development environments.  You can think of it as
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Vagrant.
+The [brew.sh script](#brewsh-script) installs Vagrant.
 
 If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/) or run:
 
@@ -620,7 +637,7 @@ Docker automates the deployment of applications inside software containers.  I t
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Docker.
+The [brew.sh script](#brewsh-script) installs Docker.
 
 If you prefer to install it separately, you can download it [here](https://www.docker.com/) or run:
 
@@ -694,7 +711,7 @@ Package managers make it so much easier to install and update applications (for 
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
+The [brew.sh script](#brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
 
 If you prefer to install it separately, run the following command and follow the steps on the screen:
 
@@ -832,7 +849,7 @@ OS X, like Linux, ships with [Python](http://python.org/) already installed. But
 
 #### Installation
 
-The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) installs the latest versions of Python 2 and Python 3.
+The [brew.sh script](#brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ### Pip
 
@@ -840,7 +857,7 @@ The section [Step 3: Run the brew.sh script](#step-3-run-the-brewsh-script) inst
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs pip.
+The [pydata.sh script](#pydatash-script) installs pip.
 
 #### Usage
 
@@ -868,7 +885,7 @@ The advantage is that different projects might require different versions of pac
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs Virtualenv.
+The [pydata.sh script](#pydatash-script) installs Virtualenv.
 
 #### Usage
 
@@ -906,7 +923,7 @@ Main features include:
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs Virtualenvwrapper.
+The [pydata.sh script](#pydatash-script) installs Virtualenvwrapper.
 
 #### Usage
 
@@ -939,7 +956,7 @@ Anaconda is a free distribution of the Python programming language for large-sca
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs packages you need to run Python data applications.  Alternatively, you can install the more heavy-weight Anaconda instead.
+The [pydata.sh script](#pydatash-script) installs packages you need to run Python data applications.  Alternatively, you can install the more heavy-weight Anaconda instead.
 
 Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/install.html) or the more lightweight [miniconda](http://conda.pydata.org/miniconda.html).
 
@@ -955,7 +972,7 @@ IPython Notebook is a web-based interactive computational environment where you 
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs IPython Notebook.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs IPython Notebook.  If you prefer to install it separately, run:
 
     $ pip install "ipython[notebook]"
 
@@ -983,7 +1000,7 @@ NumPy adds Python support for large, multi-dimensional arrays and matrices, alon
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs NumPy.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs NumPy.  If you prefer to install it separately, run:
 
     $ pip install numpy
 
@@ -1002,7 +1019,7 @@ Pandas is a software library written for data manipulation and analysis in Pytho
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs Pandas.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs Pandas.  If you prefer to install it separately, run:
 
     $ pip install pandas
 
@@ -1021,7 +1038,7 @@ Matplotlib is a Python 2D plotting library which produces publication quality fi
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh scripts](#step-5-run-the-pydata-script) installs matplotlib.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs matplotlib.  If you prefer to install it separately, run:
 
     $ pip install matplotlib
 
@@ -1040,7 +1057,7 @@ Seaborn is a Python visualization library based on matplotlib. It provides a hig
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh scripts](#step-5-run-the-pydata-script) installs matplotlib.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs matplotlib.  If you prefer to install it separately, run:
 
     $ pip install seaborn
 
@@ -1059,7 +1076,7 @@ Scikit-learn adds Python support for large, multi-dimensional arrays and matrice
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs Scikit-learn.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs Scikit-learn.  If you prefer to install it separately, run:
 
     $ pip install scikit-learn
 
@@ -1078,7 +1095,7 @@ SciPy is a collection of mathematical algorithms and convenience functions built
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs SciPy.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to install it separately, run:
 
     $ pip install scipy
 
@@ -1097,7 +1114,7 @@ Flask is a micro web application framework written in Python.
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs SciPy.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to install it separately, run:
 
     $ pip install Flask
 
@@ -1116,7 +1133,7 @@ Bokeh is a Python interactive visualization library that targets modern web brow
 
 #### Installation
 
-The section [Step 5: Run the pydata.sh script](#step-5-run-the-pydata-script) installs Bokeh.  If you prefer to install it separately, run:
+The [pydata.sh script](#pydatash-script) installs Bokeh.  If you prefer to install it separately, run:
 
     $ pip install bokeh
 
@@ -1137,7 +1154,7 @@ Spark is an in-memory cluster computing framework, up to 100 times faster for ce
 
 #### Installation
 
-The section [Step 6: Run the aws.sh script](#step-5-run-the-pydata-script) installs Spark locally.  It also hooks up Spark to run within the IPython Notebook by configuring your `.bash_profile` and adding the repo's `profile_pyspark/` to `.ipython`.
+The [aws.sh script](#aws-script) installs Spark locally.  It also hooks up Spark to run within the IPython Notebook by configuring your `.bash_profile` and adding the repo's `profile_pyspark/` to `.ipython`.
 
 If you prefer to install it separately, run:
 
@@ -1172,7 +1189,7 @@ Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clust
 
 **Mrjob is Python 2 only.**
 
-The section [Step 6: Run the aws.sh script](#step-5-run-the-pydata-script) installs mrjob locally.  If you prefer to install it separately, run:
+The [aws.sh script](#aws-script) installs mrjob locally.  If you prefer to install it separately, run:
 
     $ pip install mrjob
 
@@ -1217,7 +1234,7 @@ The AWS Command Line Interface is a unified tool to manage AWS services, allowin
 
 #### Installation
 
-The section [Step 6: Run the aws.sh script](#step-5-run-the-pydata-script) installs the AWS CLI.  If you prefer to install it separately, run:
+The [aws.sh script](#aws-script) installs the AWS CLI.  If you prefer to install it separately, run:
 
     $ pip install awscli
 
@@ -1255,7 +1272,7 @@ Boto is the official AWS SDK for Python.
 
 #### Installation
 
-The section [Step 6: Run the aws.sh script](#step-5-run-the-pydata-script) installs boto.  If you prefer to install it separately, run:
+The [aws.sh script](#aws-script) installs boto.  If you prefer to install it separately, run:
 
     $ pip install boto
 
@@ -1280,7 +1297,7 @@ I've found S3cmd to be a great command line tool for interacting with S3 on AWS.
 
 **S3cmd is Python 2 only.**
 
-The section [Step 6: Run the aws.sh script](#step-5-run-the-pydata-script) installs s3cmd.  If you prefer to install it separately, run:
+The [aws.sh script](#aws-script) installs s3cmd.  If you prefer to install it separately, run:
 
     $ pip install s3cmd
 
@@ -1469,7 +1486,7 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 #### Installation
 
-The section [Step 7: Run the datastores.sh script](#step-8-run-the-datastoressh-script) installs MySQL.  If you prefer to install it separately, run:
+The [datastores.sh script](#datastoressh-script) installs MySQL.  If you prefer to install it separately, run:
 
     $ brew update # Always good to do
     $ brew install mysql
@@ -1513,7 +1530,7 @@ In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Wor
 
 #### Installation
 
-The section [Step 7: Run the datastores.sh script](#step-8-run-the-datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
+The [datastores.sh script](#datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
 
     $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" mysqlworkbench
@@ -1531,7 +1548,7 @@ You can also find the MySQL Workbench download [here](http://www.mysql.com/downl
 
 #### Installation
 
-The section [Step 7: Run the datastores.sh script](#step-8-run-the-datastoressh-script) installs MongoDB. If you prefer to install it separately, run:
+The [datastores.sh script](#datastoressh-script) installs MongoDB. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install mongo
@@ -1559,7 +1576,7 @@ I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual
 
 #### Installation
 
-The section [Step 7: Run the datastores.sh script](#step-8-run-the-datastoressh-script) installs Redis. If you prefer to install it separately, run:
+The [datastores.sh script](#datastoressh-script) installs Redis. If you prefer to install it separately, run:
 
     $ brew update
     $ brew install redis
@@ -1593,7 +1610,7 @@ You can use elasticsearch for such cool things as real-time search results, auto
 
 #### Installation
 
-The section [Step 7: Run the datastores.sh script](#step-8-run-the-datastoressh-script) installs Elasticsearch.  If you prefer to install it separately, check out the following discussion.
+The [datastores.sh script](#datastoressh-script) installs Elasticsearch.  If you prefer to install it separately, check out the following discussion.
 
 Elasticsearch runs on Java, so check if you have it installed by running:
 
@@ -1765,7 +1782,7 @@ Read more about LESS on their page here: http://lesscss.org/
 
 #### Installation
 
-The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
+The [android.sh script](#androidsh-script) installs Java.
 
 If you prefer to install it separately, you can download the JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or run:
 
@@ -1780,7 +1797,7 @@ If you prefer to install it separately, you can download the JDK [here](http://w
   <br/>
 </p>
 
-The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs the Android SDK.
+The [android.sh script](#androidsh-script) installs the Android SDK.
 
 If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html).
 
@@ -1791,7 +1808,7 @@ If you prefer to install it separately, you can download it [here](https://devel
   <br/>
 </p>
 
-The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Android Studio.
+The [android.sh script](#androidsh-script) installs Android Studio.
 
 If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html) or run:
 
@@ -1806,7 +1823,7 @@ If you prefer to install it separately, you can download it [here](https://devel
   <br/>
 </p>
 
-The section [Step 9: Run the android.sh script](#step-9-run-the-androidsh-script) installs Java.
+The [android.sh script](#androidsh-script) installs Java.
 
 If you prefer to install it separately, you can download it [here](https://www.jetbrains.com/idea/download/) or run:
 
