@@ -26,7 +26,7 @@ You can also automate the process by [running a single setup script](#single-set
 
 ### For Automation, What About Vagrant, Docker, or Boxen?
 
-[Docker](#docker) and [Vagrant](#vagrant) are great tools and are set up by this repo. We use Vagrant at work to ensure dev matches up with test and production tiers. I've only started playing around with Docker for side projects and it looks very promising. However, for Mac users, Docker and Vagrant both rely on **virtual machines**, which have their own considerations/pros/cons.
+[Vagrant](#vagrant) and [Docker](#docker) are great tools and are set up by this repo. I've found that Vagrant works well to ensure dev matches up with test and production tiers. I've only started playing around with Docker for side projects and it looks very promising. However, for Mac users, Docker and Vagrant both rely on **virtual machines**, which have their own considerations/pros/cons.
 
 [Boxen](https://boxen.github.com/) is a cool solution, although some might find it better geared towards "more mature companies or devops teams". I've seen some discussions of [headaches as it is using Puppet under the hood](https://github.com/boxen/our-boxen/issues/742).
 
