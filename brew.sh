@@ -52,6 +52,10 @@ brew install wget --with-iri
 brew install ringojs
 brew install narwhal
 
+# Install Python
+brew install python
+brew install python3
+
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
@@ -111,10 +115,6 @@ brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 brew install zopfli
-
-# Install Python
-brew install python
-brew install python3
 
 # Install Heroku
 brew install heroku-toolbelt
