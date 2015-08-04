@@ -1634,9 +1634,7 @@ As you guessed, you can add plugins to elasticsearch. A popular one is [elastics
 
 Start a local elasticsearch server with:
 
-    $ elasticsearch -f
-
-(The `-f` option tells it to run in the foreground, so you can stop it with `Ctrl+C`.)
+    $ elasticsearch
 
 Test that the server is working correctly by running:
 
