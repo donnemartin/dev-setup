@@ -56,7 +56,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [pydata.sh script](#pydatash-script)
     * Sets up python for data analysis
 * [aws.sh script](#awssh-script)
-    * Sets up Amazon Web Services
+    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh script](#datastoressh-script)
     * Sets up common data stores
 * [webdev.sh script](#webdevsh-script)
@@ -186,7 +186,7 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
     * Sets up python for data analysis
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
-    * Sets up Amazon Web Services
+    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
     * Sets up common data stores
 * webdev.sh
@@ -378,7 +378,7 @@ Then start working with the installed packages, for example:
   <br/>
 </p>
 
-To set up a development environment to work Amazon Web Services, run the `aws.sh` script:
+To set up a development environment to work with Spark, Hadoop MapReduce, and Amazon Web Services, run the `aws.sh` script:
 
     $ ./aws.sh
 
