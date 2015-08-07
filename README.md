@@ -1442,7 +1442,7 @@ Assuming that you have an account (sign up if you don't), let's install the [Her
 
 The formula might not have the latest version of the Heroku Client, which is updated pretty often. Let's update it now:
 
-    $ heroku update
+    $ brew upgrade heroku-toolbelt
 
 Don't be afraid to run `heroku update` every now and then to always have the most recent version.
 
