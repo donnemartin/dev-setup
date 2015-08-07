@@ -60,6 +60,7 @@ pip install scikit-learn
 pip install "ipython[all]"
 pip install bokeh
 pip install Flask
+pip install sqlalchemy
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -85,6 +86,7 @@ pip install scikit-learn
 pip install "ipython[all]"
 pip install bokeh
 pip install Flask
+pip install sqlalchemy
 
 echo "------------------------------"
 echo "Script completed."
