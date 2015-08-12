@@ -59,8 +59,8 @@ This repo takes a more **light-weight** approach to automation using a combinati
     * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh script](#datastoressh-script)
     * Sets up common data stores
-* [webdev.sh script](#webdevsh-script)
-    * [Coming Soon] Sets up JavaScript web development
+* [web.sh script](#websh-script)
+    * Sets up JavaScript web development
 * [android.sh script](#androidsh-script)
     * Sets up Android development
 
@@ -189,8 +189,8 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
     * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
     * Sets up common data stores
-* webdev.sh
-    * [Coming Soon] Sets up JavaScript web development
+* [web.sh](https://github.com/donnemartin/dev-setup/blob/master/web.sh)
+    * Sets up JavaScript web development
 * [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
     * Sets up Android development
 
@@ -397,18 +397,18 @@ To set up common data stores, run the `datastores.sh` script:
 
 [Section 5: Data Stores](#section-5-data-stores) describes the installed packages and usage.
 
-### webdev.sh script
+### web.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
   <br/>
 </p>
 
-To set up a JavaScript web development environment, Run the `webdev.sh` script:
+To set up a JavaScript web development environment, Run the `web.sh` script:
 
-    $ ./webdev.sh  # automated install coming soon
+    $ ./web.sh
 
-To install manually, refer to [Section 6: Web Development](#section-6-web-development) which describes the installed packages and usage.
+[Section 6: Web Development](#section-6-web-development) describes the installed packages and usage.
 
 ### android.sh script
 
