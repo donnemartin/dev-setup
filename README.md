@@ -1653,7 +1653,9 @@ Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of 
   <br/>
 </p>
 
-Install [Node.js](http://nodejs.org/) with Homebrew:
+#### Installation
+
+The [web.sh script](#websh-script) installs [Node.js](http://nodejs.org/).  You can also install it manually with Homebrew:
 
     $ brew update
     $ brew install node
@@ -1720,7 +1722,9 @@ JSHint is a JavaScript developer's best friend.
 
 If the extra credit assignment to install Sublime Package Manager was completed, JSHint can be run as part of Sublime Text.
 
-Install JSHint via npm (global install preferred)
+#### Installation
+
+The [web.sh script](#websh-script) installs JSHint.  You can also install it manually via via npm:
 
     $ npm install -g jshint
 
@@ -1737,11 +1741,11 @@ CSS preprocessors are becoming quite popular, the most popular processors are [L
 
 #### Installation
 
-To install LESS you have to use NPM / Node, which you installed earlier using Homebrew. In the terminal use:
+The [web.sh script](#websh-script) installs LESS.  To install LESS manually you have to use NPM / Node, which you installed earlier using Homebrew. In the terminal use:
 
-    $ npm install less --global
+    $ npm install -g less
 
-Note: the `--global` flag is optional but it prevents having to mess around with file paths. You can install without the flag, just know what you're doing.
+Note: the `-g` flag is optional but it prevents having to mess around with file paths. You can install without the flag, just know what you're doing.
 
 You can check that it installed properly by using:
 
