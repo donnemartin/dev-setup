@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+ 
+
+switch() 
+{
+if [ -e "${HOME}/.m2" ];
+then
+	if [ -e "${HOME}/.m2.personal" ];
+	then
+		mv "${HOME}/.m2" "${HOME}/.m2.work"
+		mv "${HOME}/.m2.personal" "${HOME}/.m2"
+		echo "Personal Maven Repository"
+	elif [ -e "${HOME}/.m2.work" ];
+	then
+		mv "${HOME}/.m2" "${HOME}/.m2.personal"
+		mv "${HOME}/.m2.work" "${HOME}/.m2"
+		echo "Work Maven Repository"
+	else
+		echo "No alternate maven repository"
+	fi
+else
+	echo "No .m2 folder found"
+fi
+}
+	
+if [ "$#" -gt 0 ];
+then
+	while getopts ":c" opt; do
+		case $opt in
+			c)
+				if [ -e "${HOME}/.m2.personal" ];
+				then
+					echo "Using Work Repository"
+				elif [ -e "${HOME}/.m2.work" ];
+				then
+					echo "Using Personal Repository"
+				else
+					echo "No alternative maven repository"
+				fi
+				;;
+			\?)
+				echo "-c: Show current maven repository"
+				;;
+		esac
+	done
+else
+	switch
+fi
