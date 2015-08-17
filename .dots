@@ -13,10 +13,11 @@ function runDots() {
         if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
-            echo "Syncing the dev-setup repo to your local machine."
+            echo "Syncing the dev-setup and dotfiles repo to your local machine."
             echo "------------------------------"
             echo ""
-            cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
