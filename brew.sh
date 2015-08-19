@@ -143,6 +143,9 @@ brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" evernote
 
+#Remove comment to install LaTeX distribution MacTeX
+#brew cask install --appdir="/Applications" mactex
+
 # Link cask apps to Alfred
 brew cask alfred link
 
