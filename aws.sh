@@ -37,7 +37,7 @@ EXTRA_PATH=~/.extra
 echo $EXTRA_PATH
 echo "" >> $EXTRA_PATH
 echo "" >> $EXTRA_PATH
-echo "# Configure aws cli autocomplete, added by pydata.sh" >> $EXTRA_PATH
+echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
 echo "complete -C '~/.virtualenvs/py2-data/bin/aws_completer' aws" >> $EXTRA_PATH
 source $EXTRA_PATH
 
@@ -64,7 +64,7 @@ pip install awscli
 #echo $EXTRA_PATH
 #echo "" >> $EXTRA_PATH
 #echo "" >> $EXTRA_PATH
-#echo "# Configure aws cli autocomplete, added by pydata.sh" >> $EXTRA_PATH
+#echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
 #echo "complete -C '~/.virtualenvs/py3-data/bin/aws_completer' aws" >> $EXTRA_PATH
 #source $EXTRA_PATH
 
