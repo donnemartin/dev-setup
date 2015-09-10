@@ -117,6 +117,12 @@ brew install webkit2png
 brew install zopfli
 brew install pkg-config libffi
 
+# Lxml and Libxslt
+brew install libxml2
+brew install libxslt
+brew link libxml2 --force
+brew link libxslt --force
+
 # Install Heroku
 brew install heroku-toolbelt
 heroku update
