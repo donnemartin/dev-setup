@@ -101,6 +101,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [MapReduce](#mapreduce)
 * [AWS Account](#aws-account)
 * [AWS CLI](#aws-cli)
+* [SAWS](#saws)
 * [Boto](#boto)
 * [S3cmd](#s3cmd)
 * [S3DistCp](#s3distcp)
@@ -1258,6 +1259,57 @@ aws_secret_access_key = YOURSECRETKEY
 #### Usage
 
 Refer to the following [AWS CLI IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### SAWS
+
+![](http://i.imgur.com/vzC5zmA.gif)
+
+Although the [AWS CLI](https://github.com/aws/aws-cli) is a great resource to manage your AWS-powered services, it's **tough to remember usage** of:
+
+* 50+ top-level commands
+* 1400+ subcommands
+* Countless command-specific options
+* Resources such as instance tags and buckets
+
+#### SAWS: A Supercharged AWS CLI
+
+`SAWS` aims to **supercharge** the AWS CLI with features focusing on:
+
+* **Improving ease-of-use**
+* **Increasing productivity**
+
+Under the hood, `SAWS` is **powered by the AWS CLI** and supports the **same commands** and **command structure**.
+
+`SAWS` and `AWS CLI` Usage:
+
+    aws <command> <subcommand> [parameters] [options]
+
+`SAWS` features:
+
+* Auto-completion of:
+    * Commands
+    * Subcommands
+    * Options
+* Auto-completion of resources:
+    * Bucket names
+    * Instance ids
+    * Instance tags
+    * [More coming soon!]((#todo-add-more-resources))
+* Customizable shortcuts
+* Fuzzy completion of resources and shortcuts
+* Syntax and output highlighting
+* Execution of shell commands
+* Command history
+* Contextual help
+* Toolbar options
+
+`SAWS` is available for Mac, Linux, Unix, and [Windows](#windows-support).
+
+![](http://i.imgur.com/Eo12q9T.png)
+
+#### Installation and Usage.
+
+Refer to the [repo link](https://github.com/donnemartin/saws).
 
 ### Boto
 
