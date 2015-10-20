@@ -7,7 +7,7 @@ dev-setup
 
 ## Motivation
 
-Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  This repo aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
+Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  `dev-setup` aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
 
 * **OS X updates and Xcode Command Line Tools**
 * **OS X defaults** geared towards developers
@@ -20,7 +20,13 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Javascript web development**: Node.js, JSHint, and Less
 * **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
 
-You can also automate the process by [running a single setup script](#single-setup-script) to install and configure specified sections.
+### But...I Don't Need All These Tools!
+
+**`dev-setup` is geared to be more of a *reference* for various developer tools you might find useful.**
+
+**You're *not* really meant to install everything.**
+
+If you're looking for automation `dev-setup` provides a customizable [setup script](#single-setup-script).  There's really no one-size-fits-all solution for developers so you're encouraged to make tweaks to suit your needs.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
@@ -153,7 +159,9 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ##### Run the .dots Script with Command Line Arguments
 
-Since you probably don't want to install every section, the `.dots` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+**Since you probably don't want to install every section**, the `.dots` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
 
 Run all:
 
@@ -170,8 +178,6 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 #### Running without Git
 
     $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
-
-**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
 
 #### Scripts
 
