@@ -164,5 +164,8 @@ brew cask alfred link
 brew install docker
 brew install boot2docker
 
+# Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
 # Remove outdated versions from the cellar.
 brew cleanup
