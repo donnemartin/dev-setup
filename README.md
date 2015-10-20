@@ -99,6 +99,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
+* [Awesome AWS](#awesome-aws)
 * [AWS Account](#aws-account)
 * [AWS CLI](#aws-cli)
 * [SAWS](#saws)
@@ -1211,6 +1212,27 @@ runners:
 #### Usage
 
 Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+
+### Awesome AWS [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/aws.png">
+</p>
+<br/>
+
+[Awesome AWS](https://github.com/donnemartin/awesome-aws) is a curated list of awesome AWS libraries, open source repos, guides, blogs, and other resources.  It's a great way to stay up-to-date with the various aws-backed and community-led efforts geared towards AWS.
+
+## The Fiery Meter of AWSome
+
+'Hot' repos in Awesome AWS are visually tagged based on their popularity:
+
+* Repo with 0100+ Stars: :fire:
+* Repo with 0200+ Stars: :fire::fire:
+* Repo with 0500+ Stars: :fire::fire::fire:
+* Repo with 1000+ Stars: :fire::fire::fire::fire:
+* Repo with 2000+ Stars: :fire::fire::fire::fire::fire:
+
+*Repos not on `The Fiery Meter of AWSome` can still be awesome, see [A Note on Repo AWSomeness](https://github.com/donnemartin/awesome-aws/blob/master/CONTRIBUTING.md#a-note-on-repo-awsomeness).*
 
 ### AWS Account
 
