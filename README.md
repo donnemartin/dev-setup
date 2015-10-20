@@ -99,7 +99,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
-* [Awesome AWS](#awesome-aws)
+* [Awesome AWS](#awesome-aws-)
 * [AWS Account](#aws-account)
 * [AWS CLI](#aws-cli)
 * [SAWS](#saws)
