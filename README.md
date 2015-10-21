@@ -7,7 +7,7 @@ dev-setup
 
 ## Motivation
 
-Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  `dev-setup` aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** that **automate the setup** of:
+Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  `dev-setup` aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** to **automate the setup** of the following:
 
 * **OS X updates and Xcode Command Line Tools**
 * **OS X defaults** geared towards developers
@@ -22,11 +22,11 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 
 ### But...I Don't Need All These Tools!
 
-**`dev-setup` is geared to be more of a *reference* for various developer tools you might find useful.**
+**`dev-setup` is geared to be more of an organized *reference* of various developer tools.**
 
-**You're *not* really meant to install everything.**
+**You're *not* meant to install everything.**
 
-If you're looking for automation `dev-setup` provides a customizable [setup script](#single-setup-script).  There's really no one-size-fits-all solution for developers so you're encouraged to make tweaks to suit your needs.
+If you're interested in automation, `dev-setup` provides a customizable [setup script](#single-setup-script).  There's really no one-size-fits-all solution for developers so you're encouraged to make tweaks to suit your needs.
 
 [Credits](#credits): This repo builds on the awesome work from [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
