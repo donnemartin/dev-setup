@@ -1228,7 +1228,7 @@ Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/d
 
 [Awesome AWS](https://github.com/donnemartin/awesome-aws) is a curated list of awesome AWS libraries, open source repos, guides, blogs, and other resources.  It's a great way to stay up-to-date with the various aws-backed and community-led efforts geared towards AWS.
 
-## The Fiery Meter of AWSome
+#### The Fiery Meter of AWSome
 
 'Hot' repos in Awesome AWS are visually tagged based on their popularity:
 
