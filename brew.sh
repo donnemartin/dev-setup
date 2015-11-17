@@ -102,6 +102,7 @@ brew install dark-mode
 brew install git
 brew install git-lfs
 brew install git-flow
+brew install git-extras
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
