@@ -755,7 +755,7 @@ To see what you have installed (with their version numbers):
 
     $ brew list --versions
 
-### Ruby and RVM
+### Ruby and rbenv
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/ruby.png">
@@ -766,83 +766,46 @@ To see what you have installed (with their version numbers):
 
 #### Installation
 
-When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
+`brew.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine. Installing latest version of Ruby with `rbenv` is very easy.
 
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
+`brew.sh` adds the following line to your `.extra` file to initialize `rbenv`:
 
-When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
-
-```bash
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 ```
-
-I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clean. I suggest you do the same.
-
-After that, start a new terminal and run:
-
-    $ type rvm | head -1
-
-You should get the output `rvm is a function`.
+eval "$(rbenv init -)"
+```
 
 #### Usage
 
-The following command will show you which versions of Ruby you have installed:
+`rbenv` uses `ruby-build` to download, compile, and install new versions of Ruby. You can see all versions available to download and install like so:
 
-    $ rvm list
+```
+$ ruby-build --definitions
+```
 
-The one that was just installed, Ruby 2.0, should be set as default. When managing multiple versions, you switch between them with:
+To install a new version of Ruby:
 
-    $ rvm use system # Switch back to system install (1.8)
-    $ rvm use 2.0.0 --default # Switch to 2.0.0 and sets it as default
+```
+# list all available versions installed on the system:
+$ rbenv install -l
 
-Run the following to make sure the version you want is being used (in our case, the just-installed Ruby 1.9.3):
+# install a Ruby version:
+$ rbenv install 2.2.3
+```
 
-    $ which ruby
-    $ ruby --version
+To switch the Ruby versions:
+```
+# set a local application-specific Ruby version in the current directory
+$ rbenv local 1.9.3
 
-You can install another version with:
+# set the global version of Ruby to be used in all shells
+$ rbenv global 2.0.0
 
-    $ rvm install 1.9.3
+`rbenv` by default will install Ruby versions into a directory of the same name under ~/.rbenv/versions. Because your user owns this directory, you no longer need to use `sudo` to install gems.
 
-To update RVM itself, use:
-
-    $ rvm get stable
-
-[RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
-
-    $ which gem
-
-Update to its latest version with:
-
-    $ gem update --system
-
-To install a "gem" (Ruby package), run:
-
-    $ gem install <gemname>
-
-To install without generating the documentation for each gem (faster):
-
-    $ gem install <gemname> --no-document
-
-To see what gems you have installed:
-
-    $ gem list
-
-To check if any installed gems are outdated:
-
-    $ gem outdated
-
-To update all gems or a particular gem:
-
-    $ gem update [<gemname>]
-
-RubyGems keeps old versions of gems, so feel free to do come cleaning after updating:
-
-    $ gem cleanup
-
-I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
-
-    $ gem install compass --no-document
+```
+# install the compass gem
+$ gem install compass --no-document
+```
 
 ### Python
 
