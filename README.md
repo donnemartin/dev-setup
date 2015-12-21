@@ -82,7 +82,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Vagrant](#vagrant)
 * [Docker](#docker)
 * [Homebrew](#homebrew)
-* [Ruby and RVM](#ruby-and-rvm)
+* [Ruby and rbenv](#ruby-and-rbenv)
 * [Python](#python)
 * [Pip](#pip)
 * [Virtualenv](#virtualenv)
