@@ -762,13 +762,11 @@ To see what you have installed (with their version numbers):
   <br/>
 </p>
 
-[Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
+[Ruby](http://www.ruby-lang.org/) is already installed on Unix systems, but we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
 
 #### Installation
 
-`brew.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine. Installing latest version of Ruby with `rbenv` is very easy.
-
-`brew.sh` adds the following line to your `.extra` file to initialize `rbenv`:
+`brew.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine.  `brew.sh` adds the following line to your `.extra` file to initialize `rbenv`:
 
 ```
 eval "$(rbenv init -)"
@@ -776,7 +774,7 @@ eval "$(rbenv init -)"
 
 #### Usage
 
-`rbenv` uses `ruby-build` to download, compile, and install new versions of Ruby. You can see all versions available to download and install like so:
+`rbenv` uses `ruby-build` to download, compile, and install new versions of Ruby. You can see all versions available to download and install:
 
 ```
 $ ruby-build --definitions
@@ -792,7 +790,8 @@ $ rbenv install -l
 $ rbenv install 2.2.3
 ```
 
-To switch the Ruby versions:
+To switch Ruby versions:
+
 ```
 # set a local application-specific Ruby version in the current directory
 $ rbenv local 1.9.3
@@ -802,9 +801,9 @@ $ rbenv global 2.0.0
 
 `rbenv` by default will install Ruby versions into a directory of the same name under ~/.rbenv/versions. Because your user owns this directory, you no longer need to use `sudo` to install gems.
 
-```
 # install the compass gem
 $ gem install compass --no-document
+
 ```
 
 ### Python
