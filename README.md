@@ -799,8 +799,11 @@ $ rbenv local 1.9.3
 # set the global version of Ruby to be used in all shells
 $ rbenv global 2.0.0
 
-`rbenv` by default will install Ruby versions into a directory of the same name under ~/.rbenv/versions. Because your user owns this directory, you no longer need to use `sudo` to install gems.
+```
 
+`rbenv` by default will install Ruby versions into a directory of the same name under `~/.rbenv/versions`. Because your user owns this directory, you no longer need to use `sudo` to install gems.
+
+```
 # install the compass gem
 $ gem install compass --no-document
 
