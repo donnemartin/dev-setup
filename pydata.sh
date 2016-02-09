@@ -91,6 +91,16 @@ pip install sqlalchemy
 #pip install mysql-python  # Python 2 only, use mysqlclient instead
 pip install mysqlclient
 
+###############################################################################
+# Install IPython Profile
+###############################################################################
+
+echo "------------------------------"
+echo "Installing IPython Notebook Default Profile"
+
+# Add the IPython profile
+cp -r init/profile_default/ ~/.ipython/profile_default
+
 echo "------------------------------"
 echo "Script completed."
 echo "Usage: workon py2-data for Python2"
