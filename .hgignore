@@ -1,6 +1,9 @@
 # Use shell-style glob syntax
 syntax: glob
 
+# IntelliJ IDEA IDE
+.idea
+
 # Compiled Python files
 *.pyc
 
