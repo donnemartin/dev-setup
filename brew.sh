@@ -57,6 +57,10 @@ brew install narwhal
 # Install Python
 brew install python
 brew install python3
+pip install virtualenv
+pip install virtualenvwrapper
+LINE='source /usr/local/bin/virtualenvwrapper.sh'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install ruby-build and rbenv
 brew install ruby-build
@@ -64,7 +68,17 @@ brew install rbenv
 LINE='eval "$(rbenv init -)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
+# NodeJS
+brew install node
+brew install nvm
+LINE='source $(brew --prefix nvm)/nvm.sh'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
+#npm install -g coffee-script
+#npm install -g grunt-cli
+npm install -g gulp
+npm install -g jshint
+#npm install -g less
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi

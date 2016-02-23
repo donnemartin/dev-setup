@@ -6,35 +6,10 @@
 # This script might be run with .dots, which uses elevated privileges
 sudo -K
 
-echo "------------------------------"
-echo "Setting up pip."
-
-# Install pip
-easy_install pip
-
-###############################################################################
-# Virtual Enviroments                                                         #
-###############################################################################
-
-echo "------------------------------"
-echo "Setting up virtual environments."
-
-# Install virtual environments globally
 pip install virtualenv
 pip install virtualenvwrapper
 
-echo "------------------------------"
-echo "Source virtualenvwrapper from ~/.extra"
-
-EXTRA_PATH=~/.extra
-echo $EXTRA_PATH
-echo "" >> $EXTRA_PATH
-echo "" >> $EXTRA_PATH
-echo "# Source virtualenvwrapper, added by pydata.sh" >> $EXTRA_PATH
-echo "export WORKON_HOME=~/.virtualenvs" >> $EXTRA_PATH
-echo "source /usr/local/bin/virtualenvwrapper.sh" >> $EXTRA_PATH
-echo "" >> $BASH_PROFILE_PATH
-source $EXTRA_PATH
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 
 ###############################################################################
 # Python 2 Virtual Enviroment                                                 #
@@ -44,7 +19,7 @@ echo "------------------------------"
 echo "Setting up py2-data virtual environment."
 
 # Create a Python2 data environment
-mkvirtualenv py2-data
+mkvirtualenv --python=/usr/local/bin/python2 py2-data
 workon py2-data
 
 # Install Python data modules
