@@ -7,10 +7,8 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
+alias d="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -23,13 +21,13 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+alias l="ls -lFh ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
+alias ll="ls -laFh ${colorflag}"
 
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias lld="ls -lF ${colorflag} | grep --color=never '^d'"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
@@ -59,25 +57,24 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d en0 -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
 
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
+command -v md5 > /dev/null || alias md5="md5sum"
 
 # OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
+command -v sha1 > /dev/null || alias sha1="shasum"
 
 # JavaScriptCore REPL
 jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc";
 [ -e "${jscbin}" ] && alias jsc="${jscbin}";
 unset jscbin;
-
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -122,9 +119,6 @@ alias map="xargs -n1"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="lwp-request -m '$method'"
 done
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"

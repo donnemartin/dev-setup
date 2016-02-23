@@ -46,6 +46,8 @@ chsh -s /usr/local/bin/bash
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
+brew install ngrep
+
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
@@ -61,6 +63,8 @@ brew install ruby-build
 brew install rbenv
 LINE='eval "$(rbenv init -)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
+
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -137,6 +141,7 @@ heroku update
 
 # Install Cask
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
@@ -163,7 +168,7 @@ brew cask install --appdir="/Applications" evernote
 #brew cask install --appdir="/Applications" inkscape
 
 #Remove comment to install LaTeX distribution MacTeX
-#brew cask install --appdir="/Applications" mactex
+brew cask install --appdir="/Applications" mactex
 
 # Link cask apps to Alfred
 brew cask alfred link
