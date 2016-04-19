@@ -569,7 +569,7 @@ We'll come back to the details of that later, but for now, just download the fil
     $ cd ~
     $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_profile
     $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.bash_prompt
-    $ curl -O https://raw.githubusercontent.com/donnemartin/mac-dev-setup/master/.aliases
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.aliases
 
 With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: `ls`, `ls -lh` (aliased to `ll`), `ls -lha` (aliased to `la`).
 
