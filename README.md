@@ -496,6 +496,23 @@ While inside the `Packages` directory, clone the theme repository using the comm
         "theme": "Soda Light 3.sublime-theme"
     }
 
+##### Changing Monokai Comment Color
+
+Although Monokai is a great color scheme, I find that comments can be difficult to see.  You can follow these [instructions](http://stackoverflow.com/a/32686509) to change the color of the default theme.
+
+I set my comments color to `#E6DB74`.
+
+```
+<dict>
+    ...
+    <dict>
+        <key>foreground</key>
+        <string>#E6DB74</string>
+    </dict>
+    ...
+</dict>
+```
+
 ### Atom
 
 <p align="center">
