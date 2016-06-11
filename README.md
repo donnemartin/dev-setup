@@ -48,7 +48,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ## Section 1: Installation
 
-**Scripts tested on OS X 10.10 Yosemite.**
+**Scripts tested on OS X 10.10 Yosemite and 10.11 El Capitan.**
 
 * [Single Setup Script](#single-setup-script)
 * [bootstrap.sh script](#bootstrapsh-script)
