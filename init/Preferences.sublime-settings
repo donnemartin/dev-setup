@@ -23,7 +23,7 @@
     "font_face": "Monaco",
     "font_size": 10,
     "highlight_modified_tabs": true,
-    "hot_exit": false,
+    "hot_exit": true,
     "line_padding_bottom": 5,
     "match_brackets": true,
     "match_brackets_angle": true,
