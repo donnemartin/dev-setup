@@ -29,6 +29,7 @@ brew cask install --appdir="/Applications" intellij-idea
 brew install groovy
 brew install saxon
 brew cask install --appdir="/Applications" visualvm
+brew cask install --appdir="/Applications" jd-gui
 
 # Remove outdated versions from the cellar.
 brew cleanup
