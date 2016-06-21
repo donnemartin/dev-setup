@@ -184,6 +184,10 @@ brew cask install --appdir="/Applications" microsoft-lync
 brew cask install --appdir="/Applications" charles
 brew cask install --appdir="/Applications" jdownloader
 
+brew cask install --appdir="/Applications" sourcetree
+brew cask install --appdir="/Applications" github
+brew cask install --appdir="/Applications" versions
+
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
