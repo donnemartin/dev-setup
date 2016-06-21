@@ -203,6 +203,8 @@ brew cask install microsoft-lync
 brew cask install spotify
 brew cask install spotify-notifications
 
+brew cask install vlc
+
 #setup app store api
 brew install mas
 #install memory clean
