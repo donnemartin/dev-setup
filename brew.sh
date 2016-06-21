@@ -75,8 +75,17 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
+# Install Cask
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+
+#Core System Casks
+brew cask install --appdir="~/Applications" java
+brew cask install --appdir="~/Applications" java7
+brew cask install --appdir="~/Applications" xquartz
+
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
+brew install aircrack-ng #needs java 1.7+
 brew install bfg
 brew install binutils
 brew install binwalk
@@ -98,7 +107,7 @@ brew install tcpflow
 brew install tcpreplay
 brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
-brew install homebrew/x11/xpdf
+brew install homebrew/x11/xpdf #needs xquartz
 brew install xz
 
 # Install other useful binaries.
@@ -135,15 +144,10 @@ brew link libxslt --force
 brew install heroku-toolbelt
 heroku update
 
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text3
