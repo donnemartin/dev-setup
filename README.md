@@ -177,7 +177,7 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 
 #### Running without Git
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && chmod +x .dots && ./.dots [Add ARGS Here]
 
 #### Scripts
 
