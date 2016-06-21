@@ -181,6 +181,8 @@ brew cask install --appdir="/Applications" microsoft-lync
 
 #brew cask install --appdir="/Applications" tg-pro #sha256 mismatch
 
+brew cask install --appdir="/Applications" charles
+
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
