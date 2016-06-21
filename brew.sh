@@ -206,6 +206,8 @@ brew cask install spotify-notifications
 
 brew cask install charles
 brew cask install jdownloader
+brew cask install utorrent
+open -a "uTorrent"
 brew install openvpn
 brew cask install tunnelblick
 
