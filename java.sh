@@ -24,11 +24,11 @@ brew tap caskroom/versions
 
 brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" java7
-brew cask install --appdir="~/Applications" intellij-idea
-#brew cask install --appdir="~/Applications" jedit #sha256 mismatch
+brew cask install --appdir="/Applications" intellij-idea
+#brew cask install --appdir="/Applications" jedit #sha256 mismatch
 brew install groovy
 brew install saxon
-brew cask install --appdir="~/Applications" visualvm
+brew cask install --appdir="/Applications" visualvm
 
 # Remove outdated versions from the cellar.
 brew cleanup
