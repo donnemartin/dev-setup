@@ -215,6 +215,7 @@ brew cask install tunnelblick
 brew cask install sourcetree
 brew cask install github
 brew cask install versions
+brew cask install omnigraffle
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install mactex
