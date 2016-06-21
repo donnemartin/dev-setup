@@ -157,6 +157,7 @@ brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
 brew cask install --appdir="/Applications" brackets
 brew install ansible
+brew cask install --appdir="/Applications" mitmproxy
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
