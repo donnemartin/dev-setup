@@ -199,6 +199,8 @@ brew cask install gitter
 brew cask install hipchat
 brew cask install adium
 brew cask install microsoft-lync
+brew cask install spotify
+brew cask install spotify-notifications
 
 #brew cask install tg-pro #sha256 mismatch
 
