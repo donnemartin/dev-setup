@@ -80,9 +80,9 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 #Core System Casks
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" java7
-brew cask install --appdir="~/Applications" xquartz
+brew cask install --appdir="/Applications" java
+brew cask install --appdir="/Applications" java7
+brew cask install --appdir="/Applications" xquartz
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng #needs java 1.7+
@@ -148,6 +148,7 @@ heroku update
 # Core casks
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" quicksilver
+brew cask install --appdir="/Applications" flexiglass
 brew cask install --appdir="~/Applications" iterm2
 
 # Development tool casks
