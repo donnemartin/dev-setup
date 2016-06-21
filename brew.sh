@@ -167,14 +167,15 @@ brew cask install --appdir="/Applications" torbrowser
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" 1password
 #brew cask install --appdir="/Applications" gimp
 #brew cask install --appdir="/Applications" inkscape
-brew cask install --appdir="~/Applications" gitter
-brew cask install --appdir="~/Applications" hipchat
-brew cask install --appdir="~/Applications" adium
-brew cask install --appdir="~/Applications" microsoft-lync
+brew cask install --appdir="/Applications" gitter
+brew cask install --appdir="/Applications" hipchat
+brew cask install --appdir="/Applications" adium
+brew cask install --appdir="/Applications" microsoft-lync
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
