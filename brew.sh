@@ -156,6 +156,7 @@ brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
 brew cask install --appdir="/Applications" brackets
+brew install ansible
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
