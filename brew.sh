@@ -138,7 +138,8 @@ brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
-brew install imagemagick --with-webp
+brew install librsvg
+brew install imagemagick --with-webp --with-librsvg
 brew install lua
 brew install lynx
 brew install p7zip
