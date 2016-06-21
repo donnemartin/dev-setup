@@ -212,7 +212,10 @@ mas install 451444120
 
 brew cask install charles
 brew cask install jdownloader
+#setup jdownloader
+open -a "JDownloader Installer"
 brew cask install utorrent
+#setup utorrent
 open -a "uTorrent"
 brew install openvpn
 brew cask install tunnelblick
