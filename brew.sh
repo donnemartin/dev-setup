@@ -148,7 +148,7 @@ heroku update
 # Core casks
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" quicksilver
-brew cask install --appdir="/Applications" flexiglass
+brew cask install --appdir="/Applications" sizeup
 brew cask install --appdir="~/Applications" iterm2
 
 # Development tool casks
