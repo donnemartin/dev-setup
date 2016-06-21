@@ -21,16 +21,25 @@ brew update
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-brew cask install --appdir="/Applications" java
-brew cask install --appdir="/Applications" java7
-brew cask install --appdir="/Applications" intellij-idea
-#brew cask install --appdir="/Applications" jedit #sha256 mismatch
+brew cask install java
+brew cask install java7
+brew cask install intellij-idea
+#brew cask install jedit #sha256 mismatch
 brew install groovy
 brew install saxon
-brew cask install --appdir="/Applications" visualvm
-brew cask install --appdir="/Applications" jd-gui
-brew cask install --appdir="/Applications" eclipse-java
+brew cask install visualvm
+brew cask install jd-gui
+brew cask install eclipse-java
+brew install maven
+brew install autoconf
+brew install automake
+brew install gpg
+brew install libxml2
+brew install go
+brew install ant
+brew install ffmpeg
 
 # Remove outdated versions from the cellar.
 brew cleanup
