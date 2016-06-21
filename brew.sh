@@ -203,6 +203,11 @@ brew cask install microsoft-lync
 brew cask install spotify
 brew cask install spotify-notifications
 
+#setup app store api
+brew install mas
+#install memory clean
+mas install 451444120
+
 #brew cask install tg-pro #sha256 mismatch
 
 brew cask install charles
