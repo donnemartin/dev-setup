@@ -27,6 +27,7 @@ brew cask install --appdir="~/Applications" java7
 brew cask install --appdir="~/Applications" intellij-idea
 #brew cask install --appdir="~/Applications" jedit #sha256 mismatch
 brew install groovy
+brew install saxon
 
 # Remove outdated versions from the cellar.
 brew cleanup
