@@ -179,6 +179,8 @@ brew cask install --appdir="/Applications" hipchat
 brew cask install --appdir="/Applications" adium
 brew cask install --appdir="/Applications" microsoft-lync
 
+#brew cask install --appdir="/Applications" tg-pro #sha256 mismatch
+
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
