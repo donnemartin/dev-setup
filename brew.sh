@@ -213,6 +213,7 @@ mas install 451444120
 #brew cask install tg-pro #sha256 mismatch
 
 brew cask install charles
+brew cask install transmit
 brew cask install jdownloader
 #setup jdownloader
 open -a "JDownloader Installer"
