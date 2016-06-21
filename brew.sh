@@ -185,6 +185,7 @@ brew cask install microsoft-lync
 
 brew cask install charles
 brew cask install jdownloader
+brew cask install tunnelblick
 
 brew cask install sourcetree
 brew cask install github
