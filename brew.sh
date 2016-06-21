@@ -152,7 +152,7 @@ brew cask install --appdir="/Applications" sizeup
 brew cask install --appdir="~/Applications" iterm2
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" virtualbox-extension-pack
