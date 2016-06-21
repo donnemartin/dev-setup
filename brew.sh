@@ -78,11 +78,12 @@ brew install woff2
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #Core System Casks
-brew cask install --appdir="/Applications" java
-brew cask install --appdir="/Applications" java7
-brew cask install --appdir="/Applications" xquartz
+brew cask install java
+brew cask install java7
+brew cask install xquartz
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng #needs java 1.7+
@@ -146,51 +147,51 @@ heroku update
 
 
 # Core casks
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="/Applications" quicksilver
-brew cask install --appdir="/Applications" sizeup
+brew cask install alfred
+brew cask install quicksilver
+brew cask install sizeup
 brew cask install --appdir="~/Applications" iterm2
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" virtualbox-extension-pack
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" macdown
-brew cask install --appdir="/Applications" brackets
+brew cask install sublime-text
+brew cask install atom
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
+brew cask install vagrant
+brew cask install macdown
+brew cask install brackets
 brew install ansible
-brew cask install --appdir="/Applications" mitmproxy
+brew cask install mitmproxy
 
 # Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" opera
-brew cask install --appdir="/Applications" torbrowser
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" google-drive
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
-#brew cask install --appdir="/Applications" gimp
-#brew cask install --appdir="/Applications" inkscape
-brew cask install --appdir="/Applications" gitter
-brew cask install --appdir="/Applications" hipchat
-brew cask install --appdir="/Applications" adium
-brew cask install --appdir="/Applications" microsoft-lync
+brew cask install google-chrome
+brew cask install firefox
+brew cask install opera
+brew cask install torbrowser
+brew cask install skype
+brew cask install slack
+brew cask install dropbox
+brew cask install google-drive
+brew cask install evernote
+brew cask install 1password
+#brew cask install gimp
+#brew cask install inkscape
+brew cask install gitter
+brew cask install hipchat
+brew cask install adium
+brew cask install microsoft-lync
 
-#brew cask install --appdir="/Applications" tg-pro #sha256 mismatch
+#brew cask install tg-pro #sha256 mismatch
 
-brew cask install --appdir="/Applications" charles
-brew cask install --appdir="/Applications" jdownloader
+brew cask install charles
+brew cask install jdownloader
 
-brew cask install --appdir="/Applications" sourcetree
-brew cask install --appdir="/Applications" github
-brew cask install --appdir="/Applications" versions
+brew cask install sourcetree
+brew cask install github
+brew cask install versions
 
 #Remove comment to install LaTeX distribution MacTeX
-#brew cask install --appdir="/Applications" mactex
+#brew cask install mactex
 
 # Link cask apps to Alfred
 brew cask alfred link
