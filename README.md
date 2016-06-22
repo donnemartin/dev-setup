@@ -344,6 +344,9 @@ gpip(){
 }
 ```
 
+Other samples:
+* [wildone](https://gist.github.com/wildone/c4f992ec5e6d88568aa1a1382da16184)
+
 You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
 
 ### osxprep.sh script
