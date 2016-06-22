@@ -196,14 +196,21 @@ brew cask install evernote
 brew cask install 1password
 #brew cask install gimp
 #brew cask install inkscape
+
+#dev social
 brew cask install gitter
 brew cask install hipchat
 brew cask install adium
 brew cask install microsoft-lync
+
+#media
 brew cask install spotify
 brew cask install spotify-notifications
-
 brew cask install vlc
+brew install ffmpeg
+
+
+##tools
 
 #setup app store api
 brew install mas
@@ -211,7 +218,6 @@ brew install mas
 mas install 451444120
 
 #brew cask install tg-pro #sha256 mismatch
-
 brew cask install charles
 brew cask install transmit
 brew cask install jdownloader
@@ -222,7 +228,9 @@ brew cask install utorrent
 open -a "uTorrent"
 brew install openvpn
 brew cask install tunnelblick
+brew cask install little-snitch
 
+#dev source
 brew cask install sourcetree
 brew cask install github
 brew cask install versions
