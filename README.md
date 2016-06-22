@@ -78,7 +78,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [iTerm2](#iterm2)
 * [Vim](#vim)
 * [Git](#git)
-* [VirtualBox](#virtualbox)
+* [VirtualBox + Extensions Pack](#virtualbox)
 * [Vagrant](#vagrant)
 * [Docker](#docker)
 * [Homebrew](#homebrew)
@@ -87,6 +87,42 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Pip](#pip)
 * [Virtualenv](#virtualenv)
 * [Virtualenvwrapper](#virtualenvwrapper)
+
+### Browsers
+* [Chrome]
+* [Firefox]
+* [TorBrowser]
+* [Opera]
+
+### Social
+* [Gitter] - chat
+* [Hipchat]
+* [Adium]
+* [Lync]
+
+### Media
+* [Spotify]
+* [VLC]
+* [FFMPEG]
+
+
+### Tools
+* [Memory Clean]
+* [Charles]
+* [MITMProxy]
+* [Transmit]
+* [JDownloader]
+* [uTorrent]
+
+### Source Repository UIs
+* [SourceTree]
+* [Github]
+* [Versions]
+
+### Connectivity
+* [OpenVPN]
+* [Tunnelblick]
+* [Little Snitch]
 
 ## Section 3: Python Data Analysis
 
@@ -129,9 +165,14 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ## Section 6: JavaScript Web Development
 
-* [Node.js](#nodejs)
+* [Node.js + NPM](#nodejs)
 * [JSHint](#jshint)
+* [Coffee Script]
+* [JSHint]
 * [Less](#less)
+* [Gulp]
+* [Grunt]
+* [Repoman]
 
 ## Section 7: Android Development
 
@@ -146,6 +187,31 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Credits](#credits)
 * [Contact Info](#contact-info)
 * [License](#license)
+
+## Section 9: Java Development
+
+### General
+* [Java 8](#java)
+* [Java 7](#java)
+
+### IDE's
+* [IntelliJ IDEA](#intellij-idea)
+* [Groovy]
+* [VisualVM]
+* [JD-GUI]
+* [Eclipse Java]
+* [Maven]
+* [Ant]
+* [LIBXML2]
+
+## Section 10: General Development
+
+### General
+* [Automake]
+* [Autoconf]
+* [GPG]
+* [Saxon]
+
 
 ## Section 1: Installation
 
