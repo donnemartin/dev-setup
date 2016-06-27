@@ -211,6 +211,7 @@ brew install ffmpeg
 
 
 ##tools
+brew cask install betterzip
 
 #setup app store api
 brew install mas
