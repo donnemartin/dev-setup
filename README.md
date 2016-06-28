@@ -19,6 +19,8 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Common data stores**: MySQL, PostgreSQL, MongoDB, Redis, and Elasticsearch
 * **Javascript web development**: Node.js, JSHint, and Less
 * **Android development**: Java, Android SDK, Android Studio, IntelliJ IDEA
+* **Java development**: Intellij ULT & CE, Eclipse Java, Maven, Ant, Groovy, Java 8 & 7, etc
+* **General development**: Go, Automake, Autoconf, GPG, Saxon, etc
 
 ### But...I Don't Need All These Tools!
 
@@ -69,6 +71,10 @@ This repo takes a more **light-weight** approach to automation using a combinati
     * Sets up JavaScript web development
 * [android.sh script](#androidsh-script)
     * Sets up Android development
+* [dev.sh script](#devsh-script)
+    * Sets up General development
+* [java.sh script](#javash-script)
+    * Sets up Java development
 
 ## Section 2: General Apps and Tools
 
@@ -87,42 +93,45 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Pip](#pip)
 * [Virtualenv](#virtualenv)
 * [Virtualenvwrapper](#virtualenvwrapper)
+* [Ansible](http://brewformulas.org/ansible)
 
 ### Browsers
-* [Chrome]
-* [Firefox]
-* [TorBrowser]
-* [Opera]
+* [Chrome](http://macappstore.org/chrome)
+* [Firefox](http://macappstore.org/firefox)
+* [TorBrowser](http://macappstore.org/torbrowser)
+* [Opera](http://macappstore.org/opera)
 
 ### Social
-* [Gitter] - chat
-* [Hipchat]
-* [Adium]
-* [Lync]
+* [Gitter](http://macappstore.org/gitter)
+* [Hipchat](http://macappstore.org/hipchat)
+* [Adium](http://macappstore.org/adium)
+* [Lync](http://macappstore.org/lync)
 
 ### Media
-* [Spotify]
-* [VLC]
-* [FFMPEG]
+* [Spotify](http://macappstore.org/spotify)
+* [VLC](http://macappstore.org/vlc)
+* [FFMPEG](http://brewformulas.org/ffmpeg)
 
 
 ### Tools
-* [Memory Clean]
-* [Charles]
-* [MITMProxy]
-* [Transmit]
-* [JDownloader]
-* [uTorrent]
+* [Memory Clean](http://macappstore.org/)
+* [Charles](http://macappstore.org/charles)
+* [MITMProxy](http://macappstore.org/mitmproxy)
+* [Transmit](http://macappstore.org/transmit)
+* [JDownloader](http://macappstore.org/jdownloader)
+* [uTorrent](http://macappstore.org/utorrent)
+* [BetterZip](http://macappstore.org/betterzip)
+* [OmniGraffle](http://macappstore.org/omnigraffle)
 
 ### Source Repository UIs
-* [SourceTree]
-* [Github]
-* [Versions]
+* [SourceTree](http://macappstore.org/sourcetree)
+* [Github](http://macappstore.org/github)
+* [Versions](http://macappstore.org/versions)
 
 ### Connectivity
-* [OpenVPN]
-* [Tunnelblick]
-* [Little Snitch]
+* [OpenVPN](http://macappstore.org/openvpn)
+* [Tunnelblick](http://macappstore.org/tunnelblick)
+* [Little Snitch](http://macappstore.org/little-snitch)
 
 ## Section 3: Python Data Analysis
 
@@ -167,12 +176,12 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 * [Node.js + NPM](#nodejs)
 * [JSHint](#jshint)
-* [Coffee Script]
-* [JSHint]
+* [Coffee Script](https://www.npmjs.com/package/coffee-script)
+* [JSHint](https://www.npmjs.com/package/jshint)
 * [Less](#less)
-* [Gulp]
-* [Grunt]
-* [Repoman]
+* [Gulp](https://www.npmjs.com/package/gulp)
+* [Grunt](https://www.npmjs.com/package/grunt)
+* [Repoman](https://www.npmjs.com/package/repoman)
 
 ## Section 7: Android Development
 
@@ -188,29 +197,31 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Contact Info](#contact-info)
 * [License](#license)
 
-## Section 9: Java Development
+## Section 9: Java Development [java.sh script](#javash-script)
 
 ### General
-* [Java 8](#java)
-* [Java 7](#java)
+* [Java 8](http://macappstore.org/java)
+* [Java 7](http://macappstore.org/java)
 
 ### IDE's
-* [IntelliJ IDEA](#intellij-idea)
-* [Groovy]
-* [VisualVM]
-* [JD-GUI]
-* [Eclipse Java]
-* [Maven]
-* [Ant]
-* [LIBXML2]
+* [IntelliJ IDEA](http://macappstore.org/intellij-idea)
+* [IntelliJ IDEA](http://macappstore.org/intellij-idea-ce)
+* [Groovy](http://macappstore.org/groovy/)
+* [VisualVM](http://macappstore.org/visualvm/)
+* [JD-GUI](http://macappstore.org/jd-gui)
+* [Eclipse Java](http://macappstore.org/eclipse-java)
+* [Maven](http://macappstore.org/maven)
+* [Ant](http://macappstore.org/ant)
+* [LIBXML2](http://macappstore.org/libxml2)
 
-## Section 10: General Development
+## Section 10: General Development [dev.sh script](#devsh-script)
 
 ### General
-* [Automake]
-* [Autoconf]
-* [GPG]
-* [Saxon]
+* [Go](http://macappstore.org/go)
+* [Automake](http://macappstore.org/automake)
+* [Autoconf](http://macappstore.org/autoconf)
+* [GPG](http://macappstore.org/gpg)
+* [Saxon](http://macappstore.org/saxon)
 
 
 ## Section 1: Installation
