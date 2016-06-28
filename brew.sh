@@ -229,7 +229,9 @@ brew cask install utorrent
 open -a "uTorrent"
 brew install openvpn
 brew cask install tunnelblick
+#seup little snitch
 brew cask install little-snitch
+open -a "Little Snitch Installer"
 
 #dev source
 brew cask install sourcetree
