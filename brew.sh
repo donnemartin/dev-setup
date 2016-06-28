@@ -212,6 +212,7 @@ brew install ffmpeg
 
 ##tools
 brew cask install betterzip
+brew cask install omnigraffle
 
 #setup app store api
 brew install mas
@@ -237,7 +238,6 @@ open -a "Little Snitch Installer"
 brew cask install sourcetree
 brew cask install github
 brew cask install versions
-brew cask install omnigraffle
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install mactex
