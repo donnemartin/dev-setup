@@ -57,6 +57,7 @@ brew install python
 brew install python3
 
 # Install ruby-build and rbenv
+brew install ruby
 brew install ruby-build
 brew install rbenv
 LINE='eval "$(rbenv init -)"'
