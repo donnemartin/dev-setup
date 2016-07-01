@@ -27,6 +27,7 @@ brew install go
 brew install autoconf
 brew install automake
 brew install gpg
+brew install gpgtools
 brew install saxon
 
 # Remove outdated versions from the cellar.
