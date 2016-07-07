@@ -57,6 +57,7 @@ brew install python
 brew install python3
 
 # Install ruby-build and rbenv
+brew install ruby
 brew install ruby-build
 brew install rbenv
 LINE='eval "$(rbenv init -)"'
@@ -75,8 +76,37 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
+brew tap caskroom/fonts
+brew cask install \
+  font-anonymous-pro \
+  font-dejavu-sans-mono-for-powerline \
+  font-droid-sans \
+  font-droid-sans-mono font-droid-sans-mono-for-powerline \
+  font-meslo-lg font-input \
+  font-inconsolata font-inconsolata-for-powerline \
+  font-liberation-mono font-liberation-mono-for-powerline \
+  font-liberation-sans \
+  font-meslo-lg \
+  font-nixie-one \
+  font-office-code-pro \
+  font-pt-mono \
+  font-roboto \
+  font-source-code-pro font-source-code-pro-for-powerline \
+  font-source-sans-pro \
+  font-ubuntu font-ubuntu-mono-powerline
+
+# Install Cask
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+#Core System Casks
+brew cask install java
+brew cask install java7
+brew cask install xquartz
+
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
+brew install aircrack-ng #needs java 1.7+
 brew install bfg
 brew install binutils
 brew install binwalk
@@ -98,7 +128,7 @@ brew install tcpflow
 brew install tcpreplay
 brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
-brew install homebrew/x11/xpdf
+brew install homebrew/x11/xpdf #needs xquartz
 brew install xz
 
 # Install other useful binaries.
@@ -109,7 +139,8 @@ brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
-brew install imagemagick --with-webp
+brew install librsvg
+brew install imagemagick --with-webp --with-librsvg
 brew install lua
 brew install lynx
 brew install p7zip
@@ -135,36 +166,82 @@ brew link libxslt --force
 brew install heroku-toolbelt
 heroku update
 
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 # Core casks
-brew cask install --appdir="/Applications" alfred
+brew cask install alfred
+brew cask install quicksilver
+brew cask install sizeup
 brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text3
-brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" macdown
+brew cask install sublime-text
+brew cask install atom
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
+brew cask install vagrant
+brew cask install macdown
+brew cask install brackets
+brew install ansible
+brew cask install mitmproxy
 
 # Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
-#brew cask install --appdir="/Applications" gimp
-#brew cask install --appdir="/Applications" inkscape
+brew cask install google-chrome
+brew cask install firefox
+brew cask install opera
+brew cask install torbrowser
+brew cask install skype
+brew cask install slack
+brew cask install dropbox
+brew cask install google-drive
+brew cask install evernote
+brew cask install 1password
+#brew cask install gimp
+#brew cask install inkscape
+
+#dev social
+brew cask install gitter
+brew cask install hipchat
+brew cask install adium
+brew cask install microsoft-lync
+
+#media
+brew cask install spotify
+brew cask install spotify-notifications
+brew cask install vlc
+brew install ffmpeg
+
+
+##tools
+brew cask install betterzip
+brew cask install omnigraffle
+
+#setup app store api
+brew install mas
+#install memory clean
+mas install 451444120
+
+#brew cask install tg-pro #sha256 mismatch
+brew cask install charles
+brew cask install transmit
+brew cask install jdownloader
+#setup jdownloader
+open -a "JDownloader Installer"
+brew cask install utorrent
+#setup utorrent
+open -a "uTorrent"
+brew install openvpn
+brew cask install tunnelblick
+#seup little snitch
+brew cask install little-snitch
+open -a "Little Snitch Installer"
+
+#dev source
+brew cask install sourcetree
+brew cask install github
+brew cask install versions
 
 #Remove comment to install LaTeX distribution MacTeX
-#brew cask install --appdir="/Applications" mactex
+#brew cask install mactex
 
 # Link cask apps to Alfred
 brew cask alfred link
@@ -172,6 +249,9 @@ brew cask alfred link
 # Install Docker, which requires virtualbox
 brew install docker
 brew install boot2docker
+
+# add mouse drivers
+brew cask install logitech-gaming-software
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

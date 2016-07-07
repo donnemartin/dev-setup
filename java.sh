@@ -18,17 +18,23 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-brew install node npm
+# Install Cask
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+brew cask install java
+brew cask install java7
+brew cask install intellij-idea
+brew cask install intellij-idea-ce
+#brew cask install jedit #sha256 mismatch
+brew install groovy
+brew cask install visualvm
+brew cask install jd-gui
+brew cask install eclipse-java
+brew install maven
+brew install libxml2
+brew install ant
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-npm install -g coffee-script
-npm install -g grunt
-npm install -g grunt-cli
-npm install -g jshint
-npm install -g less
-npm install -g repoman
-npm install -g gulp
-
-#gem install jekyll

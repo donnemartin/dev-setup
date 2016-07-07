@@ -18,17 +18,17 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-brew install node npm
+# Install Cask
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+brew install go
+brew install autoconf
+brew install automake
+brew install gpg
+brew install gpgtools
+brew install saxon
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-npm install -g coffee-script
-npm install -g grunt
-npm install -g grunt-cli
-npm install -g jshint
-npm install -g less
-npm install -g repoman
-npm install -g gulp
-
-#gem install jekyll

@@ -229,6 +229,27 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
+# Install Screensaver
+mkdir -p "~/Library/Screen Savers"
+cp -R ./init/screensavers/matrixgl.saver "~/Library/Screen Savers/matrixgl.saver"
+
+# Set Screensaver Active
+defaults -currentHost write com.apple.screensaver "moduleDict" -dict-add "path" -string "~/Library/Screen Savers/matrixgl.saver"
+defaults -currentHost write com.apple.screensaver "moduleDict" -dict-add "type" -int "0"
+defaults -currentHost write com.apple.screensaver "moduleDict" -dict-add "moduleName" -string "matrixgl"
+defaults -currentHost write com.apple.screensaver "showClock"  -int "1"
+
+# Set Screen Saver options
+# grab the system's uuid
+if [[ `ioreg -rd1 -c IOPlatformExpertDevice | grep -i "UUID" | cut -c27-50` != "00000000-0000-1000-8000-" ]]; then
+    macUUID=`ioreg -rd1 -c IOPlatformExpertDevice | grep -i "UUID" | cut -c27-62`
+fi
+defaults write ~/Library/Preferences/ByHost/ru.zolotov.alex.matrixgl.$macUUID.plist "Color" -int "6404"
+defaults write ~/Library/Preferences/ByHost/ru.zolotov.alex.matrixgl.$macUUID.plist "Credits" -int "0"
+defaults write ~/Library/Preferences/ByHost/ru.zolotov.alex.matrixgl.$macUUID.plist "MainScreen Only" -int "0"
+defaults write ~/Library/Preferences/ByHost/ru.zolotov.alex.matrixgl.$macUUID.plist "Show Images" -int "0"
+
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -257,7 +278,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
-#defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
@@ -570,6 +591,7 @@ sudo mdutil -E / > /dev/null
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Solarized Dark theme by default in Terminal.app
+## set themeName to "Solarized Dark xterm-256color"
 osascript <<EOD
 
 tell application "Terminal"
@@ -577,7 +599,7 @@ tell application "Terminal"
     local allOpenedWindows
     local initialOpenedWindows
     local windowID
-    set themeName to "Solarized Dark xterm-256color"
+    set themeName to "Matrix"
 
     (* Store the IDs of all the open terminal windows. *)
     set initialOpenedWindows to id of every window
