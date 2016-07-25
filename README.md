@@ -552,7 +552,7 @@ The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script
   <br/>
 </p>
 
-I prefer iTerm2 over the stock Terminal, as it has some some additional [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
+I prefer iTerm2 over the stock Terminal, as it has some additional [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
 
 In Finder, drag and drop the iTerm Application file into the Applications folder.
 
