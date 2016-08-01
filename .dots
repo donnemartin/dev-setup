@@ -85,7 +85,7 @@ function runDots() {
             echo "Setting up JavaScript web development environment."
             echo "------------------------------"
             echo ""
-            #./webdev.sh # coming soon
+            ./webdev.sh
         fi
         if [ $ARG == "android" ] || [ $ARG == "all" ]; then
             # Run the android.sh Script

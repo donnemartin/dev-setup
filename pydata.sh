@@ -20,6 +20,8 @@ echo "------------------------------"
 echo "Setting up virtual environments."
 
 # Install virtual environments globally
+# It fails to install virtualenv if PIP_REQUIRE_VIRTUALENV was true
+export PIP_REQUIRE_VIRTUALENV=false
 pip install virtualenv
 pip install virtualenvwrapper
 
@@ -90,6 +92,17 @@ pip install Flask
 pip install sqlalchemy
 #pip install mysql-python  # Python 2 only, use mysqlclient instead
 pip install mysqlclient
+
+###############################################################################
+# Install IPython Profile
+###############################################################################
+
+echo "------------------------------"
+echo "Installing IPython Notebook Default Profile"
+
+# Add the IPython profile
+mkdir -p ~/.ipython
+cp -r init/profile_default/ ~/.ipython/profile_default
 
 echo "------------------------------"
 echo "Script completed."
