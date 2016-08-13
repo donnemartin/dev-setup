@@ -2,8 +2,6 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
-
 function doIt() {
     rsync --exclude ".DS_Store" -avh --no-perms files ~;
     source ~/.bash_profile;
