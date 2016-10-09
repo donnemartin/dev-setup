@@ -147,7 +147,7 @@ brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
@@ -166,9 +166,6 @@ brew cask install --appdir="/Applications" 1password
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
-
-# Link cask apps to Alfred
-brew cask alfred link
 
 # Install Docker, which requires virtualbox
 brew install docker
