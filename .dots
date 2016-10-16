@@ -1,12 +1,25 @@
 #!/usr/bin/env bash
 
+startsudo() {
+    sudo -v
+    ( while true; do sudo -v; sleep 60; done; ) &
+    SUDO_PID="$!"
+    trap stopsudo SIGINT SIGTERM
+}
+
+stopsudo() {
+    kill "$SUDO_PID"
+    trap - SIGINT SIGTERM
+    sudo -k
+}
+ 
 function runDots() {
     # Ask for the administrator password upfront
     sudo -v
 
     # Keep-alive: update existing `sudo` time stamp until the script has finished
-    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
+    startsudo
+    
     # Run sections based on command line arguments
     for ARG in "$@"
     do
@@ -38,7 +51,7 @@ function runDots() {
             echo "This might awhile to complete, as some formulae need to be installed from source."
             echo "------------------------------"
             echo ""
-            ./brew.sh
+            (stopsudo && ./brew.sh)
         fi
         if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
             # Run the osx.sh Script
@@ -96,6 +109,8 @@ function runDots() {
             ./android.sh
         fi
     done
+
+    stopsudo
 
     echo "------------------------------"
     echo "Completed running .dots, restart your computer to ensure all updates take effect"
