@@ -79,8 +79,8 @@ function runDots() {
             echo ""
             ./datastores.sh
         fi
-        if [ $ARG == "webdev" ] || [ $ARG == "all" ]; then
-            # Run the webdev.sh Script
+        if [ $ARG == "web" ] || [ $ARG == "all" ]; then
+            # Run the web.sh Script
             echo "------------------------------"
             echo "Setting up JavaScript web development environment."
             echo "------------------------------"
