@@ -51,8 +51,11 @@ This repo takes a more **light-weight** approach to automation using a combinati
 **Scripts tested on OS X 10.10 Yosemite and 10.11 El Capitan.**
 
 * [Single Setup Script](#single-setup-script)
-* [bootstrap.sh script](#bootstrapsh-script)
-    * Syncs dev-setup to your local home directory `~`
+
+* [update.sh script](#updatesh-script)
+    * Syncs dev-setup repository to your local working directory
+* [dots.sh script](#dotssh-script)
+    * Syncs dev-setup dot files to your local home directory `~`
 * [osxprep.sh script](#osxprepsh-script)
     * Updates OS X and installs Xcode command line tools
 * [brew.sh script](#brewsh-script)
@@ -157,34 +160,36 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
-##### Run the .dots Script with Command Line Arguments
+##### Run the setup.sh Script with Command Line Arguments
 
-**Since you probably don't want to install every section**, the `.dots` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+**Since you probably don't want to install every section**, the `setup.sh` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
 
-**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `setup.sh` script and its associated components to suit your needs.**
 
 Run all:
 
-    $ ./.dots all
+    $ ./setup.sh all
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
+Run `update.sh`, `dots.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx
+    $ ./setup.sh sync dots osxprep brew osx
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+Run `update.sh`, `dots.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx pydata aws datastores
+    $ ./setup.sh sync dots osxprep brew osx pydata aws datastores
 
 #### Running without Git
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/setup.sh && ./setup.sh [Add ARGS Here]
 
 #### Scripts
 
-* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
+* [setup.sh](https://github.com/donnemartin/dev-setup/blob/master/setup.sh)
     * Runs specified scripts
-* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
-    * Syncs dev-setup to your local home directory `~`
+* [update.sh](https://github.com/donnemartin/dev-setup/blob/master/update.sh)
+    * Syncs dev-setup to your local working directory
+* [dots.sh](https://github.com/donnemartin/dev-setup/blob/master/update.sh)
+    * Syncs dev-setup dot files to your local home directory `~`
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
     * Updates OS X and installs Xcode command line tools
 * [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
@@ -204,42 +209,42 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 
 **Notes:**
 
-* `.dots` will initially prompt you to enter your password.
-* `.dots` might ask you to re-enter your password at certain stages of the installation.
-* If OS X updates require a restart, simply run `.dots` again to resume where you left off.
+* `setup.sh` will initially prompt you to enter your password.
+* `setup.sh` might ask you to re-enter your password at certain stages of the installation.
+* If OS X updates require a restart, simply run `setup.sh` again to resume where you left off.
 * When installing the Xcode command line tools, a dialog box will confirm installation.
     * Once Xcode is installed, follow the instructions on the terminal to continue.
-* `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
-* **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
+* `setup.sh` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
+* **When `setup.sh` completes, be sure to restart your computer for all updates to take effect.**
 
-I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [setup.sh](https://github.com/donnemartin/dev-setup/blob/master/setup.sh) script.
 
-### bootstrap.sh script
+### update.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
   <br/>
 </p>
 
-The `bootstrap.sh` script will sync the dev-setup repo to your local home directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
+The `update.sh` script will sync the dev-setup repo to your local working directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
 
 #### Running with Git
 
-First, fork or [clone the repo](#clone-the-repo).  The `bootstrap.sh` script will pull in the latest version and copy the files to your home folder `~`:
+First, fork or [clone the repo](#clone-the-repo).  The `update.sh` script will pull in the latest version and copy the files to your working directory:
 
-    $ source bootstrap.sh
+    $ source update.sh
 
 To update later on, just run that command again.
 
 Alternatively, to update while avoiding the confirmation prompt:
 
-    $ set -- -f; source bootstrap.sh
+    $ set -- -f; source update.sh
 
 #### Running without Git
 
-To sync dev-setup to your local home directory without Git, run the following:
+To download dev-setup to your local working directory without Git, run the following:
 
-    $ cd ~; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
+    $ curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,update.sh,LICENSE}
 
 To update later on, just run that command again.
 
@@ -279,6 +284,10 @@ gpip(){
 ```
 
 You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
+
+### dots.sh script
+
+The `dots.sh` script will sync the dev-setup dots files to your local homedirectory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
 
 ### osxprep.sh script
 
@@ -543,7 +552,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script) contain terminal customizations.
+The [dots.sh script](#dotssh-script) and [osx.sh script](#osxsh-script) contain terminal customizations.
 
 ### iTerm2
 
@@ -589,7 +598,7 @@ I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of
 
 #### Configuration
 
-The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
+The [dots.sh script](#dotssh-script) contains Vim customizations.
 
 ### VirtualBox
 

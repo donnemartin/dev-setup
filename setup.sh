@@ -21,7 +21,7 @@ function runDots() {
 		if [ $ARG == "dots" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
-            echo "Syncing the dev-setup dot files to your user home directory."
+            echo "Syncing dev-setup dot files to your local home directory `~`"
             echo "------------------------------"
             echo ""
             ./dots.sh
@@ -106,7 +106,7 @@ function runDots() {
     done
 
     echo "------------------------------"
-    echo "Completed running .dots, restart your computer to ensure all updates take effect"
+    echo "Completed running setup, restart your computer to ensure all updates take effect"
     echo "------------------------------"
 }
 
