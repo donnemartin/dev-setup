@@ -51,7 +51,6 @@ This repo takes a more **light-weight** approach to automation using a combinati
 **Scripts tested on OS X 10.10 Yosemite and 10.11 El Capitan.**
 
 * [Single Setup Script](#single-setup-script)
-
 * [update.sh script](#updatesh-script)
     * Syncs dev-setup repository to your local working directory
 * [dots.sh script](#dotssh-script)
@@ -287,7 +286,7 @@ You could also use `~/.extra` to override settings, functions, and aliases from 
 
 ### dots.sh script
 
-The `dots.sh` script will sync the dev-setup dots files to your local homedirectory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
+The `dots.sh` script will sync the dev-setup dots files to your local home directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
 
 ### osxprep.sh script
 
