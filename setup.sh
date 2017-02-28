@@ -10,19 +10,27 @@ function runDots() {
     # Run sections based on command line arguments
     for ARG in "$@"
     do
-        if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
+        if [ $ARG == "sync" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
-            echo "Syncing the dev-setup repo to your local machine."
+            echo "Syncing the dev-setup repo to the local working directory."
             echo "------------------------------"
             echo ""
-            ./bootstrap.sh
+            ./sync.sh
+        fi
+		if [ $ARG == "dots" ] || [ $ARG == "all" ]; then
+            echo ""
+            echo "------------------------------"
+            echo "Syncing the dev-setup dot files to your user home directory."
+            echo "------------------------------"
+            echo ""
+            ./dots.sh
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
             echo ""
             echo "------------------------------"
-            echo "Updating OSX and installing Xcode command line tools"
+            echo "Updating OSX and installing Xcode command line tools."
             echo "------------------------------"
             echo ""
             ./osxprep.sh
@@ -102,10 +110,6 @@ function runDots() {
     echo "------------------------------"
 }
 
-read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-echo "";
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    runDots $@
-fi;
+runDots $@
 
 unset runDots;
