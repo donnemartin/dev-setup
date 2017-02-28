@@ -10,13 +10,13 @@ function runDots() {
     # Run sections based on command line arguments
     for ARG in "$@"
     do
-        if [ $ARG == "sync" ] || [ $ARG == "all" ]; then
+        if [ $ARG == "update" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
-            echo "Syncing the dev-setup repo to the local working directory."
+            echo "Syncing dev-setup repo to your local working directory: $(pwd)"
             echo "------------------------------"
             echo ""
-            ./sync.sh
+            ./update.sh
         fi
 		if [ $ARG == "dots" ] || [ $ARG == "all" ]; then
             echo ""
