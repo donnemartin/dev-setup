@@ -3,7 +3,7 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 #Sync if possible
-if [ -f .git ]
+if [ -d .git ]
 then
     git pull origin master;
 else 
