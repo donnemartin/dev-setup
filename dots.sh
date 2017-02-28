@@ -2,7 +2,7 @@
 
 function setup_dots() {
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "*.sh" \
-        --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
+        --exclude "*.md" --exclude "LICENSE" -avh --no-perms . ~;
     source ~/.bash_profile;
 }
 
