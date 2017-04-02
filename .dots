@@ -68,7 +68,7 @@ function runDots() {
             echo "Setting customized Terminal."
             echo "------------------------------"
             echo ""
-            ./osx.sh
+            ./terminal.sh
         fi
         if [ $ARG == "pydata" ] || [ $ARG == "all" ]; then
             # Run the pydata.sh Script
