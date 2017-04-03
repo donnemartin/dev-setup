@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Originally from ~/.macos — https://mths.be/macos
+# ~/osx.sh — Originally from https://mths.be/osx
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
