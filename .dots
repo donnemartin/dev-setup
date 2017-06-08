@@ -16,7 +16,7 @@ function runDots() {
             echo "Syncing the dev-setup repo to your local machine."
             echo "------------------------------"
             echo ""
-            cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            ./bootstrap.sh
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
