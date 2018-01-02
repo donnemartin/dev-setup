@@ -95,6 +95,15 @@ function runDots() {
             echo ""
             ./android.sh
         fi
+        if [ $ARG == "gcp" ] || [ $ARG == "all" ]; then
+            # Run the gcp.sh Script
+            echo "------------------------------"
+            echo "Setting up GCP development environment."
+            echo "------------------------------"
+            echo ""
+            ./gcp.sh
+        fi
+
     done
 
     echo "------------------------------"
