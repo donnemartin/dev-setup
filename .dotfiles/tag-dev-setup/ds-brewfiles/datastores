@@ -1,0 +1,13 @@
+cask_args appdir: "/Applications"
+
+# Install data stores
+brew "mysql"
+brew "postgresql"
+brew "mongo"
+brew "redis"
+brew "elasticsearch"
+
+# Install mysql workbench
+# Install Cask
+brew "caskroom/cask/brew-cask"
+cask "mysqlworkbench"

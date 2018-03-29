@@ -34,9 +34,9 @@ function runDots() {
             ./osxprep.sh
         fi
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
-            # Run the brew.sh Script
+            # Run the core.sh Script
             # For a full listing of installed formulae and apps, refer to
-            # the commented brew.sh source file directly and tweak it to
+            # the commented core.sh source file directly and tweak it to
             # suit your needs.
             echo ""
             echo "------------------------------"
@@ -44,7 +44,7 @@ function runDots() {
             echo "This might awhile to complete, as some formulae need to be installed from source."
             echo "------------------------------"
             echo ""
-            ./brew.sh
+            ./core.sh
         fi
 
         if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
