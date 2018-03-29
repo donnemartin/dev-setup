@@ -97,12 +97,6 @@ pip install mysqlclient
 # Install IPython Profile
 ###############################################################################
 
-echo "------------------------------"
-echo "Installing IPython Notebook Default Profile"
-
-# Add the IPython profile
-mkdir -p ~/.ipython
-cp -r init/profile_default/ ~/.ipython/profile_default
 
 echo "------------------------------"
 echo "Script completed."

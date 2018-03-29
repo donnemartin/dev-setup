@@ -1,0 +1,4 @@
+DOTFILES_DIRS=".dotfiles"
+TAGS="dev-setup"
+SYMLINK_DIRS="ds-themes"
+UNDOTTED="bin"
