@@ -1,5 +1,3 @@
 DOTFILES_DIRS=".dotfiles"
 TAGS="dev-setup"
-SYMLINK_DIRS="dev-setup"
 UNDOTTED="bin"
-EXCLUDES="ds-brewfiles/* brew-bundle.sh"

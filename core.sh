@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-./.dotfiles/tag-dev-setup/brew-bundle.sh install --file=.dotfiles/tag-dev-setup/ds-brewfiles/core
+./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/core
 
 # GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.

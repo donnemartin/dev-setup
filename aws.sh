@@ -72,7 +72,7 @@ pip install awscli
 # System-Wide Packages                                                        #
 ###############################################################################
 
-./.dotfiles/tag-dev-setup/brew-bundle.sh install --file=.dotfiles/tag-dev-setup/ds-brewfiles/aws
+./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/aws
 
 ###############################################################################
 # Install IPython Notebook Spark Integration
