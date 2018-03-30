@@ -1,4 +1,4 @@
 DOTFILES_DIRS=".dotfiles"
 TAGS="dev-setup"
-SYMLINK_DIRS="ds-themes"
+SYMLINK_DIRS="dev-setup"
 UNDOTTED="bin"
