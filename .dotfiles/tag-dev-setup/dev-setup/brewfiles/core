@@ -1,0 +1,147 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/versions"
+tap "bramstein/webfonttools"
+
+brew "coreutils"
+
+# Install some other useful utilities like `sponge`.
+brew "moreutils"
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew "findutils"
+
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew "gnu-sed", args: ["with-default-names"]
+
+# Install Bash 4.
+brew "bash"
+
+brew "bash-completion2"
+
+# Install `wget` with IRI support.
+brew "wget", args: ["with-iri"]
+
+# Install RingoJS and Narwhal.
+# Note that the order in which these are installed is important;
+# see http://git.io/brew-narwhal-ringo.
+brew "ringojs"
+brew "narwhal"
+
+# Install Python
+brew "python"
+brew "python3"
+
+# Install ruby-build and rbenv
+brew "ruby-build"
+brew "rbenv"
+
+# Install more recent versions of some OS X tools.
+brew "vim", args: ["override-system-vi"]
+brew "homebrew/dupes/grep"
+brew "homebrew/dupes/openssh"
+brew "homebrew/dupes/screen"
+brew "homebrew/php/php55", args: ["with-gmp"]
+
+# Install font tools.
+
+brew "sfnt2woff"
+brew "sfnt2woff-zopfli"
+brew "woff2"
+
+# Install some CTF tools; see https://github.com/ctfs/write-ups.
+brew "aircrack-ng"
+brew "bfg"
+brew "binutils"
+brew "binwalk"
+brew "cifer"
+brew "dex2jar"
+brew "dns2tcp"
+brew "fcrackzip"
+brew "foremost"
+brew "hashpump"
+brew "hydra"
+brew "john"
+brew "knock"
+brew "netpbm"
+brew "nmap"
+brew "pngcheck"
+brew "socat"
+brew "sqlmap"
+brew "tcpflow"
+brew "tcpreplay"
+brew "tcptrace"
+brew "ucspi-tcp" # `tcpserver` etc.
+brew "homebrew/x11/xpdf"
+brew "xz"
+
+# Install other useful binaries.
+brew "ack"
+brew "dark-mode"
+#brew "exiv2"
+brew "git"
+brew "git-lfs"
+brew "git-flow"
+brew "git-extras"
+brew "hub"
+brew "imagemagick", args: ["with-webp"]
+brew "lua"
+brew "lynx"
+brew "p7zip"
+brew "pigz"
+brew "pv"
+brew "rename"
+brew "rhino"
+brew "speedtest_cli"
+brew "ssh-copy-id"
+brew "tree"
+brew "webkit2png"
+brew "zopfli"
+brew "pkg-config libffi"
+brew "pandoc"
+
+# Lxml and Libxslt
+brew "libxml2"
+brew "libxslt"
+
+# Install Heroku
+brew "heroku-toolbelt"
+
+# Core casks
+cask "alfred"
+cask "iterm2"
+cask "java"
+cask "xquartz"
+
+# Development tool casks
+cask "sublime-text"
+cask "atom"
+cask "virtualbox"
+cask "vagrant"
+cask "macdown"
+
+# Misc casks
+cask "google-chrome"
+cask "firefox"
+cask "skype"
+cask "slack"
+cask "dropbox"
+cask "evernote"
+cask "1password"
+#cask "gimp"
+#cask "inkscape
+
+# Install Docker, which requires virtualbox
+brew "docker"
+brew "boot2docker"
+
+# Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+cask "quicklookase"
+cask "qlvideo"

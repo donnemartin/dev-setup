@@ -55,7 +55,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
     * Syncs dev-setup to your local home directory `~`
 * [osxprep.sh script](#osxprepsh-script)
     * Updates OS X and installs Xcode command line tools
-* [brew.sh script](#brewsh-script)
+* [core.sh script](#brewsh-script)
     * Installs common Homebrew formulae and apps
 * [osx.sh script](#osxsh-script)
     * Sets up OS X defaults geared towards developers
@@ -167,11 +167,11 @@ Run all:
 
     $ ./.dots all
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
+Run `bootstrap.sh`, `osxprep.sh`, `core.sh`, and `osx.sh`:
 
     $ ./.dots bootstrap osxprep brew osx
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+Run `bootstrap.sh`, `osxprep.sh`, `core.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
 
     $ ./.dots bootstrap osxprep brew osx pydata aws datastores
 
@@ -187,7 +187,7 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
     * Syncs dev-setup to your local home directory `~`
 * [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
     * Updates OS X and installs Xcode command line tools
-* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
+* [core.sh](https://github.com/donnemartin/dev-setup/blob/master/core.sh)
     * Installs common Homebrew formulae and apps
 * [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
     * Sets up OS X defaults geared towards developers
@@ -209,7 +209,7 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 * If OS X updates require a restart, simply run `.dots` again to resume where you left off.
 * When installing the Xcode command line tools, a dialog box will confirm installation.
     * Once Xcode is installed, follow the instructions on the terminal to continue.
-* `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
+* `.dots` runs `core.sh`, which takes awhile to complete as some formulae need to be installed from source.
 * **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
 
 I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
@@ -316,22 +316,22 @@ If you're running 10.8 or older, you'll need to go to [http://developer.apple.co
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
-### brew.sh script
+### core.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
   <br/>
 </p>
 
-When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
+When setting up a new Mac, you may want to install [Homebrew](http://core.sh/), a package manager that simplifies installing and updating applications or libraries.
 
-Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
+Some of the apps installed by the `core.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [core.sh source file](https://github.com/donnemartin/dev-setup/blob/master/core.sh) directly and tweak it to suit your needs.**
 
-Run the `brew.sh` script:
+Run the `core.sh` script:
 
-    $ ./brew.sh
+    $ ./core.sh
 
-The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
+The `core.sh` script takes awhile to complete, as some formulae need to be installed from source.
 
 **For your terminal customization to take full effect, quit and re-start the terminal**
 
@@ -444,7 +444,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Sublime Text.
+The [core.sh script](#brewsh-script) installs Sublime Text.
 
 If you prefer to install it separately, go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
@@ -524,7 +524,7 @@ I set my comments color to `#E6DB74`.
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Atom.
+The [core.sh script](#brewsh-script) installs Atom.
 
 If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
@@ -602,12 +602,11 @@ VirtualBox creates and manages virtual machines.  It's a solid free solution to 
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs VirtualBox
+The [core.sh script](#brewsh-script) installs VirtualBox
 
 If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" virtualbox
 
 ### Vagrant
@@ -621,12 +620,11 @@ Vagrant creates and configures development environments.  You can think of it as
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Vagrant.
+The [core.sh script](#brewsh-script) installs Vagrant.
 
 If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" vagrant
 
 ### Docker
@@ -640,7 +638,7 @@ Docker automates the deployment of applications inside software containers.  I t
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Docker.
+The [core.sh script](#brewsh-script) installs Docker.
 
 If you prefer to install it separately, you can download it [here](https://www.docker.com/) or run:
 
@@ -710,11 +708,11 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
   <br/>
 </p>
 
-Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
+Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://core.sh/).
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
+The [core.sh script](#brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
 
 If you prefer to install it separately, run the following command and follow the steps on the screen:
 
@@ -763,7 +761,7 @@ To see what you have installed (with their version numbers):
 
 #### Installation
 
-`brew.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine.  `brew.sh` adds the following line to your `.extra` file to initialize `rbenv`:
+`core.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine.  `core.sh` adds the following line to your `.extra` file to initialize `rbenv`:
 
 ```
 eval "$(rbenv init -)"
@@ -811,7 +809,7 @@ OS X, like Linux, ships with [Python](http://python.org/) already installed. But
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs the latest versions of Python 2 and Python 3.
+The [core.sh script](#brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ### Pip
 
@@ -1566,7 +1564,6 @@ In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Wor
 
 The [datastores.sh script](#datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
 
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" mysqlworkbench
 
 You can also find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
@@ -1823,7 +1820,6 @@ The [android.sh script](#androidsh-script) installs Java.
 If you prefer to install it separately, you can download the JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="~/Applications" java
 
 ### Android SDK
@@ -1849,7 +1845,6 @@ The [android.sh script](#androidsh-script) installs Android Studio.
 If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="~/Applications" android-studio
 
 ### IntelliJ IDEA
@@ -1864,7 +1859,6 @@ The [android.sh script](#androidsh-script) installs Java.
 If you prefer to install it separately, you can download it [here](https://www.jetbrains.com/idea/download/) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="~/Applications" intellij-idea-ce
 
 ## Section 8: Misc
