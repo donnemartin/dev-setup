@@ -5,9 +5,6 @@ echo "Setting up Python data development environment."
 echo "------------------------------"
 echo ""
 
-# Removed user's cached credentials
-sudo -K
-
 echo "------------------------------"
 echo "Setting up pip."
 

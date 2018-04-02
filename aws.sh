@@ -5,10 +5,6 @@ echo "Setting up AWS development environment."
 echo "------------------------------"
 echo ""
 
-
-# Removed user's cached credentials
-sudo -K
-
 echo "------------------------------"
 echo "Setting up AWS."
 echo "This script requires pip and virtualenvwrapper to be installed."
