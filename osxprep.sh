@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+echo ""
+echo "------------------------------"
+echo "Updating OSX and installing Xcode command line tools"
+echo "------------------------------"
+echo ""
+
 # Ask for the administrator password upfront
 sudo -v
 

@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# Run the core.sh Script
+# For a full listing of installed formulae and apps, refer to
+# the commented core.sh source file directly and tweak it to
+# suit your needs.
+
+echo ""
+echo "------------------------------"
+echo "Installing Homebrew along with some common formulae and apps."
+echo "This might awhile to complete, as some formulae need to be installed from source."
+echo "------------------------------"
+echo ""
+
 ./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/core
 
 # GNU core utilities (those that come with OS X are outdated).
