@@ -16,7 +16,7 @@ echo ""
 
 # GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"

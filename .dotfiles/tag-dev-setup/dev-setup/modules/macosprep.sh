@@ -8,13 +8,13 @@ fi
 
 echo ""
 echo "------------------------------"
-echo "Updating OSX and installing Xcode command line tools"
+echo "Updating macOS and installing Xcode command line tools"
 echo "------------------------------"
 echo ""
 
 # Step 1: Update the OS and Install Xcode Tools
 echo "------------------------------"
-echo "Updating OSX.  If this requires a restart, run the script again."
+echo "Updating macOS. If this requires a restart, run the script again."
 
 # Install all available updates
 sudo softwareupdate -i -a
