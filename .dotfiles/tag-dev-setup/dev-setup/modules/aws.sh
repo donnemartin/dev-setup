@@ -1,5 +1,7 @@
 #!/bin/bash
 
+readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo "------------------------------"
 echo "Setting up AWS development environment."
 echo "------------------------------"
@@ -71,7 +73,7 @@ pip install awscli
 # System-Wide Packages                                                        #
 ###############################################################################
 
-./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/aws
+brew bundle install --file="${SCRIPT_DIR}/../brewfiles/aws"
 
 ###############################################################################
 # Install IPython Notebook Spark Integration

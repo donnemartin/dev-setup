@@ -1,5 +1,7 @@
 #!/bin/bash
 
+readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Run the core.sh Script
 # For a full listing of installed formulae and apps, refer to
 # the commented core.sh source file directly and tweak it to
@@ -12,7 +14,7 @@ echo "This might awhile to complete, as some formulae need to be installed from 
 echo "------------------------------"
 echo ""
 
-./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/core
+brew bundle install --file="${SCRIPT_DIR}/../brewfiles/essentials"
 
 # GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.

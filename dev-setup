@@ -160,9 +160,9 @@ provision_module() {
     echo "Running ${module} module"
 
     if [[ " ${requires_sudo[@]} " =~ " ${1}" ]]; then
-        provision_enabled && echo "( start_sudo && ${module} && stop_sudo )"
+        provision_enabled && ( start_sudo && ${module} && stop_sudo )
     else
-        provision_enabled && echo "( ${module} )"
+        provision_enabled && ( ${module} )
     fi
 }
 

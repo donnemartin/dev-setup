@@ -1,5 +1,7 @@
 #!/bin/bash
 
+readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 if [[ $(command -v brew) == "" ]]; then
     echo "Installing homebrew..."
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -14,8 +16,9 @@ if [[ $(command -v rcup) == "" ]]; then
     echo "------------------------------"
     echo "Installing rcm suite"
 
-    brew bundle install --file=../brewfiles/essentials
+    brew bundle install --file="${SCRIPT_DIR}/../brewfiles/base"
 fi
+
 
 echo "------------------------------"
 echo "Updating and/or installing dotfiles"

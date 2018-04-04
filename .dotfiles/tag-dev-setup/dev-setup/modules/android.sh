@@ -1,8 +1,10 @@
 #!/bin/bash
 
+readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo "------------------------------"
 echo "Setting up Android development environment."
 echo "------------------------------"
 echo ""
 
-./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/android
+brew bundle install --file="${SCRIPT_DIR}/../brewfiles/android"
