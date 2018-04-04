@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# ~/pydata.sh
-
-# Removed user's cached credentials
-# This script might be run with .dots, which uses elevated privileges
-sudo -K
+echo "------------------------------"
+echo "Setting up Python data development environment."
+echo "------------------------------"
+echo ""
 
 echo "------------------------------"
 echo "Setting up pip."

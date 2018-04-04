@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# ~/aws.sh
+readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Removed user's cached credentials
-# This script might be run with .dots, which uses elevated privileges
-sudo -K
+echo "------------------------------"
+echo "Setting up AWS development environment."
+echo "------------------------------"
+echo ""
 
 echo "------------------------------"
 echo "Setting up AWS."
@@ -72,7 +73,7 @@ pip install awscli
 # System-Wide Packages                                                        #
 ###############################################################################
 
-./.dev-setup/brew-bundle.sh install --file=.dev-setup/brewfiles/aws
+brew bundle install --file="${SCRIPT_DIR}/../brewfiles/aws"
 
 ###############################################################################
 # Install IPython Notebook Spark Integration
