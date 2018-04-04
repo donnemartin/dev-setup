@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 echo "------------------------------"
 echo "Setting up Python data development environment."

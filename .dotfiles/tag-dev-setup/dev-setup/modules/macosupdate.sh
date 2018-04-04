@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 if [[ "${EUID}" -ne 0 ]]; then
   echo "This module requires sudo rights."
@@ -8,7 +8,7 @@ fi
 
 echo ""
 echo "------------------------------"
-echo "Updating macOS and installing Xcode command line tools"
+echo "Updating macOS and the Xcode command line tools if not present"
 echo "------------------------------"
 echo ""
 
@@ -19,7 +19,10 @@ echo "Updating macOS. If this requires a restart, run the script again."
 # Install all available updates
 sudo softwareupdate -i -a
 
-echo "------------------------------"
-echo "Installing Xcode Command Line Tools."
-# Install Xcode command line tools
-xcode-select --install
+# normally homebrew installs xcode for us
+if [[ -z $(xcode-select -p) ]]; then
+    echo "------------------------------"
+    echo "Installing Xcode Command Line Tools."
+
+    xcode-select --install
+fi

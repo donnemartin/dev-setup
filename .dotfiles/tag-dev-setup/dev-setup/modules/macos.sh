@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 if [[ "${EUID}" -ne 0 ]]; then
   echo "This module requires sudo rights."

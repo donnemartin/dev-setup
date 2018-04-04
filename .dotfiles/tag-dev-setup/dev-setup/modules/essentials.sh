@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Run the core.sh Script
 # For a full listing of installed formulae and apps, refer to
@@ -7,7 +7,7 @@
 
 echo ""
 echo "------------------------------"
-echo "Installing Homebrew along with some common formulae and apps."
+echo "Installing core homebrew formulae and apps."
 echo "This might awhile to complete, as some formulae need to be installed from source."
 echo "------------------------------"
 echo ""

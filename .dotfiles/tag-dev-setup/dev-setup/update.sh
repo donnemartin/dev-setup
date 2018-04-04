@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Change this update file in your rc tag directory to your needs
 # You should consider adapting the _DOWNLOAD_URI path to your repo

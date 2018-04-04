@@ -5,8 +5,8 @@
 #
 # ARG_OPTIONAL_BOOLEAN([selfupdate],[],[Update dev-setup],[])
 # ARG_OPTIONAL_BOOLEAN([provision],[p],[Provision with given modules (default all)],[off])
-# ARG_OPTIONAL_REPEATED([modules],[m],[Modules to provision],[all])
-# ARG_TYPE_GROUP_SET([modules],[modules],[modules],[macosprep,rcm,macos,core,android,aws,datastores,pydata,web,all])
+# ARG_OPTIONAL_REPEATED([modules],[m],[Modules to provision, all if none given])
+# ARG_TYPE_GROUP_SET([modules],[modules],[modules],[macosupdate,macos,essentials,android,aws,datastores,pydata,web,all])
 # ARG_HELP([dev-setup installer])
 # ARGBASH_GO()
 # needed because of Argbash --> m4_ignore([
@@ -36,19 +36,19 @@ begins_with_short_option()
 # validators
 modules()
 {
-	local _allowed=("macosprep" "rcm" "macos" "core" "android" "aws" "datastores" "pydata" "web" "all")
+	local _allowed=("macosupdate" "macos" "essentials" "android" "aws" "datastores" "pydata" "web" "all")
 	local _seeking="$1"
 	for element in "${_allowed[@]}"
 	do
 		test "$element" = "$_seeking" && echo "$element" && return 0
 	done
-	die "Value '$_seeking' (of argument '$2') doesn't match the list of allowed values: 'macosprep', 'rcm', 'macos', 'core', 'android', 'aws', 'datastores', 'pydata', 'web' and 'all'" 4
+	die "Value '$_seeking' (of argument '$2') doesn't match the list of allowed values: 'macosupdate', 'macos', 'essentials', 'android', 'aws', 'datastores', 'pydata', 'web' and 'all'" 4
 }
 
 # THE DEFAULTS INITIALIZATION - OPTIONALS
 _arg_selfupdate="off"
 _arg_provision="off"
-_arg_modules=(all)
+_arg_modules=()
 
 print_help ()
 {
@@ -56,7 +56,7 @@ print_help ()
 	printf 'Usage: %s [--(no-)selfupdate] [-p|--(no-)provision] [-m|--modules <modules>] [-h|--help]\n' "$0"
 	printf '\t%s\n' "--selfupdate,--no-selfupdate: Update dev-setup (off by default)"
 	printf '\t%s\n' "-p,--provision,--no-provision: Provision with given modules (default all) (off by default)"
-	printf '\t%s\n' "-m,--modules: Modules to provision (one of 'macosprep', 'rcm', 'macos', 'core', 'android', 'aws', 'datastores', 'pydata', 'web' and 'all'; default array: (all) )"
+	printf '\t%s\n' "-m,--modules: Modules to provision, all if none given (one of 'macosupdate', 'macos', 'essentials', 'android', 'aws', 'datastores', 'pydata', 'web' and 'all'; empty by default)"
 	printf '\t%s\n' "-h,--help: Prints help"
 }
 
@@ -149,7 +149,7 @@ stop_sudo() {
 
 provision_module() {
     local -r module="${PREFIX_PATH}/modules/${1}.sh"
-    local -r requires_sudo=("macos" "macosprep")
+    local -r requires_sudo=("macos" "macosupdate")
 
     if [[ ! -e ${module} ]]; then
         echo "${module} does not seem to exist, skipping."
@@ -185,12 +185,27 @@ provision_module() {
     echo "";
     [[ ! $REPLY =~ ^[Yy]$ ]] && exit 0
 
+    [[ ${#_arg_modules[@]} = 0 || " ${_arg_modules[@]} " =~ " all " ]] && modules=("macosupdate" "macos" "essentials" "android" "aws" "datastores" "pydata" "web") || modules=("${_arg_modules[@]}")
 
-    [[ " ${_arg_modules[@]} " =~ " all " ]] && _arg_modules=("macosprep" "rcm" "macos" "core" "android" "aws" "datastores" "pydata" "web")
+    # 99% of our modules are not usable without homebrew and a proper dotfiles setup so we always run the base module
+    modules=("base" "${modules[@]}")
 
-    for module in "${_arg_modules[@]}"
+    # check if macosupdate is contained in module list and if so queue it at the beginning
+    if [[ " ${modules[@]} " =~ " macosupdate " ]]; then
+        _tmp_modules=()
+
+        for module in "${modules[@]}"
+        do
+            [[ ${module} != "macosupdate" ]] && _tmp_modules+=("${module}")
+        done
+
+        modules=("macosupdate" "${_tmp_modules[@]}")
+    fi
+
+    # run modules
+    for module in "${modules[@]}"
     do
-       provision_module ${module}
+        provision_module ${module}
     done
 
     echo "------------------------------"
