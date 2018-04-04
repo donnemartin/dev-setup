@@ -13,9 +13,8 @@ fi
 # customize. For example, if you are not running an SSD you
 # might want to change some of the settings listed in the
 # SSD section.
-echo ""
 echo "------------------------------"
-echo "Setting sensible OSX defaults."
+echo "Setting sensible macos defaults."
 echo "------------------------------"
 echo ""
 
