@@ -53,11 +53,11 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Single Setup Script](#single-setup-script)
 * [bootstrap.sh script](#bootstrapsh-script)
     * Syncs dev-setup to your local home directory `~`
-* [osxprep.sh script](#osxprepsh-script)
+* [macosupdate.sh script](#macosupdatesh-script)
     * Updates OS X and installs Xcode command line tools
-* [brew.sh script](#brewsh-script)
+* [essentials.sh script](#brewsh-script)
     * Installs common Homebrew formulae and apps
-* [osx.sh script](#osxsh-script)
+* [macos.sh script](#macossh-script)
     * Sets up OS X defaults geared towards developers
 * [pydata.sh script](#pydatash-script)
     * Sets up python for data analysis
@@ -157,62 +157,59 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
     $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
 
-##### Run the .dots Script with Command Line Arguments
+##### Run the devsetup Script with Command Line Arguments
 
-**Since you probably don't want to install every section**, the `.dots` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+**Since you probably don't want to install every section**, the `devsetup` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
 
-**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `devsetup` script and its associated components to suit your needs.**
 
 Run all:
 
-    $ ./.dots all
+    $ ./devsetup -p
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
+Run `macosupdate.sh`, `essentials.sh`, and `macos.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx
+    $ ./devsetup -p -m `macosupdate` -m macos -m essentials
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+Run `macosupdate.sh`, `essentials.sh`, and `macos.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx pydata aws datastores
+    $ ./devsetup -p -m `macosupdate` -m essentials -m macos -m pydata -m aws -m datastores
 
 #### Running without Git
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
+    $ curl -O https://raw.githubusercontent.com/omares/dev-setup/master/devsetup && ./devsetup [Add ARGS Here]
 
 #### Scripts
 
-* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
+* devsetup
     * Runs specified scripts
-* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
-    * Syncs dev-setup to your local home directory `~`
-* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
+* macosupdate.sh
     * Updates OS X and installs Xcode command line tools
-* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
+* essentials.sh
     * Installs common Homebrew formulae and apps
-* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
+* macos.sh
     * Sets up OS X defaults geared towards developers
-* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
+* pydata.sh
     * Sets up python for data analysis
-* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
+* aws.sh
     * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
-* [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
+* datastores.sh
     * Sets up common data stores
-* [web.sh](https://github.com/donnemartin/dev-setup/blob/master/web.sh)
+* web.sh
     * Sets up JavaScript web development
-* [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
+* android.sh
     * Sets up Android development
 
 **Notes:**
 
-* `.dots` will initially prompt you to enter your password.
-* `.dots` might ask you to re-enter your password at certain stages of the installation.
-* If OS X updates require a restart, simply run `.dots` again to resume where you left off.
+* `devsetup` might ask you to enter your password at certain stages of the installation.
+* If OS X updates require a restart, simply run `devsetup` again to resume where you left off.
 * When installing the Xcode command line tools, a dialog box will confirm installation.
     * Once Xcode is installed, follow the instructions on the terminal to continue.
-* `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
-* **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
+* `devsetup` runs `essentials.sh`, which takes awhile to complete as some formulae need to be installed from source.
+* **When `devsetup` completes, be sure to restart your computer for all updates to take effect.**
 
-I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [devsetup](https://github.com/donnemartin/dev-setup/blob/master/devsetup) script.
 
 ### bootstrap.sh script
 
@@ -280,18 +277,18 @@ gpip(){
 
 You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
 
-### osxprep.sh script
+### macosupdate.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
   <br/>
 </p>
 
-Run the `osxprep.sh` script:
+Run the `macosupdate.sh` script:
 
-    $ ./osxprep.sh
+    $ ./macosupdate.sh
 
-`osxprep.sh` will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, `osxprep.sh` will then [Install Xcode Command Line Tools](#install-xcode-command-line-tools).
+`macosupdate.sh` will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, `macosupdate.sh` will then [Install Xcode Command Line Tools](#install-xcode-command-line-tools).
 
 If you want to go the manual route, you can also install all updates by running "App Store", selecting the "Updates" icon, then updating both the OS and installed apps.
 
@@ -303,7 +300,7 @@ If you are running **OS X 10.9 Mavericks or later**, then you can install the Xc
 
     $ xcode-select --install
 
-**Note**: the `osxprep.sh` script executes this command.
+**Note**: the `macosupdate.sh` script executes this command.
 
 Running the command above will display a dialog where you can either:
 * Install Xcode and the command line tools
@@ -316,39 +313,39 @@ If you're running 10.8 or older, you'll need to go to [http://developer.apple.co
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
-### brew.sh script
+### essentials.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
   <br/>
 </p>
 
-When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
+When setting up a new Mac, you may want to install [Homebrew](http://essentials.sh/), a package manager that simplifies installing and updating applications or libraries.
 
-Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
+Some of the apps installed by the `essentials.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [essentials.sh source file](https://github.com/donnemartin/dev-setup/blob/master/essentials.sh) directly and tweak it to suit your needs.**
 
-Run the `brew.sh` script:
+Run the `essentials.sh` script:
 
-    $ ./brew.sh
+    $ ./essentials.sh
 
-The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
+The `essentials.sh` script takes awhile to complete, as some formulae need to be installed from source.
 
 **For your terminal customization to take full effect, quit and re-start the terminal**
 
-### osx.sh script
+### macos.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/macos.png">
   <br/>
 </p>
 
-When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `osx.sh` script also configures common third-party apps such Sublime Text and Chrome.
+When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `macos.sh` script also configures common third-party apps such Sublime Text and Chrome.
 
-**Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/donnemartin/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
+**Note**: **I strongly encourage you read through the commented [macos.sh source file](https://github.com/donnemartin/dev-setup/blob/master/macos.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
 
-Run the `osx.sh` script:
+Run the `macos.sh` script:
 
-    $ ./osx.sh
+    $ ./macos.sh
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
@@ -444,7 +441,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Sublime Text.
+The [essentials.sh script](#brewsh-script) installs Sublime Text.
 
 If you prefer to install it separately, go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
@@ -454,7 +451,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 #### Configuration
 
-The [osx.sh script](#osxsh-script) contains Sublime Text configurations.
+The [macos.sh script](#macossh-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
@@ -524,7 +521,7 @@ I set my comments color to `#E6DB74`.
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Atom.
+The [essentials.sh script](#brewsh-script) installs Atom.
 
 If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
 
@@ -543,7 +540,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script) contain terminal customizations.
+The [bootstrap.sh script](#bootstrapsh-script) and [macos.sh script](#macossh-script) contain terminal customizations.
 
 ### iTerm2
 
@@ -602,12 +599,11 @@ VirtualBox creates and manages virtual machines.  It's a solid free solution to 
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs VirtualBox
+The [essentials.sh script](#brewsh-script) installs VirtualBox
 
 If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" virtualbox
 
 ### Vagrant
@@ -621,12 +617,11 @@ Vagrant creates and configures development environments.  You can think of it as
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Vagrant.
+The [essentials.sh script](#brewsh-script) installs Vagrant.
 
 If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" vagrant
 
 ### Docker
@@ -640,7 +635,7 @@ Docker automates the deployment of applications inside software containers.  I t
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Docker.
+The [essentials.sh script](#brewsh-script) installs Docker.
 
 If you prefer to install it separately, you can download it [here](https://www.docker.com/) or run:
 
@@ -699,7 +694,7 @@ They will get added to your `.gitconfig` file.
 
 To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
 
-    $ git config --global credential.helper osxkeychain
+    $ git config --global credential.helper macoskeychain
 
 **Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/dev-setup/blob/master/.gitignore) file for inspiration.  Also check out GitHub's [collection of .gitignore templates](https://github.com/github/gitignore).
 
@@ -710,11 +705,11 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
   <br/>
 </p>
 
-Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
+Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://essentials.sh/).
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
+The [essentials.sh script](#brewsh-script) installs Homebrew and a number of useful Homebrew formulae and apps.
 
 If you prefer to install it separately, run the following command and follow the steps on the screen:
 
@@ -763,7 +758,7 @@ To see what you have installed (with their version numbers):
 
 #### Installation
 
-`brew.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine.  `brew.sh` adds the following line to your `.extra` file to initialize `rbenv`:
+`essentials.sh` provides [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) which allow you to manage multiple versions of Ruby on the same machine.  `essentials.sh` adds the following line to your `.extra` file to initialize `rbenv`:
 
 ```
 eval "$(rbenv init -)"
@@ -811,7 +806,7 @@ OS X, like Linux, ships with [Python](http://python.org/) already installed. But
 
 #### Installation
 
-The [brew.sh script](#brewsh-script) installs the latest versions of Python 2 and Python 3.
+The [essentials.sh script](#brewsh-script) installs the latest versions of Python 2 and Python 3.
 
 ### Pip
 
@@ -1566,7 +1561,6 @@ In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Wor
 
 The [datastores.sh script](#datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
 
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" mysqlworkbench
 
 You can also find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
@@ -1823,7 +1817,6 @@ The [android.sh script](#androidsh-script) installs Java.
 If you prefer to install it separately, you can download the JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="~/Applications" java
 
 ### Android SDK
@@ -1849,7 +1842,6 @@ The [android.sh script](#androidsh-script) installs Android Studio.
 If you prefer to install it separately, you can download it [here](https://developer.android.com/sdk/index.html) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="~/Applications" android-studio
 
 ### IntelliJ IDEA
@@ -1864,7 +1856,6 @@ The [android.sh script](#androidsh-script) installs Java.
 If you prefer to install it separately, you can download it [here](https://www.jetbrains.com/idea/download/) or run:
 
     $ brew update
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="~/Applications" intellij-idea-ce
 
 ## Section 8: Misc

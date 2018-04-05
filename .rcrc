@@ -1,0 +1,3 @@
+DOTFILES_DIRS=".dotfiles"
+TAGS="dev-setup"
+UNDOTTED="bin"

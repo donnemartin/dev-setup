@@ -1,12 +1,24 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+if [[ "${EUID}" -ne 0 ]]; then
+  echo "This module requires sudo rights."
+  echo "You should run this module using the dev-setup script in your home directory."
+  exit 1
+fi
+
+# Run the osx.sh Script
+# I strongly suggest you read through the commented osx.sh
+# source file and tweak any settings based on your personal
+# preferences. The script defaults are intended for you to
+# customize. For example, if you are not running an SSD you
+# might want to change some of the settings listed in the
+# SSD section.
+echo "------------------------------"
+echo "Setting sensible macos defaults."
+echo "------------------------------"
+echo ""
 
 # ~/osx.sh — Originally from https://mths.be/osx
-
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -586,7 +598,7 @@ tell application "Terminal"
     (* Open the custom theme so that it gets added to the list
        of available terminal themes (note: this will open two
        additional terminal windows). *)
-    do shell script "open '$HOME/init/" & themeName & ".terminal'"
+    do shell script "open '$HOME/.dev-setup/themes/" & themeName & ".terminal'"
 
     (* Wait a little bit to ensure that the custom theme is added. *)
     delay 1
@@ -640,7 +652,7 @@ start_if_needed() {
 
 # Install the Solarized Dark theme for iTerm
 start_if_needed iTerm
-open "${HOME}/init/Solarized Dark.itermcolors"
+open "${HOME}/.dev-setup/themes/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -774,7 +786,7 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+cp -r ${HOME}/.dev-setup/themes/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 ###############################################################################
 # Transmission.app                                                            #

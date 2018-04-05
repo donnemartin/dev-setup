@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# ~/pydata.sh
-
-# Removed user's cached credentials
-# This script might be run with .dots, which uses elevated privileges
-sudo -K
+echo "------------------------------"
+echo "Setting up Python data development environment."
+echo "------------------------------"
+echo ""
 
 echo "------------------------------"
 echo "Setting up pip."
@@ -97,12 +96,6 @@ pip install mysqlclient
 # Install IPython Profile
 ###############################################################################
 
-echo "------------------------------"
-echo "Installing IPython Notebook Default Profile"
-
-# Add the IPython profile
-mkdir -p ~/.ipython
-cp -r init/profile_default/ ~/.ipython/profile_default
 
 echo "------------------------------"
 echo "Script completed."

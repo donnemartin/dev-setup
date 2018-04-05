@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# ~/aws.sh
+readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Removed user's cached credentials
-# This script might be run with .dots, which uses elevated privileges
-sudo -K
+echo "------------------------------"
+echo "Setting up AWS development environment."
+echo "------------------------------"
+echo ""
 
 echo "------------------------------"
 echo "Setting up AWS."
@@ -72,17 +73,7 @@ pip install awscli
 # System-Wide Packages                                                        #
 ###############################################################################
 
-# Check for Homebrew,
-# Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# Make sure we’re using the latest Homebrew.
-brew update
-
-brew install apache-spark
+brew bundle install --file="${SCRIPT_DIR}/../brewfiles/aws"
 
 ###############################################################################
 # Install IPython Notebook Spark Integration
@@ -90,9 +81,6 @@ brew install apache-spark
 
 echo "------------------------------"
 echo "Installing IPython Notebook Spark integration"
-
-# Add the pyspark IPython profile
-cp -r init/profile_pyspark/ ~/.ipython/profile_pyspark
 
 BASH_PROFILE_PATH=~/.bash_profile
 echo $BASH_PROFILE_PATH
