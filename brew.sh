@@ -21,6 +21,9 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+# TODO: Add descriptions to everything we are installing
+
+
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -71,6 +74,7 @@ brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
+brew tap caskroom/fonts
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
@@ -144,10 +148,16 @@ brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" visual-studio-code
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
+brew cask install --appdir="/Applications" dash
+brew cask install --appdir="/Applications" github-desktop
+brew cask install --appdir="/Applications" mysqlworkbench
+brew cask install --appdir="/Applications" filezilla
+
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
@@ -155,10 +165,17 @@ brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" 1password
-#brew cask install --appdir="/Applications" gimp
-#brew cask install --appdir="/Applications" inkscape
+brew cask install --appdir="/Applications" spectacle
+brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" the-unarchiver
+brew cask install --appdir="/Applications" vanilla
+brew cask install --appdir="/Applications" gimp
+brew cask install --appdir="/Applications" inkscape
+brew cask install --appdir="/Applications" appcleaner
+brew cask install --appdir="/Applications" cheatsheet
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
