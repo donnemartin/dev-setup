@@ -133,12 +133,8 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
+brew install heroku/brew/heroku
 heroku update
-
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
@@ -172,7 +168,7 @@ brew install docker
 brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 
 # Remove outdated versions from the cellar.
 brew cleanup
