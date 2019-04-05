@@ -4,7 +4,7 @@
 
 # Ask for the administrator password upfront.
 sudo -v
-
+Fix brew install gnu-sed --with-default-name invalid option
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
@@ -34,7 +34,6 @@ brew install findutils
 brew install gnu-sed
 # Install Bash 4.
 brew install bash
-brew tap homebrew/versions
 brew install bash-completion2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
