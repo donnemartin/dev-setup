@@ -13,6 +13,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **OS X defaults** geared towards developers
 * **Developer tools**: Vim, bash, tab completion, curl, git, GNU core utils, Python, Ruby, etc
 * **Developer apps**: iTerm2, Sublime Text, Atom, VirtualBox, Vagrant, Docker, Chrome, etc
+* **Terminal customization**: Oh My Zsh, Powerline fonts, spf13
 * **Python data analysis**: IPython Notebook, NumPy, Pandas, Scikit-Learn, Matplotlib, etc
 * **Big Data platforms**: Spark (with IPython Notebook integration) and MapReduce
 * **Cloud services**: Amazon Web Services (Boto, AWS CLI, S3cmd, etc) and Heroku
@@ -59,6 +60,8 @@ This repo takes a more **light-weight** approach to automation using a combinati
     * Installs common Homebrew formulae and apps
 * [osx.sh script](#osxsh-script)
     * Sets up OS X defaults geared towards developers
+* [terminal.sh script](#terminal-script)
+		* Adds customization to Terminal
 * [pydata.sh script](#pydatash-script)
     * Sets up python for data analysis
 * [aws.sh script](#awssh-script)
@@ -191,6 +194,8 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
     * Installs common Homebrew formulae and apps
 * [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
     * Sets up OS X defaults geared towards developers
+* [terminal.sh](https://github.com/donnemartin/dev-setup/blob/master/terminal.sh)
+		* Customizes terminal
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
     * Sets up python for data analysis
 * [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
