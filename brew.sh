@@ -74,6 +74,10 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
+#Install Dev fonts
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
 brew install bfg
@@ -142,7 +146,7 @@ brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" visual-studio-code
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
