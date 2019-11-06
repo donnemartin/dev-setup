@@ -20,6 +20,9 @@ brew update
 
 brew install node
 
+#Install Yarn
+brew install yarn
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
