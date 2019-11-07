@@ -166,3 +166,8 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+
+[user]
+	name = Tobin Elavathil
+	email = tobin.elavathil@gmail.com
+	username = telavathil
