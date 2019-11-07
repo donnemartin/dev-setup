@@ -104,6 +104,7 @@ brew install ucspi-tcp # `tcpserver` etc.
 brew install homebrew/x11/xpdf
 brew install xz
 brew install zsh
+brew install direnv
 
 # Install other useful binaries.
 brew install ack
