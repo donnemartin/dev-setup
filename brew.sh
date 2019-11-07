@@ -33,14 +33,13 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
 # Install Bash 4.
-brew install bash
-brew install bash-completion2
-# We installed the new shell, now we have to activate it
-echo "Adding the newly installed shell to the list of allowed shells"
-# Prompts for password
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-# Change to the new shell, prompts for password
-chsh -s /usr/local/bin/bash
+# brew install bash
+# brew install bash-completion2
+# # We installed the new shell, now we have to activate it
+# # Prompts for password
+# sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+# # Change to the new shell, prompts for password
+# chsh -s /usr/local/bin/bash
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -48,8 +47,8 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+# brew install ringojs
+# brew install narwhal
 
 # Install Python
 brew install python
@@ -149,7 +148,7 @@ brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
 brew cask install --appdir="/Applications" visual-studio-code
-brew cask install --appdir="/Applications" atom
+# brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
@@ -176,6 +175,7 @@ brew install boot2docker
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 
 #Make Zsh default shell
+echo "Adding the newly installed shell to the list of allowed shells"
 sudo echo /usr/local/bin/zsh >> /etc/shells
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 chsh -s /usr/local/bin/zsh
