@@ -103,6 +103,7 @@ brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
 brew install homebrew/x11/xpdf
 brew install xz
+brew install zsh
 
 # Install other useful binaries.
 brew install ack
@@ -172,6 +173,22 @@ brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+
+#Make Zsh default shell
+sudo echo /usr/local/bin/zsh >> /etc/shells
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+chsh -s /usr/local/bin/zsh
+
+#Zsh plugins
+brew install antigen
+echo '#Plugins
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen theme robbyrussell/oh-my-zsh themes/robbyrussell
+
+# Apply Antigen
+antigen apply' >> ~/.zshrc
 
 # Remove outdated versions from the cellar.
 brew cleanup
