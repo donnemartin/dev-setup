@@ -137,8 +137,15 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku/brew/heroku
+brew tap heroku/brew
+brew install heroku
 heroku update
+
+# Install Netlify CLI
+brew install netlify-cli
+
+#Install Terraform
+brew install terraform
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
