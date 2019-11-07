@@ -198,5 +198,12 @@ antigen theme robbyrussell/oh-my-zsh themes/robbyrussell
 # Apply Antigen
 antigen apply' >> ~/.zshrc
 
+#Add VSCode extensions
+echo "Setting up VSCode"
+code --install-extension 'dbaeumer.vscode-eslint'
+code --install-extension 'ecmel.vscode-html-css'
+code --install-extension 'esbenp.prettier-vscode'
+code --install-extension 'dracula-theme.theme-dracula'
+
 # Remove outdated versions from the cellar.
 brew cleanup
