@@ -177,9 +177,9 @@ c = get_config()
 #------------------------------------------------------------------------------
 
 # Exports to a Latex template.  Inherit from this class if your template is
-# LaTeX based and you need custom tranformers/filters.  Inherit from it if  you
-# are writing your own HTML template and need custom tranformers/filters.   If
-# you don't need custom tranformers/filters, just change the  'template_file'
+# LaTeX based and you need custom transformers/filters.  Inherit from it if  you
+# are writing your own HTML template and need custom transformers/filters.   If
+# you don't need custom transformers/filters, just change the  'template_file'
 # config option.  Place your template in the special "/latex"  subfolder of the
 # "../templates" folder.
 
