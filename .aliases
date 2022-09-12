@@ -135,7 +135,8 @@ alias pumpitup="osascript -e 'set volume 7'"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 # Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+# Reference: https://apple.stackexchange.com/questions/406616/replacement-for-cgsession-suspend
+alias afk="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down,control down}'"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
