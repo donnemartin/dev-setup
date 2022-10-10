@@ -136,31 +136,31 @@ brew install heroku/brew/heroku
 heroku update
 
 # Core casks
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" xquartz
+brew install --cask --appdir="/Applications" alfred
+brew install --cask --appdir="~/Applications" iterm2
+brew install --cask --appdir="~/Applications" java
+brew install --cask --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" macdown
+brew install --cask --appdir="/Applications" sublime-text
+brew install --cask --appdir="/Applications" atom
+brew install --cask --appdir="/Applications" virtualbox
+brew install --cask --appdir="/Applications" vagrant
+brew install --cask --appdir="/Applications" macdown
 
 # Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
-#brew cask install --appdir="/Applications" gimp
-#brew cask install --appdir="/Applications" inkscape
+brew  install --cask --appdir="/Applications" google-chrome
+brew  install --cask --appdir="/Applications" firefox
+brew  install --cask --appdir="/Applications" skype
+brew  install --cask --appdir="/Applications" slack
+brew  install --cask --appdir="/Applications" dropbox
+brew  install --cask --appdir="/Applications" evernote
+brew  install --cask --appdir="/Applications" 1password
+#brew  install --cask --appdir="/Applications" gimp
+#brew  install --cask --appdir="/Applications" inkscape
 
 #Remove comment to install LaTeX distribution MacTeX
-#brew cask install --appdir="/Applications" mactex
+#brew  install --cask --appdir="/Applications" mactex
 
 # Install Docker, which requires virtualbox
 brew install docker
